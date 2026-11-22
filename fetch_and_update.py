@@ -363,6 +363,12 @@ def main():
         db["veg"]["error"] = str(e)[:200]
         fail.append("農業部菜價")
 
+    # 清掉已從 FEEDS 移除的舊來源，避免設定頁永遠顯示一個抓取失敗的幽靈來源
+    live = {f["key"] for f in FEEDS}
+    for stale in [k for k in db["feeds"] if k not in live]:
+        log("移除已不再使用的來源:", stale)
+        db["feeds"].pop(stale, None)
+
     db["updated_at"] = datetime.now(TPE).isoformat()
     db["status"] = {"ok": ok, "failed": fail}
 
