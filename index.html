@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Social ERP · 個人社會資訊站</title>
+<style>
+:root{
+  --bg:#f4f6fa; --surface:#ffffff; --surface2:#f0f3f8; --line:#e2e8f0;
+  --text:#1f2933; --muted:#64748b; --primary:#2563eb; --primary-soft:#dbeafe;
+  --green:#16a34a; --green-soft:#dcfce7; --red:#dc2626; --red-soft:#fee2e2;
+  --amber:#d97706; --amber-soft:#fef3c7; --sidebar:#0f1b2d; --sidebar-text:#c6d2e2;
+  --sidebar-active:#2563eb; --shadow:0 1px 3px rgba(16,24,40,.08),0 1px 2px rgba(16,24,40,.04);
+}
+[data-theme="dark"]{
+  --bg:#0b1220; --surface:#131c2b; --surface2:#1b2638; --line:#263447;
+  --text:#e8eef5; --muted:#93a4ba; --primary:#3b82f6; --primary-soft:#1e293b;
+  --green:#34d399; --green-soft:#0f2a20; --red:#f87171; --red-soft:#2a1414;
+  --amber:#fbbf24; --amber-soft:#2a2410; --sidebar:#070d16; --sidebar-text:#9fb0c6;
+  --shadow:0 1px 3px rgba(0,0,0,.4);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--text);
+  font-family:"Segoe UI","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;font-size:14px}
+a{color:var(--primary);text-decoration:none}
+button{font-family:inherit}
+
+/* layout */
+.app{display:flex;min-height:100vh}
+.sidebar{width:230px;background:var(--sidebar);color:var(--sidebar-text);flex-shrink:0;
+  position:fixed;top:0;bottom:0;left:0;display:flex;flex-direction:column;z-index:40;transition:transform .2s}
+.brand{padding:18px 20px;font-size:1.15rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:9px;border-bottom:1px solid rgba(255,255,255,.07)}
+.brand small{display:block;font-size:.65rem;color:var(--sidebar-text);font-weight:400;margin-top:2px}
+.nav{padding:10px 0;overflow-y:auto;flex:1}
+.nav a{display:flex;align-items:center;gap:11px;padding:11px 20px;color:var(--sidebar-text);
+  font-size:.92rem;cursor:pointer;border-left:3px solid transparent}
+.nav a:hover{background:rgba(255,255,255,.05);color:#fff}
+.nav a.active{background:rgba(37,99,235,.18);border-left-color:var(--sidebar-active);color:#fff;font-weight:600}
+.nav .ico{width:20px;text-align:center;font-size:1.05rem}
+.sb-foot{padding:12px 20px;font-size:.7rem;color:#64748b;border-top:1px solid rgba(255,255,255,.07)}
+
+.main{flex:1;margin-left:230px;display:flex;flex-direction:column;min-width:0}
+.topbar{height:60px;background:var(--surface);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:14px;padding:0 20px;position:sticky;top:0;z-index:30}
+.topbar .ptitle{font-size:1.1rem;font-weight:700;margin-right:auto}
+.hamb{display:none;background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--text)}
+.tb-btn{background:var(--surface2);border:1px solid var(--line);color:var(--text);
+  border-radius:8px;height:38px;padding:0 13px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-size:.88rem}
+.tb-btn:hover{border-color:var(--primary)}
+.tb-btn.primary{background:var(--primary);color:#fff;border-color:var(--primary)}
+.month-sel{display:inline-flex;align-items:center;gap:6px;background:var(--surface2);
+  border:1px solid var(--line);border-radius:8px;height:38px;padding:0 6px}
+.month-sel button{background:none;border:none;cursor:pointer;color:var(--text);font-size:1rem;padding:0 6px}
+.month-sel b{font-size:.88rem;min-width:70px;text-align:center}
+.content{padding:22px;max-width:1240px;width:100%}
+
+/* generic */
+.row{display:flex;flex-wrap:wrap;gap:16px}
+.grid{display:grid;gap:16px}
+.g2{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 4px;font-size:1rem}
+.card .hint{color:var(--muted);font-size:.8rem;margin:0 0 12px}
+.card-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.card-h h3{margin:0}
+.kpi .label{color:var(--muted);font-size:.82rem}
+.kpi .val{font-size:1.6rem;font-weight:800;margin:4px 0 2px}
+.kpi .delta{font-size:.78rem}
+.pos{color:var(--green)} .neg{color:var(--red)}
+.badge{display:inline-block;font-size:.7rem;padding:2px 9px;border-radius:999px;background:var(--surface2);border:1px solid var(--line);color:var(--muted)}
+.badge.b-入門,.badge.b-green{background:var(--green-soft);color:var(--green);border:none}
+.badge.b-初級,.badge.b-blue{background:var(--primary-soft);color:var(--primary);border:none}
+.badge.b-中級,.badge.b-amber{background:var(--amber-soft);color:var(--amber);border:none}
+.progress{height:9px;background:var(--surface2);border-radius:999px;overflow:hidden}
+.progress>i{display:block;height:100%;background:var(--primary);border-radius:999px}
+.progress.g>i{background:var(--green)} .progress.a>i{background:var(--amber)} .progress.r>i{background:var(--red)}
+
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th,td{text-align:left;padding:10px 10px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:.78rem;text-transform:none}
+tr:last-child td{border-bottom:none}
+.t-right{text-align:right} .t-center{text-align:center}
+
+input,select,textarea{width:100%;background:var(--surface);border:1px solid var(--line);color:var(--text);
+  border-radius:8px;padding:9px 11px;font-size:.9rem;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--primary)}
+label.fld{display:block;margin-bottom:12px}
+label.fld>span{display:block;font-size:.8rem;color:var(--muted);margin-bottom:5px}
+.err-msg{color:var(--red);font-size:.76rem;margin-top:4px;display:none}
+label.fld.bad input,label.fld.bad select{border-color:var(--red)}
+label.fld.bad .err-msg{display:block}
+.btn{background:var(--primary);color:#fff;border:none;border-radius:8px;padding:9px 16px;cursor:pointer;font-size:.9rem}
+.btn:hover{filter:brightness(1.05)}
+.btn.ghost{background:var(--surface2);color:var(--text);border:1px solid var(--line)}
+.btn.danger{background:var(--red)}
+.btn.sm{padding:6px 11px;font-size:.82rem}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap}
+.chip{background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;cursor:pointer;font-size:.84rem;color:var(--muted)}
+.chip.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+.iconbtn{background:none;border:none;cursor:pointer;color:var(--muted);font-size:.95rem;padding:4px 6px;border-radius:6px}
+.iconbtn:hover{background:var(--surface2);color:var(--text)}
+
+.empty{text-align:center;color:var(--muted);padding:34px 10px}
+.empty .big{font-size:2rem;opacity:.5}
+.list-split{display:flex;align-items:center;justify-content:space-between;padding:11px 0;border-bottom:1px solid var(--line)}
+.list-split:last-child{border-bottom:none}
+.muted{color:var(--muted)} .sm{font-size:.82rem} .mt{margin-top:14px} .mb{margin-bottom:12px}
+.pill-amt{font-weight:700} .avatar{width:34px;height:34px;border-radius:50%;background:var(--primary-soft);color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:700}
+
+/* toast + modal */
+#toast{position:fixed;right:20px;bottom:20px;z-index:100;display:flex;flex-direction:column;gap:8px}
+.toast{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--primary);
+  border-radius:9px;padding:12px 16px;box-shadow:var(--shadow);min-width:220px;animation:sl .2s}
+.toast.ok{border-left-color:var(--green)} .toast.bad{border-left-color:var(--red)}
+@keyframes sl{from{transform:translateX(20px);opacity:0}to{transform:none;opacity:1}}
+#overlay{position:fixed;inset:0;background:rgba(10,16,28,.5);z-index:90;display:none;align-items:center;justify-content:center;padding:16px}
+#overlay.show{display:flex}
+.modal{background:var(--surface);border:1px solid var(--line);border-radius:16px;width:100%;max-width:460px;box-shadow:var(--shadow);max-height:90vh;overflow:auto}
+.modal.lg{max-width:640px}
+.modal-h{padding:16px 20px;border-bottom:1px solid var(--line);font-weight:700;display:flex;justify-content:space-between;align-items:center}
+.modal-b{padding:20px} .modal-f{padding:14px 20px;border-top:1px solid var(--line);display:flex;justify-content:flex-end;gap:10px}
+
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)} .g3{grid-template-columns:1fr} .g2{grid-template-columns:1fr}
+  .sidebar{transform:translateX(-100%)} .sidebar.open{transform:none}
+  .main{margin-left:0} .hamb{display:block} .content{padding:16px}
+}/* ===== Social ERP 新增樣式 ===== */
+.feed-item{display:block;padding:13px 0;border-bottom:1px solid var(--line)}
+.feed-item:last-child{border-bottom:none}
+.feed-item a.ft{font-weight:600;color:var(--text);font-size:.97rem;line-height:1.5;display:block}
+.feed-item a.ft:hover{color:var(--primary)}
+.feed-meta{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:5px;font-size:.76rem;color:var(--muted)}
+.src-tag{background:var(--surface2);border:1px solid var(--line);border-radius:20px;padding:1px 9px;font-size:.73rem}
+.feed-sum{color:var(--muted);font-size:.85rem;margin-top:5px;line-height:1.55}
+.star{cursor:pointer;border:none;background:none;font-size:1rem;opacity:.35;padding:0 2px}
+.star.on{opacity:1}
+.tblwrap{max-height:560px;overflow:auto;border:1px solid var(--line);border-radius:10px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.87rem}
+.tbl th{position:sticky;top:0;z-index:5;background:var(--surface2);text-align:left;
+  padding:10px 12px;border-bottom:1px solid var(--line);font-weight:600;white-space:nowrap}
+.tbl td{padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.tbl tr:last-child td{border-bottom:none}
+.tbl tbody tr:hover{background:var(--surface2)}
+.num{text-align:right;font-variant-numeric:tabular-nums}
+.up{color:var(--red);font-weight:600}
+.down{color:var(--green);font-weight:600}
+.flat{color:var(--muted)}
+.law-sec{border-left:3px solid var(--primary);padding:2px 0 2px 14px;margin:18px 0}
+.law-sec h4{margin:0 0 7px;font-size:1rem}
+.law-art{background:var(--surface2);border-radius:8px;padding:11px 13px;margin:9px 0;
+  font-size:.87rem;line-height:1.65;white-space:pre-line}
+.law-cite{font-size:.76rem;color:var(--muted);margin-top:6px}
+.warnbox{background:var(--amber-soft);border:1px solid var(--amber);border-radius:9px;
+  padding:12px 14px;margin:14px 0;font-size:.86rem;line-height:1.6}
+.warnbox b{color:var(--amber)}
+.srcbox{background:var(--surface2);border-radius:9px;padding:11px 13px;font-size:.83rem;color:var(--muted);line-height:1.7}
+.stale{background:var(--red-soft);border:1px solid var(--red);border-radius:9px;padding:11px 14px;margin-bottom:14px;font-size:.86rem}
+.cal-row{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.cal-row:last-child{border-bottom:none}
+.cal-m{flex:0 0 58px;font-weight:700;color:var(--primary);font-size:.9rem}
+.cal-b{flex:1;font-size:.88rem;line-height:1.6}
+.linkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:9px}
+.linkgrid a{display:block;padding:10px 12px;background:var(--surface2);border:1px solid var(--line);
+  border-radius:9px;font-size:.86rem;color:var(--text)}
+.linkgrid a:hover{border-color:var(--primary);color:var(--primary)}
+.srcstat{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--line);font-size:.86rem}
+.srcstat:last-child{border-bottom:none}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}
+.dot.ok{background:var(--green)} .dot.bad{background:var(--red)}
+@media(max-width:900px){ .tbl{font-size:.8rem} .tbl td,.tbl th{padding:8px 9px} }
+</style>
+</head>
+
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">🧭 Social ERP<small>個人社會資訊站</small></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="sb-foot">資料來自公開 RSS 與政府開放 API</div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="hamb" onclick="document.getElementById('sidebar').classList.toggle('open')">☰</button>
+      <div class="ptitle" id="ptitle">資訊摘要</div>
+      <div id="tb-extra" style="display:flex;gap:10px;align-items:center"></div>
+      <button class="tb-btn" id="themeBtn" title="切換深/淺色">🌙</button>
+    </header>
+    <main class="content" id="content"></main>
+  </div>
+</div>
+<div id="overlay"><div id="modalBox"></div></div>
+<div id="toast"></div>
+<script>
+
+/* ===================== helpers ===================== */
+const $=(s,r=document)=>r.querySelector(s);
+const $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const uid=()=>Math.random().toString(36).slice(2,9);
+const CUR={TWD:'NT$',USD:'US$'};
+function fmt(n){return (CUR[STORE.d.settings.currency]||'NT$')+' '+Math.round(n).toLocaleString('en-US');}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function monthLabel(m){return m.replace('-','年')+'月';}
+function addMonth(m,d){let[y,mo]=m.split('-').map(Number);mo+=d;if(mo<1){mo=12;y--}if(mo>12){mo=1;y++}return y+'-'+String(mo).padStart(2,'0');}
+function todayStr(){return new Date().toISOString().slice(0,10);}
+
+function toast(msg,type){const t=document.createElement('div');t.className='toast '+(type||'');t.textContent=msg;$('#toast').appendChild(t);setTimeout(()=>t.remove(),2600);}
+function closeModal(){$('#overlay').classList.remove('show');$('#modalBox').innerHTML='';}
+function modal(title,bodyHtml,footHtml,size){
+  $('#modalBox').outerHTML='<div id="modalBox"></div>';
+  const box=$('#modalBox');
+  box.innerHTML='<div class="modal '+(size||'')+'"><div class="modal-h"><span>'+esc(title)+'</span><button class="iconbtn" onclick="closeModal()">✕</button></div><div class="modal-b">'+bodyHtml+'</div>'+(footHtml?'<div class="modal-f">'+footHtml+'</div>':'')+'</div>';
+  $('#overlay').classList.add('show');
+}
+function confirmDialog(msg,onYes,yesLabel){
+  modal('請確認','<p style="margin:0 0 4px">'+esc(msg)+'</p>',
+    '<button class="btn ghost" onclick="closeModal()">取消</button><button class="btn danger" id="cfmYes">'+(yesLabel||'確定')+'</button>');
+  $('#cfmYes').onclick=()=>{closeModal();onYes();};
+}
+$('#overlay').addEventListener('click',e=>{if(e.target.id==='overlay')closeModal();});
+
+/* ===================== charts (dependency-free canvas) ===================== */
+function cssVar(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim();}
+function setupCanvas(cv,h){const w=cv.clientWidth||cv.parentElement.clientWidth;cv.width=w*devicePixelRatio;cv.height=h*devicePixelRatio;cv.style.height=h+'px';const x=cv.getContext('2d');x.scale(devicePixelRatio,devicePixelRatio);return{x,w,h};}
+function barChart(cv,labels,series){ // series:[{name,color,data}]
+  const h=cv.dataset.h?+cv.dataset.h:220;const{x,w}=setupCanvas(cv,h);
+  const pad={l:52,r:12,t:14,b:26};const iw=w-pad.l-pad.r,ih=h-pad.t-pad.b;
+  const all=series.flatMap(s=>s.data);const max=Math.max(1,...all)*1.15;
+  x.strokeStyle=cssVar('--line');x.fillStyle=cssVar('--muted');x.font='11px sans-serif';x.lineWidth=1;
+  for(let i=0;i<=4;i++){const gy=pad.t+ih*i/4;x.beginPath();x.moveTo(pad.l,gy);x.lineTo(w-pad.r,gy);x.stroke();
+    x.textAlign='right';x.fillText(Math.round(max*(4-i)/4/1000)+'k',pad.l-8,gy+3);}
+  const groups=labels.length;const gw=iw/groups;const bw=Math.min(26,gw/(series.length+1));
+  labels.forEach((lb,gi)=>{const gx=pad.l+gw*gi+gw/2;
+    series.forEach((s,si)=>{const v=s.data[gi]||0;const bh=ih*v/max;
+      const bx=gx-(series.length*bw)/2+si*bw;x.fillStyle=s.color;
+      x.fillRect(bx,pad.t+ih-bh,bw-3,bh);});
+    x.fillStyle=cssVar('--muted');x.textAlign='center';x.fillText(lb,gx,h-8);});
+}
+function lineChart(cv,labels,data,color){
+  const h=cv.dataset.h?+cv.dataset.h:220;const{x,w}=setupCanvas(cv,h);
+  const pad={l:56,r:14,t:14,b:26};const iw=w-pad.l-pad.r,ih=h-pad.t-pad.b;
+  const max=Math.max(1,...data)*1.1,min=Math.min(0,...data);
+  x.strokeStyle=cssVar('--line');x.fillStyle=cssVar('--muted');x.font='11px sans-serif';
+  for(let i=0;i<=4;i++){const gy=pad.t+ih*i/4;x.beginPath();x.moveTo(pad.l,gy);x.lineTo(w-pad.r,gy);x.stroke();
+    x.textAlign='right';x.fillText(Math.round((max-(max-min)*i/4)/1000)+'k',pad.l-8,gy+3);}
+  const step=iw/Math.max(1,labels.length-1);
+  x.strokeStyle=color;x.lineWidth=2.4;x.beginPath();
+  const pts=data.map((v,i)=>[pad.l+step*i,pad.t+ih-ih*(v-min)/(max-min||1)]);
+  pts.forEach((p,i)=>i?x.lineTo(p[0],p[1]):x.moveTo(p[0],p[1]));x.stroke();
+  x.fillStyle=color;pts.forEach(p=>{x.beginPath();x.arc(p[0],p[1],3,0,7);x.fill();});
+  x.fillStyle=cssVar('--muted');x.textAlign='center';labels.forEach((lb,i)=>{if(labels.length>8&&i%2)return;x.fillText(lb,pad.l+step*i,h-8);});
+}
+function donut(cv,items){ // items:[{label,value,color}]
+  const h=cv.dataset.h?+cv.dataset.h:200;const{x,w}=setupCanvas(cv,h);
+  const cx=h/2+6,cy=h/2,r=h/2-12,ir=r*0.6;const tot=items.reduce((a,b)=>a+b.value,0)||1;
+  let a=-Math.PI/2;items.forEach(it=>{const sl=it.value/tot*Math.PI*2;x.beginPath();x.moveTo(cx,cy);
+    x.arc(cx,cy,r,a,a+sl);x.closePath();x.fillStyle=it.color;x.fill();a+=sl;});
+  x.fillStyle=cssVar('--surface');x.beginPath();x.arc(cx,cy,ir,0,7);x.fill();
+  x.fillStyle=cssVar('--text');x.font='bold 13px sans-serif';x.textAlign='center';x.fillText('支出占比',cx,cy+4);
+  // legend
+  x.font='12px sans-serif';x.textAlign='left';let ly=24;items.forEach(it=>{x.fillStyle=it.color;x.fillRect(h+8,ly-9,11,11);
+    x.fillStyle=cssVar('--muted');x.fillText(it.label+'  '+Math.round(it.value/tot*100)+'%',h+24,ly);ly+=22;});
+}
+const PALETTE=['#2563eb','#16a34a','#d97706','#db2777','#7c3aed','#0891b2','#dc2626','#64748b'];
+
+function ART_SEED(){return [
+ {id:'a1',cat:'基礎觀念',level:'入門',title:'先建立緊急預備金，再開始投資',mins:4,
+  plain:'投資前，先存下 3～6 個月生活費放在隨時能動用的地方（活存或高利定存），當作意外時的安全網。有了它，投資遇到下跌時才不必被迫在低點賣出求現。',
+  example:'小美月支出 2 萬，她先存了 8 萬（約 4 個月）當預備金，之後臨時要修機車、看牙都能從這裡出，不必動到投資或刷卡分期。',
+  points:['預備金 = 3～6 個月生活費','放在活存/定存，不要拿去投資','有了它才開始投資，心理更穩'],
+  related:['a2','a9']},
+ {id:'a2',cat:'基礎觀念',level:'入門',title:'風險與報酬是一體兩面',mins:3,
+  plain:'報酬愈高，通常要承受的波動與虧損風險也愈高。任何宣稱「高報酬又零風險／保證獲利」的，幾乎都是詐騙。',
+  example:'有人在 LINE 群保證「月賺 20%」，這遠高於正常市場報酬，是典型詐騙話術。',
+  points:['高報酬必然伴隨高風險','先認識自己的風險承受度','聽到「保證獲利」要提高警覺'],
+  related:['a7','a9']},
+ {id:'a3',cat:'投資工具',level:'入門',title:'什麼是 ETF？和個股有什麼不同',mins:5,
+  plain:'ETF 是一籃子股票組成的基金，買一張等於同時投資很多公司，天生分散風險，適合沒時間研究個股的新手。',
+  example:'買一檔追蹤台股大盤的市值型 ETF，就等於同時持有台灣前幾大的公司，不必自己選股。',
+  points:['ETF = 一籃子股票，自動分散','費用（內扣）通常比主動基金低','仍會隨大盤波動，不是穩賺'],
+  related:['a6','a8']},
+ {id:'a4',cat:'操作教學',level:'初級',title:'如何開證券戶（台股第一步）',mins:4,
+  plain:'台股交易要同時開「證券帳戶」和搭配的「交割銀行帳戶」，多數券商可用手機線上開戶，備妥身分證與第二證件即可。',
+  example:'阿豪花 15 分鐘用券商 App 線上開戶，隔天審核通過就能下單買零股。',
+  points:['證券戶 + 交割銀行戶一起開','可線上或臨櫃','比較手續費折讓與 App 好用度'],
+  related:['a5']},
+ {id:'a5',cat:'操作教學',level:'初級',title:'限價單 vs 市價單怎麼選',mins:3,
+  plain:'限價單是你指定價格才成交，能控價但可能買不到；市價單用當下市價立即成交，速度快但價格不確定。新手多用限價單較安全。',
+  example:'想用 100 元買進就掛限價 100；若非買到不可、不在意價格才用市價。',
+  points:['限價：控價、可能不成交','市價：秒成交、價格不定','波動大時市價易買在高點'],
+  related:['a4']},
+ {id:'a6',cat:'股票知識',level:'中級',title:'除權除息與填權息',mins:5,
+  plain:'公司發股利時，股價會扣掉相應金額（除權息），所以領股利當天資產不會憑空變多；之後股價漲回原水準才算真賺到（填息）。',
+  example:'一檔股票除息 3 元，股價從 100 變 97，等它漲回 100 才算完成填息。',
+  points:['除息=股價扣掉現金股利','填息=股價漲回除息前','沒填息等於左手換右手'],
+  related:['a3','a8']},
+ {id:'a7',cat:'風險與防詐',level:'初級',title:'飆股群組與假投資老師詐騙',mins:4,
+  plain:'自稱名人或老師、拉你進群報明牌、要你下載特定 App 入金的，幾乎都是詐騙。合法券商不會這樣招攬。',
+  example:'「老師」要你把錢匯到某個平台帳戶、畫面上獲利一直漲，但要提領時卻被要求先繳稅金——這是假平台。',
+  points:['名人代言＋保證獲利＝警訊','匯到私人帳戶/特定平台＝詐騙','可撥 165 查證'],
+  related:['a2']},
+ {id:'a8',cat:'股票知識',level:'中級',title:'本益比與殖利率入門',mins:4,
+  plain:'本益比=股價÷每股盈餘，看股價相對獲利貴不貴；現金殖利率=現金股利÷股價，看領息報酬率。兩者都只是參考，不能單看一個。',
+  example:'殖利率很高有時是因為股價大跌造成的，不一定代表是好標的。',
+  points:['本益比看「貴不貴」','殖利率看「領息報酬」','要搭配產業與成長性一起看'],
+  related:['a6','a3']},
+ {id:'a9',cat:'理財規劃',level:'入門',title:'用 50/30/20 打造你的預算',mins:4,
+  plain:'一個好記的分配法：收入的 50% 給必要支出、30% 給想要的享受、20% 拿來儲蓄與投資。可依自身情況微調。',
+  example:'月入 5 萬：2.5 萬必要（房租、吃飯）、1.5 萬想要（娛樂）、1 萬儲蓄投資。',
+  points:['必要 50%、想要 30%、儲蓄投資 20%','先付給未來的自己（先存再花）','可自行用試算工具檢視比例是否失衡'],
+  related:['a1']},
+];}
+function COURSE_SEED(){return [
+ {id:'c1',title:'投資新手的第一堂課',level:'入門',desc:'從零開始建立正確的理財與投資觀念。',
+  lessons:[{t:'為什麼要理財',done:true},{t:'認識風險與報酬',done:true},{t:'緊急預備金',done:true},{t:'認識 ETF',done:false},{t:'開始你的第一筆投資',done:false}]},
+ {id:'c2',title:'看懂你的第一張股票',level:'初級',desc:'學會股票交易的基本操作與常見名詞。',
+  lessons:[{t:'開戶與下單',done:true},{t:'限價與市價',done:false},{t:'除權息',done:false},{t:'本益比與殖利率',done:false}]},
+];}
+function GLOSSARY_SEED(){return [
+ {term:'ETF',def:'指數股票型基金，一籃子股票組合，買一張即分散投資多家公司。'},
+ {term:'本益比（PE）',def:'股價 ÷ 每股盈餘，衡量股價相對獲利是否昂貴的參考指標。'},
+ {term:'殖利率',def:'現金股利 ÷ 股價，衡量領取現金股利的報酬率。'},
+ {term:'除權息',def:'公司配發股利時，股價扣除對應金額的程序。'},
+ {term:'複利',def:'利息再生利息，時間愈長效果愈明顯，是長期投資的核心。'},
+ {term:'停損',def:'當虧損到預設幅度時賣出，以控制單筆損失的紀律。'},
+ {term:'多頭／空頭',def:'多頭指市場上漲趨勢，空頭指市場下跌趨勢。'},
+ {term:'流動性',def:'資產變現的難易程度，現金流動性最高。'},
+ {term:'通貨膨脹',def:'物價持續上漲、貨幣購買力下降的現象。'},
+ {term:'定期定額',def:'固定時間投入固定金額，攤平成本、降低擇時壓力。'},
+];}
+function FAQ_SEED(){return [
+ {q:'我完全沒基礎，該從哪開始？',a:'先把「緊急預備金」存起來，再從「投資新手的第一堂課」學起，並從「金融知識中心」把基礎觀念讀過一輪。'},
+ {q:'要先還債還是先投資？',a:'一般建議先還清高利率債務（如信用卡循環利息），同時保留基本預備金，再逐步投資。'},
+ {q:'每個月該投資多少？',a:'可參考 50/30/20，把收入約 20% 投入儲蓄與投資，依自身狀況調整，重點是持續。'},
+ {q:'這個網站的試算準確嗎？',a:'試算為教育與情境分析用途，採用簡化假設，實際結果會因稅費、通膨、市場波動而不同。'},
+];}
+
+/* ===================== 法律知識（靜態・已逐條查證） ===================== */
+const LAW_VERIFIED_AT='2026-11-18';
+const LAW_SEED={
+ inherit:{
+  title:'遺產與繼承',
+  intro:'以下為查證當日全國法規資料庫與財政部公告之內容。金額與順位會隨修法與年度公告調整，實際案件請以主管機關最新公告與專業人士意見為準。',
+  blocks:[
+   {h:'誰有繼承權、順序怎麼排（民法 §1138）',
+    art:'遺產繼承人，除配偶外，依左列順序定之：\n一、直系血親卑親屬。\n二、父母。\n三、兄弟姊妹。\n四、祖父母。',
+    note:'配偶是「當然繼承人」，不在順位內，而是與當時順位最前的那一組人共同繼承。前一順位有人繼承時，後面的順位就輪不到。',
+    cite:'民法 §1138'},
+   {h:'特留分：不能被遺囑完全剝奪的那一塊（民法 §1223）',
+    art:'繼承人之特留分，依下列各款之規定：\n一、配偶之特留分，為其應繼分二分之一。\n二、直系血親卑親屬之特留分，為其應繼分二分之一。\n三、父母之特留分，為其應繼分二分之一。\n四、祖父母之特留分，為其應繼分三分之一。',
+    warn:'這一條在 115 年 8 月 17 日修正公布，自公布後六個月施行。查證當日法規資料庫同時掛著「本法規部分或全部條文尚未生效」的提示，且上方顯示的版本已不含「兄弟姊妹」。也就是說，你看到的可能是尚未上路的新版。實際案件務必先確認繼承事實發生時適用的是哪個版本——這個差異會直接影響分配結果。',
+    cite:'民法 §1223（115.8.17 修正公布，公布後六個月施行）'},
+   {h:'不想繼承（含債務）要多快處理（民法 §1174）',
+    art:'繼承人得拋棄其繼承權。\n前項拋棄，應於知悉其得繼承之時起三個月內，以書面向法院為之。\n拋棄繼承後，應以書面通知因其拋棄而應為繼承之人。但不能通知者，不在此限。',
+    note:'關鍵是「三個月」且必須「以書面向法院」為之，不是跟家人講一聲就算。錯過期限原則上就視為概括繼承。',
+    cite:'民法 §1174'},
+   {h:'遺產稅免稅額與扣除額（115 年度）',
+    table:[['免稅額','1,333 萬元'],['配偶扣除額','553 萬元'],
+           ['直系血親卑親屬','每人 56 萬元（未成年者按距成年年數每年加扣 56 萬元）'],
+           ['父母','每人 138 萬元'],['重度以上身心障礙特別扣除額','每人 693 萬元'],
+           ['受扶養之兄弟姊妹、祖父母','每人 56 萬元'],['喪葬費','138 萬元']],
+    note:'適用對象為「繼承事實發生日在 115 年 1 月 1 日以後」的案件。這些金額幾乎每年都會依物價指數調整，隔年請重新確認。',
+    cite:'財政部 115 年度遺產稅免稅額及各項扣除額公告'},
+   {h:'遺產稅怎麼算（遺產及贈與稅法 §13）',
+    art:'遺產稅按被繼承人死亡時，依本法規定計算之遺產總額，減除第十七條、第十七條之一規定之各項扣除額及第十八條規定之免稅額後之課稅遺產淨額，依下列稅率課徵之：\n一、五千萬元以下者，課徵百分之十。\n二、超過五千萬元至一億元者，課徵五百萬元，加超過五千萬元部分之百分之十五。\n三、超過一億元者，課徵一千二百五十萬元，加超過一億元部分之百分之二十。',
+    note:'課稅基礎是「課稅遺產淨額」＝遺產總額 − 各項扣除額 − 免稅額，不是遺產總額直接乘稅率。',
+    cite:'遺產及贈與稅法 §13'}
+  ]},
+ ip:{
+  title:'智慧財產權',
+  intro:'著作權、專利、商標三者的保護期間完全不同，而且起算點也不一樣——著作權從「人的生死」算，專利從「申請日」算，商標從「註冊公告日」算。',
+  blocks:[
+   {h:'著作權：自然人著作（著作權法 §30）',
+    art:'著作財產權，除本法另有規定外，存續於著作人之生存期間及其死亡後五十年。\n著作於著作人死亡後四十年至五十年間首次公開發表者，著作財產權之期間，自公開發表時起存續十年。',
+    note:'注意這裡講的是「著作財產權」。著作人格權是另一回事，不因期間屆滿而相同處理。',
+    cite:'著作權法 §30'},
+   {h:'著作權：法人著作（著作權法 §33）',
+    art:'法人為著作人之著作，其著作財產權存續至其著作公開發表後五十年。但著作在創作完成時起算五十年內未公開發表者，其著作財產權存續至創作完成時起五十年。',
+    note:'公司名義的著作用「公開發表」起算，與自然人用「生存期間＋死後 50 年」不同，這點常被搞混。',
+    cite:'著作權法 §33'},
+   {h:'專利：三種專利的年限都不一樣',
+    table:[['發明專利','自申請日起算 20 年屆滿（專利法 §52）'],
+           ['新型專利','自申請日起算 10 年屆滿（專利法 §114）'],
+           ['設計專利','自申請日起算 15 年屆滿（專利法 §135）']],
+    note:'都是從「申請日」起算，不是核准日。衍生設計專利權期限與原設計同時屆滿。',
+    cite:'專利法 §52、§114、§135'},
+   {h:'商標：可以無限延展（商標法 §33）',
+    art:'商標自註冊公告當日起，由權利人取得商標權，商標權期間為十年。\n商標權期間得申請延展，每次延展為十年。',
+    note:'商標是三者中唯一可以靠延展永久持有的。只要持續使用並按時延展，就不會因期間屆滿而消滅。',
+    cite:'商標法 §33'}
+  ]},
+ civil:{
+  title:'民法其他',
+  intro:'這一區目前只收錄我已逐條查證的繼承相關條文（已歸在「遺產與繼承」）。契約、租賃、債權時效等其他民法領域尚未納入——我不會把沒查證過的條文寫進來，所以這裡先放官方查詢入口。',
+  blocks:[
+   {h:'要查其他民法條文時',
+    links:[['全國法規資料庫 · 民法','https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=B0000001'],
+           ['全國法規資料庫 · 法規檢索','https://law.moj.gov.tw/'],
+           ['司法院法學資料檢索','https://law.judicial.gov.tw/'],
+           ['法律扶助基金會','https://www.laf.org.tw/']],
+    note:'想擴充哪一塊（例如租賃、消費借貸、侵權行為、時效），跟我說，我會照同樣方式逐條查證後補進來。'}
+  ]}
+};
+
+/* ===================== 生活情報（靜態） ===================== */
+const SHOPPING_SEED={
+ calendar:[
+  {m:'1–2月','b':'農曆年前換季出清、福袋。冬裝折扣通常到此觸底。'},
+  {m:'3月','b':'春裝上架，冬裝進入最後出清，尺碼開始不齊。'},
+  {m:'5–6月','b':'百貨年中慶；夏裝正價期，折扣以促銷活動為主。'},
+  {m:'7–8月','b':'夏裝換季出清、暑假檔期。'},
+  {m:'9–11月','b':'百貨週年慶（各家時間不同，約九月起陸續開跑），全年折扣最密集的區間。'},
+  {m:'11月','b':'雙11。電商折扣為主，實體通路多半搭配週年慶尾聲。'},
+  {m:'12月','b':'雙12、耶誕與跨年檔期；冬裝正價轉折扣的分界點。'}
+ ],
+ note:'上表是台灣零售通路的概略節奏，用來抓「什麼時候該出手」的方向感，不是任何一家的官方公告。各品牌與各分店檔期逐年不同，實際折扣請以該品牌官方公告為準。',
+ brands:['UNIQLO','GU','ZARA','NET','Lativ','新光三越','遠東SOGO','遠百','momo購物網','蝦皮購物','PChome']
+};
+
+/* ===================== 資料存取 ===================== */
+const LS_KEY='social_erp_v1';
+const STORE={
+  d:null,
+  load(){try{const r=localStorage.getItem(LS_KEY);this.d=r?JSON.parse(r):seed();}catch(e){this.d=seed();}
+    const s=seed();for(const k in s){if(this.d[k]===undefined)this.d[k]=s[k];}this.d.ui=this.d.ui||{};},
+  save(){try{localStorage.setItem(LS_KEY,JSON.stringify(this.d));}catch(e){}},
+  reset(){this.d=seed();this.save();}
+};
+function seed(){
+  return {
+    settings:{name:'我',currency:'TWD',theme:'light'},
+    articles:ART_SEED(), courses:COURSE_SEED(), glossary:GLOSSARY_SEED(), faq:FAQ_SEED(),
+    favorites:[], readingHistory:[], notes:{}, calcHistory:[], starred:[], ui:{}
+  };
+}
+
+/* DATA：來自 data/db.json。用 file:// 直接開啟時瀏覽器會擋 fetch，
+   因此內嵌一份種子資料當後備，讓本機雙擊也能看到內容。 */
+const EMBEDDED_DB={"updated_at":"2026-11-18T14:30:00+08:00","seed_note":"這是隨專案附上的種子資料（部分為實際抓取的真實條目），讓你在還沒設定 GitHub Actions 前打開就看得到東西。跑過一次 workflow 後會被完整的即時資料覆蓋。","status":{"ok":[],"failed":[]},"feeds":{"news":{"name":"時事","source":"公視新聞","url":"https://news.pts.org.tw/xml/newsfeed.xml","updated_at":"2026-11-18T14:30:00+08:00","ok":true,"items":[{"id":"seedn01","title":"黃仁勳稱若能回鍋輝達深感榮幸 董事長：已啟動執行長遴選程序","link":"https://news.pts.org.tw/article/836249","date":"2026-11-18T13:47:32+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedn02","title":"輝達宣示擴大供應鏈合作 台積電、鴻海等多個台廠入列","link":"https://news.pts.org.tw/article/836248","date":"2026-11-18T13:45:28+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedn03","title":"大陸冷高壓南下 今入夜後全台降溫明顯","link":"https://news.pts.org.tw/article/836247","date":"2026-11-18T13:44:52+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedn04","title":"蔣萬安合體謝龍介掃街 沈伯洋重返內湖花市衝刺","link":"https://news.pts.org.tw/article/836246","date":"2026-11-18T13:44:21+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedn05","title":"廢非核公投意見會／洪毓祥推以核養綠提升能源韌性 王守誠：應正視台灣地質風險","link":"https://news.pts.org.tw/article/836250","date":"2026-11-18T13:07:59+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedn06","title":"台中里長候選人涉當詐團車手 開競選車面交收款遭警方逮捕","link":"https://news.pts.org.tw/article/836245","date":"2026-11-18T13:43:54+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"}]},"technews":{"name":"科技與海外市場","source":"TechNews 科技新報","url":"https://cdn.technews.tw/feed/","updated_at":"2026-11-18T14:30:00+08:00","ok":true,"items":[{"id":"seedt01","title":"美嚴控先進 AI 晶片出口，集邦：部分訂單可能遞延","link":"https://technews.tw/","date":"2026-11-17T18:30:40+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"TechNews 科技新報","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedt02","title":"東元瞄準歐洲 AI 基建需求，模組化資料中心最快 9 個月交付","link":"https://technews.tw/","date":"2026-11-17T17:57:16+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"TechNews 科技新報","added_date":"2026-11-18T14:30:00+08:00"}]},"techorange":{"name":"數位轉型","source":"TechOrange 科技報橘","url":"https://techorange.com/feed/","updated_at":"2026-11-18T14:30:00+08:00","ok":true,"items":[]},"motive":{"name":"行銷趨勢","source":"Motive 商業洞察","url":"https://www.motive.com.tw/?feed=rss2","updated_at":"2026-11-18T14:30:00+08:00","ok":true,"items":[{"id":"seedm01","title":"品牌重塑其實不只是包裝設計","link":"https://www.motive.com.tw/","date":"2026-09-17T00:00:00+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"Motive 商業洞察","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedm02","title":"從 UNIQLO 學：品牌老化的任務要怎麼解？","link":"https://www.motive.com.tw/","date":"2026-09-17T00:00:00+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"Motive 商業洞察","added_date":"2026-11-18T14:30:00+08:00"}]},"managertoday":{"name":"企劃與方法論","source":"經理人 Managertoday","url":"https://rss.bnextmedia.com.tw/feed/managertoday/","updated_at":"2026-11-18T14:30:00+08:00","ok":true,"items":[{"id":"seedg01","title":"美國 Apple Pay 湧入 2300 筆問題回報！蘋果認了：內部更新惹禍、排除網路攻擊","link":"https://www.managertoday.com.tw/articles/view/73361","date":"2026-11-18T14:21:11+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedg02","title":"Q3 營收超出預期！輝達法說會交出漂亮成績單，為何市場仍眉頭深鎖？","link":"https://www.managertoday.com.tw/articles/view/73357","date":"2026-11-18T11:54:06+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedg03","title":"黃仁勳辭職後首發文喊回鍋，輝達董事會鐵心不讓步，只剩 15% 股東門檻最後一搏","link":"https://www.managertoday.com.tw/articles/view/73356","date":"2026-11-18T11:20:16+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedg04","title":"盤中零股新制！首次撮合 12/7 起提前至 9 點，交易時間、下單方式與手續費完整攻略","link":"https://www.managertoday.com.tw/articles/view/59023","date":"2026-11-18T11:22:16+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},{"id":"seedg05","title":"金剛經、隨他們去都上榜！誠品 2026 年度暢銷榜，台灣讀者靠這 9 本書對抗內耗","link":"https://www.managertoday.com.tw/articles/view/73359","date":"2026-11-18T13:41:55+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"}]}},"veg":{"updated_at":"2026-11-18T14:30:00+08:00","latest_date":"115.11.17","market_label":"台北各批發市場","source":"農業部 農產品批發市場交易行情","source_url":"https://data.moa.gov.tw/","ok":true,"items":[{"crop":"藍莓-進口","market":"台北二","date":"115.11.17","avg":220.9,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":876.0,"upper":312.3,"lower":144.6,"history":[{"d":"115.11.17","v":220.9}]},{"crop":"草莓","market":"台北二","date":"115.11.17","avg":173.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":261.0,"upper":238.0,"lower":127.6,"history":[{"d":"115.11.17","v":173.4}]},{"crop":"釋迦-鳳梨釋迦","market":"台北二","date":"115.11.17","avg":96.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":451.0,"upper":131.6,"lower":66.4,"history":[{"d":"115.11.17","v":96.4}]},{"crop":"百香果-其他","market":"台北二","date":"115.11.17","avg":91.0,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":985.0,"upper":120.0,"lower":53.3,"history":[{"d":"115.11.17","v":91.0}]},{"crop":"釋迦","market":"台北二","date":"115.11.17","avg":85.7,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":2019.0,"upper":131.7,"lower":52.9,"history":[{"d":"115.11.17","v":85.7}]},{"crop":"椰子-剝殼","market":"台北二","date":"115.11.17","avg":17.0,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":30.0,"upper":17.0,"lower":17.0,"history":[{"d":"115.11.17","v":17.0}]},{"crop":"椰子","market":"台北二","date":"115.11.17","avg":15.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":799.0,"upper":19.9,"lower":13.0,"history":[{"d":"115.11.17","v":15.4}]}]}};
+let DATA=EMBEDDED_DB;
+let DATA_SOURCE='embedded';
+async function loadData(){
+  // 用 file:// 直接開啟時，瀏覽器一定會擋跨來源讀取，連試都不要試，
+  // 免得在 console 留下看起來像壞掉的紅字。直接用內嵌種子資料。
+  if(location.protocol==='file:'){DATA=EMBEDDED_DB;DATA_SOURCE='embedded';return;}
+  try{
+    const r=await fetch('data/db.json?t='+Date.now(),{cache:'no-store'});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const j=await r.json();
+    if(j&&j.feeds){DATA=j;DATA_SOURCE='file';}
+  }catch(e){DATA=EMBEDDED_DB;DATA_SOURCE='embedded';}
+}
+function allFeedItems(keys){
+  const out=[];
+  (keys||Object.keys(DATA.feeds||{})).forEach(k=>{
+    const f=(DATA.feeds||{})[k];if(!f)return;
+    (f.items||[]).forEach(it=>out.push(Object.assign({feedKey:k},it)));
+  });
+  out.sort((a,b)=>String(b.date||b.added_date||'').localeCompare(String(a.date||a.added_date||'')));
+  return out;
+}
+function dataAgeDays(){
+  const t=DATA.updated_at;if(!t)return null;
+  const d=new Date(t);if(isNaN(d))return null;
+  return Math.floor((Date.now()-d.getTime())/86400000);
+}
+function relTime(iso){
+  if(!iso)return '';
+  const d=new Date(iso);if(isNaN(d))return String(iso).slice(0,16).replace('T',' ');
+  const mins=Math.floor((Date.now()-d.getTime())/60000);
+  if(mins<1)return '剛剛';
+  if(mins<60)return mins+' 分鐘前';
+  if(mins<1440)return Math.floor(mins/60)+' 小時前';
+  const days=Math.floor(mins/1440);
+  if(days<8)return days+' 天前';
+  return d.toISOString().slice(0,10);
+}
+function isStar(id){return (STORE.d.starred||[]).indexOf(id)>=0;}
+function toggleStar(id,re){
+  STORE.d.starred=STORE.d.starred||[];
+  const i=STORE.d.starred.indexOf(id);
+  if(i>=0){STORE.d.starred.splice(i,1);toast('已取消收藏');}
+  else{STORE.d.starred.push(id);toast('已加入收藏','ok');}
+  STORE.save(); if(re!==false)RENDER[CURRENT]();
+}
+function feedItemHtml(it){
+  const link=it.link?('<a class="ft" href="'+esc(it.link)+'" target="_blank" rel="noopener">'+esc(it.title)+'</a>')
+                    :('<span class="ft">'+esc(it.title)+'</span>');
+  return '<div class="feed-item">'+
+    '<div style="display:flex;gap:8px;align-items:flex-start">'+
+      '<button class="star '+(isStar(it.id)?'on':'')+'" onclick="toggleStar(\''+it.id+'\')" title="收藏">★</button>'+
+      '<div style="flex:1;min-width:0">'+link+
+        (it.summary?'<div class="feed-sum">'+esc(it.summary)+'</div>':'')+
+        '<div class="feed-meta"><span class="src-tag">'+esc(it.source||'')+'</span><span>'+esc(relTime(it.date))+'</span></div>'+
+      '</div></div></div>';
+}
+
+/* ===================== 導覽 ===================== */
+const PAGES=[
+  {id:'dashboard',name:'資訊摘要',ico:'🧭'},
+  {id:'news',name:'時事',ico:'📰'},
+  {id:'industry',name:'產業・媒體',ico:'🛰️'},
+  {id:'marketing',name:'行銷・方法論',ico:'📈'},
+  {id:'veg',name:'菜價行情',ico:'🥬'},
+  {id:'life',name:'生活情報',ico:'👕'},
+  {id:'law',name:'法律知識',ico:'⚖️'},
+  {id:'knowledge',name:'金融知識中心',ico:'📚'},
+  {id:'calculators',name:'金融計算工具',ico:'🧮'},
+  {id:'settings',name:'資料來源與設定',ico:'⚙️'},
+];
+let CURRENT='dashboard';
+function buildNav(){
+  $('#nav').innerHTML=PAGES.map(p=>'<a data-id="'+p.id+'" onclick="nav(\''+p.id+'\')"><span class="ico">'+p.ico+'</span>'+p.name+'</a>').join('');
+}
+function nav(id,keepView){
+  CURRENT=id;if(!keepView)STORE.d.ui.view=null;STORE.save();
+  $$('#nav a').forEach(a=>a.classList.toggle('active',a.dataset.id===id));
+  $('#ptitle').textContent=(PAGES.find(p=>p.id===id)||{}).name||'';
+  $('#tb-extra').innerHTML='';
+  $('#sidebar').classList.remove('open');
+  window.scrollTo(0,0);
+  RENDER[id]();
+}
+const RENDER={};
+
+/* ========== 共用小元件 ========== */
+function card(title,body,extra){
+  return '<div class="card"><div class="card-h"><h3>'+title+'</h3>'+(extra||'')+'</div>'+body+'</div>';
+}
+function staleBanner(){
+  const d=dataAgeDays();
+  if(DATA_SOURCE==='embedded')
+    return '<div class="stale">目前顯示的是<b>內建種子資料</b>。你是用本機檔案直接開啟，瀏覽器不允許讀取 data/db.json。部署到 GitHub Pages 後就會自動顯示最新資料。</div>';
+  if(d!==null&&d>=3)
+    return '<div class="stale">資料已經 <b>'+d+' 天</b>沒更新了。到 GitHub repo 的 Actions 頁籤看看排程是不是失敗了。</div>';
+  return '';
+}
+function emptyBox(msg){return '<div class="empty">'+esc(msg)+'</div>';}
+
+/* ========== 資訊摘要 ========== */
+RENDER.dashboard=function(){
+  const news=((DATA.feeds||{}).news||{}).items||[];
+  const veg=((DATA.veg||{}).items)||[];
+  const biz=allFeedItems(['managertoday','motive']).slice(0,5);
+  const tech=allFeedItems(['technews','techorange']).slice(0,5);
+  const movers=veg.filter(v=>v.change_pct!==null&&v.change_pct!==undefined)
+                  .sort((a,b)=>Math.abs(b.change_pct)-Math.abs(a.change_pct)).slice(0,6);
+
+  let vegHtml;
+  if(!movers.length){
+    vegHtml=emptyBox(veg.length?'目前只有單日資料，還算不出漲跌。明天更新後就會有比較基準。':'尚無菜價資料');
+  }else{
+    vegHtml='<div class="tblwrap" style="max-height:none"><table class="tbl"><thead><tr>'+
+      '<th>品項</th><th class="num">均價</th><th class="num">較前一交易日</th></tr></thead><tbody>'+
+      movers.map(v=>'<tr><td>'+esc(v.crop)+'</td><td class="num">'+v.avg+'</td>'+
+        '<td class="num '+(v.change_pct>0?'up':(v.change_pct<0?'down':'flat'))+'">'+
+        (v.change_pct>0?'▲':(v.change_pct<0?'▼':'—'))+' '+Math.abs(v.change_pct)+'%</td></tr>').join('')+
+      '</tbody></table></div>';
+  }
+
+  $('#content').innerHTML=staleBanner()+
+    '<div class="grid g4 mb">'+
+      kpi('時事',news.length+' 則',(DATA.feeds&&DATA.feeds.news)?relTime(DATA.feeds.news.updated_at):'—')+
+      kpi('產業・媒體',allFeedItems(['technews','techorange']).length+' 則','TechNews／TechOrange')+
+      kpi('行銷・方法論',allFeedItems(['motive','managertoday']).length+' 則','Motive／經理人')+
+      kpi('菜價品項',veg.length+' 項',(DATA.veg&&DATA.veg.latest_date)?('資料日 '+DATA.veg.latest_date):'—')+
+    '</div>'+
+    '<div class="grid g2">'+
+      card('今日時事 <span class="muted sm">· 公視新聞</span>',
+        news.length?news.slice(0,6).map(feedItemHtml).join(''):emptyBox('尚無資料'),
+        '<button class="btn ghost sm" onclick="nav(\'news\')">全部</button>')+
+      card('菜價變動最大 <span class="muted sm">· 農業部行情</span>',vegHtml,
+        '<button class="btn ghost sm" onclick="nav(\'veg\')">全部</button>')+
+    '</div>'+
+    '<div class="grid g2 mt">'+
+      card('行銷・方法論',biz.length?biz.map(feedItemHtml).join(''):emptyBox('尚無資料'),
+        '<button class="btn ghost sm" onclick="nav(\'marketing\')">全部</button>')+
+      card('產業・媒體',tech.length?tech.map(feedItemHtml).join(''):emptyBox('尚無資料'),
+        '<button class="btn ghost sm" onclick="nav(\'industry\')">全部</button>')+
+    '</div>'+
+    '<p class="muted sm mt">資料最後更新：'+esc(DATA.updated_at?relTime(DATA.updated_at):'未知')+
+    '（'+(DATA_SOURCE==='file'?'來自 data/db.json':'內建種子')+'）</p>';
+};
+function kpi(label,val,sub){
+  return '<div class="card"><div class="kpi"><div class="label">'+label+'</div><div class="val">'+val+'</div>'+
+    (sub?'<div class="muted sm">'+esc(sub)+'</div>':'')+'</div></div>';
+}
+
+/* ========== 以來源分頁的清單頁 ========== */
+function feedPage(keys,title){
+  const v=STORE.d.ui.feedTab||'all';
+  const tabs=[['all','全部']].concat(keys.map(k=>[k,((DATA.feeds||{})[k]||{}).source||k]));
+  const items=allFeedItems(v==='all'?keys:[v]);
+  const bad=keys.filter(k=>((DATA.feeds||{})[k]||{}).ok===false);
+  let warn='';
+  if(bad.length){
+    warn='<div class="warnbox"><b>有來源抓取失敗：</b>'+
+      bad.map(k=>esc(((DATA.feeds||{})[k]||{}).source||k)).join('、')+
+      '。清單顯示的是上一次成功抓到的內容。</div>';
+  }
+  $('#content').innerHTML=staleBanner()+warn+
+    '<div class="btn-row mb">'+tabs.map(t=>'<button class="chip '+(v===t[0]?'active':'')+
+      '" onclick="feedTab(\''+t[0]+'\')">'+esc(t[1])+'</button>').join('')+'</div>'+
+    card(title+' <span class="muted sm">· '+items.length+' 則</span>',
+      items.length?items.map(feedItemHtml).join(''):emptyBox('尚無資料，跑過一次更新後就會有內容'));
+}
+function feedTab(k){STORE.d.ui.feedTab=k;STORE.save();RENDER[CURRENT]();}
+RENDER.news=function(){STORE.d.ui.feedTab='all';feedPage(['news'],'時事');};
+RENDER.industry=function(){feedPage(['technews','techorange'],'產業・媒體');};
+RENDER.marketing=function(){feedPage(['motive','managertoday'],'行銷・方法論');};
+
+/* ========== 菜價行情 ========== */
+RENDER.veg=function(){
+  const veg=DATA.veg||{};
+  const items=(veg.items||[]).slice();
+  const q=(STORE.d.ui.vegQ||'').trim();
+  const sort=STORE.d.ui.vegSort||'change';
+  let list=items.filter(v=>!q||v.crop.indexOf(q)>=0);
+  if(sort==='change')list.sort((a,b)=>Math.abs(b.change_pct==null?-1:b.change_pct)-Math.abs(a.change_pct==null?-1:a.change_pct));
+  else if(sort==='price')list.sort((a,b)=>b.avg-a.avg);
+  else list.sort((a,b)=>a.crop.localeCompare(b.crop,'zh-Hant'));
+
+  const rows=list.map(v=>{
+    const c=v.change_pct;
+    const cls=c==null?'flat':(c>0?'up':(c<0?'down':'flat'));
+    const txt=c==null?'—':((c>0?'▲':(c<0?'▼':'—'))+' '+Math.abs(c)+'%');
+    return '<tr><td>'+esc(v.crop)+'</td><td>'+esc(v.market)+'</td>'+
+      '<td class="num">'+v.avg+'</td>'+
+      '<td class="num">'+(v.prev_avg==null?'—':v.prev_avg)+'</td>'+
+      '<td class="num '+cls+'">'+txt+'</td>'+
+      '<td class="num">'+(v.lower==null?'—':v.lower)+' – '+(v.upper==null?'—':v.upper)+'</td>'+
+      '<td class="num">'+(v.qty==null?'—':Math.round(v.qty))+'</td></tr>';
+  }).join('');
+
+  $('#content').innerHTML=staleBanner()+
+    '<div class="grid g4 mb">'+
+      kpi('資料日期',esc(veg.latest_date||'—'),'民國年')+
+      kpi('品項數',(veg.items||[]).length+' 項',esc(veg.market_label||''))+
+      kpi('上漲',(veg.items||[]).filter(v=>v.change_pct>0).length+' 項','較前一交易日')+
+      kpi('下跌',(veg.items||[]).filter(v=>v.change_pct<0).length+' 項','較前一交易日')+
+    '</div>'+
+    '<div class="btn-row mb" style="align-items:center;gap:10px;flex-wrap:wrap">'+
+      '<input id="vegQ" placeholder="搜尋品項…" value="'+esc(q)+'" style="flex:1;min-width:180px">'+
+      '<button class="chip '+(sort==='change'?'active':'')+'" onclick="vegSort(\'change\')">依變動</button>'+
+      '<button class="chip '+(sort==='price'?'active':'')+'" onclick="vegSort(\'price\')">依價格</button>'+
+      '<button class="chip '+(sort==='name'?'active':'')+'" onclick="vegSort(\'name\')">依名稱</button>'+
+    '</div>'+
+    card('批發行情 <span class="muted sm">· '+list.length+' 項</span>',
+      list.length?('<div class="tblwrap"><table class="tbl"><thead><tr>'+
+        '<th>品項</th><th>市場</th><th class="num">均價</th><th class="num">前一交易日</th>'+
+        '<th class="num">變動</th><th class="num">下–上價</th><th class="num">交易量</th>'+
+        '</tr></thead><tbody>'+rows+'</tbody></table></div>')
+       :emptyBox('找不到符合的品項'))+
+    '<div class="srcbox mt">資料來源：'+esc(veg.source||'農業部 農產品批發市場交易行情')+
+    '　單位：元/公斤（依品項而異）、交易量為公斤。<br>'+
+    '「變動」是最新交易日與前一個<b>有交易紀錄</b>的日子相比，中間若遇休市會自動跳過。'+
+    '單日若無前期資料則顯示「—」。</div>';
+  const el=$('#vegQ');
+  if(el){el.oninput=function(){STORE.d.ui.vegQ=this.value;STORE.save();
+    const p=this.selectionStart;RENDER.veg();const n=$('#vegQ');if(n){n.focus();n.setSelectionRange(p,p);}};}
+};
+function vegSort(s){STORE.d.ui.vegSort=s;STORE.save();RENDER.veg();}
+
+/* ========== 生活情報 ========== */
+RENDER.life=function(){
+  const S=SHOPPING_SEED;
+  $('#content').innerHTML=
+    card('換季與檔期行事曆',
+      S.calendar.map(c=>'<div class="cal-row"><div class="cal-m">'+esc(c.m)+'</div><div class="cal-b">'+esc(c.b)+'</div></div>').join('')+
+      '<div class="warnbox" style="margin-bottom:0">'+esc(S.note)+'</div>')+
+    '<div class="mt"></div>'+
+    card('品牌與通路查詢',
+      '<p class="muted sm" style="margin:0 0 10px">這裡不放折扣數字——沒有任何公開資料源能可靠提供「今天哪裡有折」，寫死只會給你過期資訊。點擊直接查該品牌目前的官方優惠公告。</p>'+
+      '<div class="linkgrid">'+S.brands.map(b=>
+        '<a href="https://www.google.com/search?q='+encodeURIComponent(b+' 官網 優惠 特賣')+
+        '" target="_blank" rel="noopener">'+esc(b)+'</a>').join('')+'</div>');
+};
+
+/* ========== 法律知識 ========== */
+RENDER.law=function(){
+  const tab=STORE.d.ui.lawTab||'inherit';
+  const keys=Object.keys(LAW_SEED);
+  const L=LAW_SEED[tab];
+  const body=L.blocks.map(b=>{
+    let h='<div class="law-sec"><h4>'+esc(b.h)+'</h4>';
+    if(b.art)h+='<div class="law-art">'+esc(b.art)+'</div>';
+    if(b.table)h+='<table class="tbl" style="margin:8px 0"><tbody>'+
+      b.table.map(r=>'<tr><td style="white-space:normal"><b>'+esc(r[0])+'</b></td><td style="white-space:normal">'+esc(r[1])+'</td></tr>').join('')+
+      '</tbody></table>';
+    if(b.links)h+='<div class="linkgrid" style="margin:8px 0">'+
+      b.links.map(l=>'<a href="'+esc(l[1])+'" target="_blank" rel="noopener">'+esc(l[0])+'</a>').join('')+'</div>';
+    if(b.warn)h+='<div class="warnbox"><b>注意：</b>'+esc(b.warn)+'</div>';
+    if(b.note)h+='<p class="muted sm" style="margin:7px 0 0;line-height:1.7">'+esc(b.note)+'</p>';
+    if(b.cite)h+='<div class="law-cite">依據：'+esc(b.cite)+'</div>';
+    return h+'</div>';
+  }).join('');
+  $('#content').innerHTML=
+    '<div class="warnbox"><b>這不是法律意見。</b>以下內容整理自公開法規資料庫與主管機關公告，查證日期為 '+LAW_VERIFIED_AT+
+    '。法規會修正、金額會逐年調整，個案適用更取決於具體事實。真的要處理繼承、簽約或權利主張，請找律師或地政士、會計師。</div>'+
+    '<div class="btn-row mb">'+keys.map(k=>'<button class="chip '+(tab===k?'active':'')+
+      '" onclick="lawTab(\''+k+'\')">'+esc(LAW_SEED[k].title)+'</button>').join('')+'</div>'+
+    card(L.title,'<p class="muted sm" style="margin:0 0 4px;line-height:1.75">'+esc(L.intro)+'</p>'+body);
+};
+function lawTab(k){STORE.d.ui.lawTab=k;STORE.save();RENDER.law();}
+
+/* ========== 資料來源與設定 ========== */
+RENDER.settings=function(){
+  const feeds=DATA.feeds||{};
+  const rows=Object.keys(feeds).map(k=>{
+    const f=feeds[k];const ok=f.ok!==false;
+    return '<div class="srcstat"><div><span class="dot '+(ok?'ok':'bad')+'"></span>'+
+      esc(f.source||k)+' <span class="muted sm">· '+esc(f.name||'')+'</span>'+
+      (ok?'':'<div class="muted sm" style="margin-left:15px">'+esc(f.error||'抓取失敗')+'</div>')+'</div>'+
+      '<div class="muted sm">'+esc(f.items?f.items.length+' 則':'—')+'</div></div>';
+  }).join('');
+  const veg=DATA.veg||{};
+  const vegOk=veg.ok!==false;
+  $('#content').innerHTML=
+    '<div class="grid g2">'+
+      card('資料來源狀態',rows+
+        '<div class="srcstat"><div><span class="dot '+(vegOk?'ok':'bad')+'"></span>'+
+        esc(veg.source||'農業部 農產品批發市場交易行情')+' <span class="muted sm">· 菜價</span>'+
+        (vegOk?'':'<div class="muted sm" style="margin-left:15px">'+esc(veg.error||'抓取失敗')+'</div>')+
+        '</div><div class="muted sm">'+((veg.items||[]).length)+' 項</div></div>'+
+        '<p class="muted sm mt">更新時間：'+esc(DATA.updated_at||'—')+'<br>'+
+        '讀取方式：'+(DATA_SOURCE==='file'?'data/db.json':'內建種子資料（本機開啟）')+'</p>')+
+      card('關於這個站',
+        '<p class="muted sm" style="line-height:1.8;margin-top:0">'+
+        '所有內容來自公開 RSS 與政府開放 API，<b>不需要任何 API 金鑰、不綁信用卡、沒有用量限制</b>。'+
+        '更新由 GitHub Actions 定時執行，資料存在 repo 裡的 data/db.json。<br><br>'+
+        '這個站<b>不收集也不儲存任何個人資料</b>。收藏、主題、閱讀紀錄只存在你目前這台電腦的瀏覽器裡，'+
+        '不會上傳、不會進 repo，換電腦也不會跟著走。</p>'+
+        '<div class="btn-row mt">'+
+        '<button class="btn ghost sm" onclick="document.getElementById(\'themeBtn\').click()">切換深／淺色</button>'+
+        '<button class="btn danger sm" onclick="resetLocal()">清除本機偏好</button></div>')+
+    '</div>'+
+    '<div class="mt"></div>'+
+    card('我的收藏 <span class="muted sm">· '+((STORE.d.starred||[]).length)+' 則</span>',
+      (function(){const all=allFeedItems();const st=all.filter(i=>isStar(i.id));
+        return st.length?st.map(feedItemHtml).join(''):emptyBox('還沒有收藏。在任何文章左邊按 ★ 就會收進這裡。');})());
+};
+function resetLocal(){
+  confirmDialog('這會清除本機的收藏、閱讀紀錄與偏好設定（不影響任何線上資料）。確定嗎？',
+    function(){STORE.reset();toast('已清除','ok');nav('dashboard');},'清除');
+}
+
+/* ========== KNOWLEDGE CENTER ========== */
+const KUI={tab:'articles',cat:'全部',level:'全部',q:''};
+RENDER.knowledge=function(){
+  const v=STORE.d.ui.view;
+  if(v&&v.type==='article')return renderArticle(v.id);
+  if(v&&v.type==='course')return renderCourse(v.id);
+  const tabs=[['articles','文章'],['courses','課程'],['glossary','名詞辭典'],['faq','常見問題'],['fav','我的收藏']];
+  let body='';
+  if(KUI.tab==='articles')body=kArticles();
+  else if(KUI.tab==='courses')body=kCourses();
+  else if(KUI.tab==='glossary')body=kGlossary();
+  else if(KUI.tab==='faq')body=kFaq();
+  else body=kFav();
+  $('#content').innerHTML='<div class="btn-row mb">'+tabs.map(t=>'<button class="chip '+(KUI.tab===t[0]?'active':'')+'" onclick="kTab(\''+t[0]+'\')">'+t[1]+'</button>').join('')+'</div><div id="kBody">'+body+'</div>';
+};
+function kTab(t){KUI.tab=t;RENDER.knowledge();}
+function artResults(){
+  let arts=STORE.d.articles.filter(a=>(KUI.cat==='全部'||a.cat===KUI.cat)&&(KUI.level==='全部'||a.level===KUI.level)&&
+    (!KUI.q||(a.title+a.plain+a.cat).toLowerCase().includes(KUI.q.toLowerCase())));
+  return arts.length?('<div class="grid g3">'+arts.map(artCard).join('')+'</div>'):'<div class="empty"><div class="big">🔍</div>找不到符合的文章</div>';
+}
+function kArticles(){
+  const cats=['全部',...new Set(STORE.d.articles.map(a=>a.cat))];
+  const levels=['全部','入門','初級','中級'];
+  return '<div class="card mb"><div class="row" style="align-items:flex-end">'+
+    '<label class="fld" style="flex:1;margin:0"><span>搜尋文章</span><input id="kq" placeholder="🔍 輸入關鍵字…" value="'+esc(KUI.q)+'"></label></div>'+
+    '<div class="btn-row mt">分類：'+cats.map(c=>'<button class="chip '+(KUI.cat===c?'active':'')+'" onclick="kFilter(\'cat\',\''+c+'\')">'+c+'</button>').join('')+'</div>'+
+    '<div class="btn-row mt">難度：'+levels.map(l=>'<button class="chip '+(KUI.level===l?'active':'')+'" onclick="kFilter(\'level\',\''+l+'\')">'+l+'</button>').join('')+'</div></div>'+
+    '<div id="kResults">'+artResults()+'</div>';
+}
+function artCard(a){const fav=STORE.d.favorites.includes(a.id);
+  return '<div class="card"><div class="card-h"><span class="badge b-'+a.level+'">'+a.level+'</span><button class="iconbtn" onclick="favFromList(\''+a.id+'\')">'+(fav?'★':'☆')+'</button></div>'+
+   '<h3 style="cursor:pointer" onclick="openArticle(\''+a.id+'\')">'+esc(a.title)+'</h3>'+
+   '<p class="muted sm" style="margin:6px 0 10px">'+esc(a.plain.slice(0,56))+'…</p>'+
+   '<div class="list-split" style="border:none;padding:0"><span class="badge">'+esc(a.cat)+'</span><button class="btn sm ghost" onclick="openArticle(\''+a.id+'\')">閱讀 · '+a.mins+' 分</button></div></div>';
+}
+function kFilter(k,v){KUI[k]=v;RENDER.knowledge();}
+function favFromList(id){toggleFav(id);RENDER.knowledge();}
+function openArticle(id){STORE.d.ui.view={type:'article',id};recordReading(id);nav('knowledge',true);}
+function openCourse(id){STORE.d.ui.view={type:'course',id};STORE.save();nav('knowledge',true);}
+function kBack(){STORE.d.ui.view=null;STORE.save();nav('knowledge');}
+function renderArticle(id){
+  const a=STORE.d.articles.find(x=>x.id===id);if(!a){kBack();return;}
+  const fav=STORE.d.favorites.includes(id);const note=STORE.d.notes[id]||'';
+  const rel=(a.related||[]).map(r=>STORE.d.articles.find(x=>x.id===r)).filter(Boolean);
+  $('#tb-extra').innerHTML='<button class="tb-btn" onclick="kBack()">‹ 返回</button>';
+  $('#content').innerHTML='<div class="card" style="max-width:820px;margin:0 auto">'+
+    '<div class="card-h"><div><span class="badge b-'+a.level+'">'+a.level+'</span> <span class="badge">'+esc(a.cat)+'</span></div>'+
+    '<button class="btn sm ghost" onclick="favDetail(\''+id+'\')">'+(fav?'★ 已收藏':'☆ 收藏')+'</button></div>'+
+    '<h2 style="margin:6px 0 4px">'+esc(a.title)+'</h2><div class="muted sm mb">閱讀時間約 '+a.mins+' 分鐘</div>'+
+    sec('白話解釋',a.plain)+sec('生活案例',a.example)+
+    '<h4 style="margin:16px 0 6px">重點整理</h4><ul>'+a.points.map(p=>'<li>'+esc(p)+'</li>').join('')+'</ul>'+
+    (rel.length?('<h4 style="margin:16px 0 6px">相關知識</h4>'+rel.map(r=>'<a class="chip" style="display:inline-block;margin:0 6px 6px 0" onclick="openArticle(\''+r.id+'\')">'+esc(r.title)+'</a>').join('')):'')+
+    '<h4 style="margin:18px 0 6px">我的筆記</h4><textarea id="noteBox" rows="3" placeholder="寫下你的心得…">'+esc(note)+'</textarea>'+
+    '<div class="btn-row mt"><button class="btn sm" onclick="saveNote(\''+id+'\')">儲存筆記</button></div></div>';
+}
+function sec(h,b){return '<h4 style="margin:16px 0 6px">'+h+'</h4><p style="line-height:1.8">'+esc(b)+'</p>';}
+function favDetail(id){toggleFav(id);renderArticle(id);}
+function saveNote(id){STORE.d.notes[id]=$('#noteBox').value;STORE.save();toast('筆記已儲存','ok');}
+function kCourses(){return '<div class="grid g2">'+STORE.d.courses.map(c=>{const d=c.lessons.filter(l=>l.done).length,p=Math.round(d/c.lessons.length*100);
+  return '<div class="card"><div class="card-h"><span class="badge b-'+c.level+'">'+c.level+'</span><span class="muted sm">'+d+'/'+c.lessons.length+' 課</span></div>'+
+   '<h3>'+esc(c.title)+'</h3><p class="muted sm">'+esc(c.desc)+'</p><div class="progress mt"><i style="width:'+p+'%"></i></div>'+
+   '<div class="btn-row mt"><button class="btn sm" onclick="openCourse(\''+c.id+'\')">'+(p===100?'複習':'繼續學習')+'</button></div></div>';}).join('')+'</div>';}
+function renderCourse(id){const c=STORE.d.courses.find(x=>x.id===id);if(!c){kBack();return;}
+  const d=c.lessons.filter(l=>l.done).length,p=Math.round(d/c.lessons.length*100);
+  $('#tb-extra').innerHTML='<button class="tb-btn" onclick="kBack()">‹ 返回</button>';
+  $('#content').innerHTML='<div class="card" style="max-width:720px;margin:0 auto"><span class="badge b-'+c.level+'">'+c.level+'</span>'+
+   '<h2 style="margin:8px 0 4px">'+esc(c.title)+'</h2><p class="muted">'+esc(c.desc)+'</p>'+
+   '<div class="list-split" style="border:none;padding:4px 0"><span class="sm muted">進度 '+p+'%</span></div><div class="progress mb"><i style="width:'+p+'%"></i></div>'+
+   c.lessons.map((l,i)=>'<div class="list-split"><label style="display:flex;gap:10px;align-items:center;cursor:pointer;margin:0"><input type="checkbox" style="width:auto" '+(l.done?'checked':'')+' onchange="toggleLesson(\''+id+'\','+i+')"> <span '+(l.done?'style="text-decoration:line-through;color:var(--muted)"':'')+'>'+(i+1)+'. '+esc(l.t)+'</span></label><span class="badge '+(l.done?'b-green':'')+'">'+(l.done?'完成':'未完成')+'</span></div>').join('')+'</div>';
+}
+function toggleLesson(cid,i){const c=STORE.d.courses.find(x=>x.id===cid);c.lessons[i].done=!c.lessons[i].done;STORE.save();toast(c.lessons[i].done?'完成一課 🎉':'已取消完成',c.lessons[i].done?'ok':'');renderCourse(cid);}
+function kGlossary(){return '<div class="card">'+STORE.d.glossary.map(g=>'<div class="list-split"><div><b>'+esc(g.term)+'</b><div class="muted sm">'+esc(g.def)+'</div></div></div>').join('')+'</div>';}
+function kFaq(){return '<div class="card">'+STORE.d.faq.map((f,i)=>'<details '+(i===0?'open':'')+' style="border-bottom:1px solid var(--line);padding:11px 0"><summary style="cursor:pointer;font-weight:600">'+esc(f.q)+'</summary><p class="muted" style="margin:8px 0 0">'+esc(f.a)+'</p></details>').join('')+'</div>';}
+function kFav(){const favs=STORE.d.favorites.map(id=>STORE.d.articles.find(a=>a.id===id)).filter(Boolean);
+  const hist=STORE.d.readingHistory.map(h=>({a:STORE.d.articles.find(x=>x.id===h.id),at:h.at})).filter(x=>x.a);
+  return '<div class="grid g2"><div class="card"><div class="card-h"><h3>★ 收藏文章</h3></div>'+
+    (favs.length?favs.map(a=>'<div class="list-split"><span class="sm" style="cursor:pointer" onclick="openArticle(\''+a.id+'\')">'+esc(a.title)+'</span><button class="iconbtn" onclick="favFromList(\''+a.id+'\')">★</button></div>').join(''):'<div class="empty">尚無收藏，到文章點 ☆ 加入</div>')+'</div>'+
+    '<div class="card"><div class="card-h"><h3>閱讀紀錄</h3></div>'+
+    (hist.length?hist.map(x=>'<div class="list-split"><span class="sm" style="cursor:pointer" onclick="openArticle(\''+x.a.id+'\')">'+esc(x.a.title)+'</span><span class="muted sm">'+x.at+'</span></div>').join(''):'<div class="empty">尚無閱讀紀錄</div>')+'</div></div>';
+}
+document.addEventListener('input',e=>{if(e.target&&e.target.id==='kq'){KUI.q=e.target.value;const r=$('#kResults');if(r)r.innerHTML=artResults();}});
+
+/* ========== CALCULATORS ========== */
+const CALC={tool:'compound'};
+const TOOLS={
+ compound:{name:'複利計算器',
+   fields:[{k:'p',label:'起始本金',def:100000,suf:'元'},{k:'pmt',label:'每月投入',def:5000,suf:'元'},
+           {k:'r',label:'年報酬率',def:6,suf:'%',max:40},{k:'y',label:'investment 年數',label2:'投資年數',def:20,suf:'年',max:60}],
+   compute(v){const n=v.y*12,i=v.r/100/12;let bal=v.p;const series=[v.p];
+     for(let m=1;m<=n;m++){bal=bal*(1+i)+v.pmt;if(m%12===0)series.push(bal);}
+     const contrib=v.p+v.pmt*n;const interest=bal-contrib;
+     return{rows:[['期末本利和',fmt(bal),'big'],['累計投入本金',fmt(contrib)],['累計報酬',fmt(interest),'pos']],
+       assume:['每月複利計算，報酬率固定為年 '+v.r+'%','每月月底投入 '+fmt(v.pmt)+'，共 '+v.y+' 年','未計入稅負、手續費與通膨'],
+       chart(cv){lineChart(cv,series.map((_,i)=>i+'y'),series,'#2563eb');}};}},
+ savings:{name:'儲蓄目標試算',
+   fields:[{k:'goal',label:'目標金額',def:600000,suf:'元'},{k:'y',label:'達成年數',def:5,suf:'年',max:50},
+           {k:'r',label:'年利率/報酬率',def:2,suf:'%',max:40}],
+   compute(v){const n=v.y*12,i=v.r/100/12;const pmt=i===0?v.goal/n:v.goal*i/(Math.pow(1+i,n)-1);
+     const contrib=pmt*n;const interest=v.goal-contrib;let bal=0;const series=[0];
+     for(let m=1;m<=n;m++){bal=bal*(1+i)+pmt;if(m%12===0)series.push(bal);}
+     return{rows:[['每月需存',fmt(pmt),'big'],['累計本金投入',fmt(contrib)],['利息貢獻',fmt(Math.max(0,interest)),'pos']],
+       assume:['為達成 '+fmt(v.goal)+' 的目標，需每月固定存入上述金額','年利率假設固定為 '+v.r+'%，每月複利','未計入稅負與通膨'],
+       chart(cv){lineChart(cv,series.map((_,i)=>i+'y'),series,'#16a34a');}};}},
+ loan:{name:'貸款月付金試算',
+   fields:[{k:'amt',label:'貸款金額',def:1000000,suf:'元'},{k:'r',label:'年利率',def:3,suf:'%',max:30},
+           {k:'y',label:'貸款年數',def:20,suf:'年',max:40}],
+   compute(v){const n=v.y*12,i=v.r/100/12;const pay=i===0?v.amt/n:v.amt*i*Math.pow(1+i,n)/(Math.pow(1+i,n)-1);
+     const total=pay*n;const interest=total-v.amt;
+     return{rows:[['每月應繳',fmt(pay),'big'],['總還款金額',fmt(total)],['總利息支出',fmt(interest),'neg']],
+       assume:['採本息平均攤還（每月繳款相同）','年利率固定為 '+v.r+'%，共 '+(v.y*12)+' 期','未計入開辦費、寬限期與提前還款'],
+       chart(cv){donut(cv,[{label:'本金',value:v.amt,color:'#2563eb'},{label:'利息',value:interest,color:'#dc2626'}]);}};}},
+ inflation:{name:'通膨與購買力試算',
+   fields:[{k:'amt',label:'目前金額',def:1000000,suf:'元'},{k:'r',label:'年通膨率',def:2.5,suf:'%',max:30},
+           {k:'y',label:'年數',def:20,suf:'年',max:60}],
+   compute(v){const f=Math.pow(1+v.r/100,v.y);const future=v.amt/f;const needed=v.amt*f;
+     const series=[];for(let yy=0;yy<=v.y;yy++)series.push(v.amt/Math.pow(1+v.r/100,yy));
+     return{rows:[[v.y+' 年後的實質購買力',fmt(future),'big'],['相當於現在的',fmt(future)],['要維持同等購買力需有',fmt(needed),'neg']],
+       assume:['通膨率固定為年 '+v.r+'%','購買力 = 金額 ÷ (1+通膨率)^年數','僅反映物價侵蝕，未計投資報酬'],
+       chart(cv){lineChart(cv,series.map((_,i)=>i+'y'),series,'#d97706');}};}},
+ emergency:{name:'緊急預備金計算',
+   fields:[{k:'exp',label:'每月必要支出',def:30000,suf:'元'},{k:'mo',label:'想準備幾個月',def:6,suf:'個月',max:24},
+           {k:'cur',label:'目前已存',def:120000,suf:'元'},{k:'save',label:'每月可再存',def:8000,suf:'元'}],
+   compute(v){const target=v.exp*v.mo;const gap=Math.max(0,target-v.cur);const months=v.save>0?Math.ceil(gap/v.save):Infinity;
+     const pct=Math.min(100,Math.round(v.cur/target*100));
+     return{rows:[['建議預備金目標',fmt(target),'big'],['目前進度',pct+'%'],['還差',fmt(gap),'neg'],['預計達成還要',gap===0?'已達成 ✅':(months===Infinity?'—':months+' 個月')]],
+       assume:['建議預備金 = 每月必要支出 × 月數（一般 3～6 個月）','預備金請放在活存/定存等隨時可動用處','不投入波動性資產'],
+       chart(cv){barChart(cv,['目前','目標'],[{name:'',color:'#2563eb',data:[v.cur,target]}]);}};}},
+};
+RENDER.calculators=function(){
+  const tools=Object.keys(TOOLS);
+  $('#content').innerHTML='<div class="btn-row mb">'+tools.map(k=>'<button class="chip '+(CALC.tool===k?'active':'')+'" onclick="calcTool(\''+k+'\')">'+TOOLS[k].name+'</button>').join('')+'</div>'+
+    '<div class="grid g2"><div class="card"><div class="card-h"><h3>'+TOOLS[CALC.tool].name+'</h3></div><div id="calcForm"></div>'+
+    '<div class="btn-row mt"><button class="btn ghost sm" onclick="calcReset()">重設</button><button class="btn sm" onclick="calcSave()">儲存試算</button></div></div>'+
+    '<div class="card"><div class="card-h"><h3>試算結果</h3></div><div id="calcRes"></div>'+
+    '<canvas id="calcChart" data-h="200" class="mt"></canvas>'+
+    '<p class="muted sm mt">※ 試算結果僅供教育與情境分析，採簡化假設，<b>不保證任何投資收益</b>，實際會因稅費、通膨與市場波動而不同。</p></div></div>';
+  calcRenderForm();
+};
+function calcTool(k){CALC.tool=k;RENDER.calculators();}
+function calcVals(){const t=TOOLS[CALC.tool];const v={};let ok=true;
+  t.fields.forEach(f=>{const el=$('#f_'+f.k);const raw=el?el.value:f.def;const num=parseFloat(raw);
+    const lab=el?el.closest('label'):null;
+    const bad=isNaN(num)||num<0||(f.max&&num>f.max);
+    if(lab)lab.classList.toggle('bad',bad);if(bad)ok=false;v[f.k]=isNaN(num)?0:num;});
+  return ok?v:null;}
+function calcRenderForm(def){const t=TOOLS[CALC.tool];
+  $('#calcForm').innerHTML=t.fields.map(f=>'<label class="fld"><span>'+(f.label2||f.label)+'（'+f.suf+'）</span>'+
+    '<input id="f_'+f.k+'" type="number" step="any" value="'+(def?f.def:(getCalcDefault(f)))+'"><span class="err-msg">請輸入 0～'+(f.max||'∞')+' 的有效數字</span></label>').join('');
+  calcCompute();
+}
+function getCalcDefault(f){return f.def;}
+function calcReset(){calcRenderForm(true);toast('已重設為預設值');}
+function calcCompute(){const v=calcVals();const res=$('#calcRes');
+  if(!v){res.innerHTML='<div class="empty">請修正紅色欄位的輸入</div>';return;}
+  const out=TOOLS[CALC.tool].compute(v);
+  res.innerHTML=out.rows.map(r=>r[2]==='big'
+    ?'<div class="kpi mb"><div class="label">'+r[0]+'</div><div class="val">'+r[1]+'</div></div>'
+    :'<div class="list-split"><span class="muted">'+r[0]+'</span><span class="pill-amt '+(r[2]||'')+'">'+r[1]+'</span></div>').join('')+
+    '<h4 style="margin:14px 0 6px">計算假設</h4><ul class="muted sm" style="margin:0;padding-left:18px">'+out.assume.map(a=>'<li>'+esc(a)+'</li>').join('')+'</ul>';
+  out.chart($('#calcChart'));
+}
+function calcSave(){const v=calcVals();if(!v){toast('請先修正輸入','bad');return;}
+  const out=TOOLS[CALC.tool].compute(v);
+  STORE.d.calcHistory.unshift({id:uid(),tool:TOOLS[CALC.tool].name,at:todayStr(),headline:out.rows[0][0]+'：'+out.rows[0][1]});
+  STORE.d.calcHistory=STORE.d.calcHistory.slice(0,30);STORE.save();toast('已儲存這次試算','ok');}
+document.addEventListener('input',e=>{if(e.target&&/^f_/.test(e.target.id||'')){calcCompute();}});
+
+
+/* ===================== 主題 + 啟動 ===================== */
+function applyTheme(){
+  const t=(STORE.d.settings&&STORE.d.settings.theme)||'light';
+  document.documentElement.setAttribute('data-theme',t);
+  $('#themeBtn').textContent=t==='dark'?'☀️':'🌙';
+}
+$('#themeBtn').onclick=function(){
+  STORE.d.settings.theme=(STORE.d.settings.theme==='dark')?'light':'dark';
+  STORE.save();applyTheme();RENDER[CURRENT]();
+};
+STORE.load();
+if(!STORE.d.settings.theme)STORE.d.settings.theme='light';
+applyTheme();
+buildNav();
+$('#content').innerHTML='<div class="empty">載入資料中…</div>';
+loadData().then(function(){ nav('dashboard'); });
+</script>
+</body>
+</html>
