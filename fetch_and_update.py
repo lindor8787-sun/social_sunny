@@ -5,7 +5,7 @@ Social ERP - 資料更新腳本
 零金鑰：所有來源都是公開 RSS / 開放 API，不需要任何 API key 或帳號。
 只用 Python 標準函式庫，不需要 pip install。
 """
-import json, os, re, sys, time, hashlib, urllib.request, urllib.error
+import json, os, re, sys, time, hashlib, urllib.request, urllib.error, urllib.parse
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
@@ -15,7 +15,10 @@ DB_PATH = os.path.join(ROOT, "data", "db.json")
 
 PER_FEED_CAP = 60          # 每個來源最多保留幾則
 VEG_DAYS = 10              # 菜價往回抓幾天
-VEG_MARKET_PREFIX = "台北"  # 只看台北的批發市場
+# 這支 API 每次最多回 1000 筆且分頁參數無效（Page 2 以上一律空），
+# 但 MarketName 篩選有效。單一市場單日約 300 多筆，遠低於上限，
+# 所以改成「逐日 × 逐市場」查詢，徹底避開截斷。
+VEG_MARKETS = ["台北一", "台北二"]
 VEG_LIST_CAP = 60
 HTTP_TIMEOUT = 30
 RETRIES = 3
@@ -26,7 +29,6 @@ FEEDS = [
     {"key": "news",         "name": "時事",           "source": "公視新聞",        "url": "https://news.pts.org.tw/xml/newsfeed.xml"},
     {"key": "technews",     "name": "科技與海外市場", "source": "TechNews 科技新報", "url": "https://cdn.technews.tw/feed/"},
     {"key": "techorange",   "name": "數位轉型",       "source": "TechOrange 科技報橘", "url": "https://techorange.com/feed/"},
-    {"key": "motive",       "name": "行銷趨勢",       "source": "Motive 商業洞察",  "url": "https://www.motive.com.tw/?feed=rss2"},
     {"key": "managertoday", "name": "企劃與方法論",   "source": "經理人 Managertoday", "url": "https://rss.bnextmedia.com.tw/feed/managertoday/"},
 ]
 
@@ -212,22 +214,43 @@ def from_roc(s):
         return None
 
 
-def fetch_veg():
+def fetch_veg_rows():
+    """逐日 × 逐市場抓取，避開 1000 筆截斷。回傳所有交易列。"""
     today = datetime.now(TPE).date()
-    start = today - timedelta(days=VEG_DAYS)
-    url = "%s?Start_time=%s&End_time=%s" % (MOA_API, to_roc(start), to_roc(today))
-    log("  查詢", url)
-    data = json.loads(http_get(url).decode("utf-8", "ignore"))
-    rows = data.get("Data") or []
+    rows = []
+    truncated = 0
+    for back in range(VEG_DAYS + 1):
+        day = to_roc(today - timedelta(days=back))
+        for market in VEG_MARKETS:
+            url = "%s?Start_time=%s&End_time=%s&MarketName=%s" % (
+                MOA_API, day, day, urllib.parse.quote(market))
+            try:
+                data = json.loads(http_get(url, tries=2).decode("utf-8", "ignore"))
+            except Exception as e:
+                log("    %s %s 取得失敗：%s" % (day, market, e))
+                continue
+            got = data.get("Data") or []
+            rows.extend(got)
+            if data.get("Next"):
+                truncated += 1
+    if truncated:
+        log("  警告：%d 次查詢回報仍有後續資料，可能被截斷" % truncated)
+    return rows
+
+
+def fetch_veg():
+    rows = fetch_veg_rows()
     log("  取得 %d 筆原始交易資料" % len(rows))
 
     series = {}   # (crop, market) -> {date: avg}
     meta = {}
     for r in rows:
         market = (r.get("MarketName") or "").strip()
-        if not market.startswith(VEG_MARKET_PREFIX):
+        if market not in VEG_MARKETS:
             continue
         crop = (r.get("CropName") or "").strip()
+        if crop == "休市":
+            continue
         d = (r.get("TransDate") or "").strip()
         try:
             avg = float(r.get("Avg_Price"))
@@ -276,7 +299,7 @@ def fetch_veg():
     return {
         "updated_at": datetime.now(TPE).isoformat(),
         "latest_date": latest,
-        "market_label": VEG_MARKET_PREFIX + "各批發市場",
+        "market_label": "、".join(VEG_MARKETS),
         "source": "農業部 農產品批發市場交易行情",
         "source_url": "https://data.moa.gov.tw/",
         "items": items,
