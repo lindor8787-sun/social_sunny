@@ -1,0 +1,46 @@
+name: 更新資料
+
+# 台北時間每天 09:00 與 20:00（UTC+8，台灣不實施日光節約時間）
+# 09:00 台北 = 01:00 UTC ；20:00 台北 = 12:00 UTC
+on:
+  schedule:
+    - cron: '0 1,12 * * *'
+  workflow_dispatch:        # 允許到 Actions 頁籤手動按一下就跑
+
+permissions:
+  contents: write           # 需要寫入權限才能把更新後的 db.json commit 回 repo
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 取出 repo
+        uses: actions/checkout@v4
+
+      - name: 安裝 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 這支腳本只用 Python 標準函式庫，沒有任何 pip 相依，
+      # 也不需要任何 API 金鑰或 Secrets。
+
+      - name: 抓取各來源並更新 data/db.json
+        run: python fetch_and_update.py
+
+      - name: 有變動才 commit
+        run: |
+          if [ -z "$(git status --porcelain data/db.json)" ]; then
+            echo "資料沒有變化，不產生 commit。"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/db.json
+          git commit -m "資料更新 $(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M')"
+          git push
