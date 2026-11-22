@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-11-22T21:56:35.124405+08:00",
+ "updated_at": "2026-11-22T22:02:13.873248+08:00",
  "seed_note": "這是隨專案附上的種子資料（部分為實際抓取的真實條目），讓你在還沒設定 GitHub Actions 前打開就看得到東西。跑過一次 workflow 後會被完整的即時資料覆蓋。",
  "status": {
   "ok": [
@@ -17,7 +17,7 @@
    "name": "時事",
    "source": "公視新聞",
    "url": "https://news.pts.org.tw/xml/newsfeed.xml",
-   "updated_at": "2026-11-22T21:55:38.433184+08:00",
+   "updated_at": "2026-11-22T22:00:48.145654+08:00",
    "ok": true,
    "items": [
     {
@@ -305,7 +305,7 @@
    "name": "科技與海外市場",
    "source": "TechNews 科技新報",
    "url": "https://cdn.technews.tw/feed/",
-   "updated_at": "2026-11-22T21:55:39.186556+08:00",
+   "updated_at": "2026-11-22T22:00:49.028494+08:00",
    "ok": true,
    "items": [
     {
@@ -692,7 +692,7 @@
    "name": "數位轉型",
    "source": "TechOrange 科技報橘",
    "url": "https://techorange.com/feed/",
-   "updated_at": "2026-11-22T21:55:40.826571+08:00",
+   "updated_at": "2026-11-22T22:00:51.114823+08:00",
    "ok": true,
    "items": [
     {
@@ -877,34 +877,6 @@
     }
    ]
   },
-  "motive": {
-   "name": "行銷趨勢",
-   "source": "Motive 商業洞察",
-   "url": "https://www.motive.com.tw/?feed=rss2",
-   "updated_at": "2026-11-18T14:30:00+08:00",
-   "ok": false,
-   "items": [
-    {
-     "id": "seedm01",
-     "title": "品牌重塑其實不只是包裝設計",
-     "link": "https://www.motive.com.tw/",
-     "date": "2026-09-17T00:00:00+08:00",
-     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
-     "source": "Motive 商業洞察",
-     "added_date": "2026-11-18T14:30:00+08:00"
-    },
-    {
-     "id": "seedm02",
-     "title": "從 UNIQLO 學：品牌老化的任務要怎麼解？",
-     "link": "https://www.motive.com.tw/",
-     "date": "2026-09-17T00:00:00+08:00",
-     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
-     "source": "Motive 商業洞察",
-     "added_date": "2026-11-18T14:30:00+08:00"
-    }
-   ],
-   "error": "syntax error: line 1, column 0"
-  },
   "managertoday": {
    "name": "企劃與方法論",
    "source": "經理人 Managertoday",
@@ -962,7 +934,7 @@
   }
  },
  "veg": {
-  "updated_at": "2026-11-22T21:56:35.123707+08:00",
+  "updated_at": "2026-11-22T22:02:13.872466+08:00",
   "latest_date": "115.11.20",
   "market_label": "台北一、台北二",
   "source": "農業部 農產品批發市場交易行情",
