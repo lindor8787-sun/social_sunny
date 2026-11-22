@@ -1,67 +1,2054 @@
 {
- "updated_at": "2026-11-18T14:30:00+08:00",
+ "updated_at": "2026-11-22T21:29:36.205086+08:00",
  "seed_note": "這是隨專案附上的種子資料（部分為實際抓取的真實條目），讓你在還沒設定 GitHub Actions 前打開就看得到東西。跑過一次 workflow 後會被完整的即時資料覆蓋。",
- "status": {"ok": [], "failed": []},
+ "status": {
+  "ok": [
+   "公視新聞",
+   "TechNews 科技新報",
+   "TechOrange 科技報橘",
+   "農業部菜價"
+  ],
+  "failed": [
+   "Motive 商業洞察",
+   "經理人 Managertoday"
+  ]
+ },
  "feeds": {
   "news": {
-   "name": "時事", "source": "公視新聞", "url": "https://news.pts.org.tw/xml/newsfeed.xml",
-   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "name": "時事",
+   "source": "公視新聞",
+   "url": "https://news.pts.org.tw/xml/newsfeed.xml",
+   "updated_at": "2026-11-22T21:29:26.038239+08:00",
+   "ok": true,
    "items": [
-    {"id":"seedn01","title":"黃仁勳稱若能回鍋輝達深感榮幸 董事長：已啟動執行長遴選程序","link":"https://news.pts.org.tw/article/836249","date":"2026-11-18T13:47:32+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedn02","title":"輝達宣示擴大供應鏈合作 台積電、鴻海等多個台廠入列","link":"https://news.pts.org.tw/article/836248","date":"2026-11-18T13:45:28+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedn03","title":"大陸冷高壓南下 今入夜後全台降溫明顯","link":"https://news.pts.org.tw/article/836247","date":"2026-11-18T13:44:52+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedn04","title":"蔣萬安合體謝龍介掃街 沈伯洋重返內湖花市衝刺","link":"https://news.pts.org.tw/article/836246","date":"2026-11-18T13:44:21+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedn05","title":"廢非核公投意見會／洪毓祥推以核養綠提升能源韌性 王守誠：應正視台灣地質風險","link":"https://news.pts.org.tw/article/836250","date":"2026-11-18T13:07:59+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedn06","title":"台中里長候選人涉當詐團車手 開競選車面交收款遭警方逮捕","link":"https://news.pts.org.tw/article/836245","date":"2026-11-18T13:43:54+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"}
+    {
+     "id": "4dfdc55d2453",
+     "title": "沈伯洋辦城市行動展與民眾互動 蔣萬安邀盧秀燕、韓國瑜車掃",
+     "link": "https://news.pts.org.tw/article/836815",
+     "date": "2026-11-22T19:56:15+08:00",
+     "summary": "民進黨台北市長候選人沈伯洋舉辦「城市行動展」邀請民眾到場參與，也低調戴上帽子、口罩、前往各舞台關心現場狀況；尋求連任的台北市長蔣萬安也行程滿檔，上午到濱江市場拜票，晚間也邀請到台中市長盧秀燕、立法院長韓國瑜陪同車掃，爭取市民支持。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038199+08:00"
+    },
+    {
+     "id": "0b5d6f5721c0",
+     "title": "鼓山、小港增4本土登革熱案例 高雄衛生局將設採檢站供快篩",
+     "link": "https://news.pts.org.tw/article/836810",
+     "date": "2026-11-22T19:55:46+08:00",
+     "summary": "即將12月，但本土登革熱疫情仍不容忽視，因為高雄這兩天共新增4起案例，其中3例來自鼓山裕興里，最初是2名男性分別在15及20日出現發燒等症狀，都確診為登革病毒一型，由於兩人住處僅離15公尺，研判為社區群聚，經擴大採檢今（22）日再發現1例。第4例則來自港正里、為登革病毒二型，跟月初小港賣場群聚案其中1例有地緣關係，判斷屬於同一傳播鏈。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038210+08:00"
+    },
+    {
+     "id": "7b79bce004d3",
+     "title": "以為付58元運費可領免費年曆 民眾遭詐團騙走近1500萬元",
+     "link": "https://news.pts.org.tw/article/836809",
+     "date": "2026-11-22T19:55:13+08:00",
+     "summary": "花蓮一名71歲女子因為掉入愛情交友詐騙，領出100萬現金，到超商宅配寄出，好在她的小孩發現異狀，在包裹送達指定超商門市前，跟警方一起北上，直奔新北市的物流中心攔截；還有台北有人想要免費領取「2027年媽祖年曆」，在社群私訊網友，原本以為只需要付58元運費，沒想到最後在4天內被騙走近1500萬元。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038211+08:00"
+    },
+    {
+     "id": "5f7f8f0056d8",
+     "title": "選戰進入倒數階段 江啟臣、何欣純直搗對手票倉",
+     "link": "https://news.pts.org.tw/article/836814",
+     "date": "2026-11-22T19:48:24+08:00",
+     "summary": "選戰進入倒數階段，藍綠候選人把握選前黃金週，陸戰行程全面衝刺。台中方面，何欣純、江啟臣分頭深入對手票倉，隔空較勁意味濃厚；高雄方面，柯志恩、賴瑞隆也加緊車掃拜票，力拚催出支持者熱情，為選情再添柴火。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038204+08:00"
+    },
+    {
+     "id": "a579475dd034",
+     "title": "十分瀑布遊客遭虎頭蜂攻擊 17人送醫幸皆無生命危險",
+     "link": "https://news.pts.org.tw/article/836813",
+     "date": "2026-11-22T19:47:50+08:00",
+     "summary": "受到國內外觀光客喜愛的新北市平溪十分公園，中午發生遊客遭黃腳虎頭蜂攻擊事件，共計17人送醫，包含4名外籍旅客，所幸都意識清楚、沒有生命危險，警消獲報到現場，將傷者做緊急處置後分送北北基醫院，並封鎖現場，由動保人員摘除蜂巢，預計接下來3到4天可能預防性封園。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038206+08:00"
+    },
+    {
+     "id": "37e23964b948",
+     "title": "北北桃3市長現身挺李四川接棒 蘇巧慧林口車掃喊要跑遍29區",
+     "link": "https://news.pts.org.tw/article/836804",
+     "date": "2026-11-22T19:47:36+08:00",
+     "summary": "新北選戰打團體戰，新北市長侯友宜、台北市長蔣萬安、桃園市長張善政等人都現身力挺國民黨候選人李四川，強調市政一棒接一棒。民進黨蘇巧慧下午則舉辦土城、三峽造勢大會，包括行政院長卓榮泰、外交部長林佳龍等人都到場力挺。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038215+08:00"
+    },
+    {
+     "id": "04eaa6df6965",
+     "title": "北市動物園展區疑遭丟抱枕 園方：黑熊精神及進食皆正常",
+     "link": "https://news.pts.org.tw/article/836812",
+     "date": "2026-11-22T19:47:22+08:00",
+     "summary": "美國日前才有動物園河馬誤吞遊客掉入展場的毛帽，最後搶救不治。台北市立動物園，週六也出現遊客，疑似將抱枕丟到台灣黑熊活動區，抱枕當場被撕碎。保育員接獲民眾通報後，立即回收動物，檢視戶外區，發現包裝塑膠袋完整，回收的棉花能填充完整娃娃。截至目前為止，黑熊的精神、食慾及排泄狀況都正常。呼籲遊客千萬別把物品丟進展場，才能避免對動物健康造成傷害。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038208+08:00"
+    },
+    {
+     "id": "3d7c86c1a2ce",
+     "title": "墨西哥毒梟梅沙落網 引發激烈衝突釀11人死亡",
+     "link": "https://news.pts.org.tw/article/836811",
+     "date": "2026-11-22T19:46:51+08:00",
+     "summary": "美國FBI 10大通緝要犯之一、墨西哥大毒梟梅沙（Fausto Isidro Meza），當地時間20日晚間在軍方突襲行動中落網，卻引爆販毒集團激烈反抗，雙方爆發槍戰，造成4名軍人、7名武裝分子，共11人死亡。隨後幫派暴力蔓延，武裝分子四處縱火、焚燒車輛、封鎖公路，讓當地陷入混亂。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038209+08:00"
+    },
+    {
+     "id": "a2bb7fd4387f",
+     "title": "金管會祭限空令3.0 明起禁平盤以下放空",
+     "link": "https://news.pts.org.tw/article/836805",
+     "date": "2026-11-22T19:10:16+08:00",
+     "summary": "美股連日重挫，尤其是費半指數，上週下跌17%、也衝擊台股。傳出證交所今（22）日將和10大券商開會研討，是否將融資維持率降到120%？另外金管會將從明日起，全面禁止平盤下放空。對比10月台股盤中一度衝上近5萬點，短短1個多月指數大跳水，專家分析，明日台股開盤恐怕將繼續承壓，即使國安基金進場，也因為銀彈不夠，也只能達到緩跌的效果。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038214+08:00"
+    },
+    {
+     "id": "1d940bb957b8",
+     "title": "一週大事／普發2萬三讀通過 美中俄元首會晤（2026.11.16-11.22）",
+     "link": "https://news.pts.org.tw/article/836808",
+     "date": "2026-11-22T16:24:27+08:00",
+     "summary": "《公視新聞網》為您精選一週國內外大事，關注焦點包括：普發2萬三讀通過、老農津貼不副署、金管會祭限空令3.0、APEC峰會、育兒職場3大補助、美中俄元首會晤、COP31延長談判。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038212+08:00"
+    },
+    {
+     "id": "59511bd02aa7",
+     "title": "石舫亘陪吳宗憲夫人拜票 林國漳為宜蘭基層候選人輔選",
+     "link": "https://news.pts.org.tw/article/836803",
+     "date": "2026-11-22T13:26:56+08:00",
+     "summary": "在宜蘭，藍綠縣長候選人吳宗憲、林國漳也利用最後的週末衝刺選情。吳宗憲團隊今（22）日打出「夫人牌」，還請來蔣萬安的夫人石舫亘助陣，一起到羅東民生市場拜票；林國漳則為基層候選人輔選、參加競總成立大會，力拼全面勝利。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038216+08:00"
+    },
+    {
+     "id": "8cf65a4e7ad3",
+     "title": "明起再有2波冷空氣報到 週二起先濕後乾",
+     "link": "https://news.pts.org.tw/article/836806",
+     "date": "2026-11-22T13:26:02+08:00",
+     "summary": "大陸冷氣團影響，西半部地區今（22）日清晨感受偏冷，新竹關西測得6.6℃的低溫，是全台最低。今日白天起冷氣團減弱，氣溫有感回升，不過本週還會再有兩波冷空氣報到，週二起先濕後乾，氣溫變化快速，請民眾要留意溫差。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038213+08:00"
+    },
+    {
+     "id": "1c16c4f77433",
+     "title": "蔣萬安為賴士葆失言致歉 沈伯洋赴新竹為莊競程造勢",
+     "link": "https://news.pts.org.tw/article/836800",
+     "date": "2026-11-22T13:13:14+08:00",
+     "summary": "選前最後一個星期天，藍綠市長候選人陸戰齊發，在台北，蔣萬安深入濱江市場拜票，並為團隊昨（21）晚的失言風波公開致歉，沈伯洋則跨縣市「南下」新竹香山，替莊競程造勢助陣。而台中，同樣輸人不輸陣，民進黨何欣純啟動全區大車掃，透露前總統蔡英文將參與車掃活動，而國民黨的江啟臣行程也滿滿滿，直說市民就是他的最大咖。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038219+08:00"
+    },
+    {
+     "id": "a189b52b2582",
+     "title": "法務部統計違反選罷法案件 犯罪年齡有高齡化趨勢",
+     "link": "https://news.pts.org.tw/article/836799",
+     "date": "2026-11-22T13:08:05+08:00",
+     "summary": "大選即將到來，選舉不法還是層出不窮，台南與宜蘭都陸續發生疑似境外勢力介選以及賄選的案件。法務部統計，近10年違反《公職人員選罷法》的案件，9500多件中，超過7成5都跟賄選有關。而選舉犯罪的年齡層還有高齡化的趨勢，50歲以上佔整體8成3，其中有超過一半還是60歲以上。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038220+08:00"
+    },
+    {
+     "id": "658ae0a4838f",
+     "title": "不滿政府擬安置大量庇護者 英國小村通過象徵性獨立公投",
+     "link": "https://news.pts.org.tw/article/836798",
+     "date": "2026-11-22T13:07:29+08:00",
+     "summary": "英國一座只有584人的小村莊，竟然投票要「脫離英國」。原來是政府打算在附近的舊空軍基地，安置931名尋求庇護者，人數比全村居民還多。村民乾脆舉行一場象徵性獨立公投，不但獲得壓倒性支持，連自己的旗幟都設計好了。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038222+08:00"
+    },
+    {
+     "id": "34adc75e30c0",
+     "title": "國道1號麻豆路段車禍釀2死 駕駛與乘客拋飛後遭輾斃",
+     "link": "https://news.pts.org.tw/article/836802",
+     "date": "2026-11-22T13:01:33+08:00",
+     "summary": "國道1號南下台南麻豆路段，今（22）日凌晨近1時發生重大連環車禍，一輛轎車疑似操作不當擦撞護欄，再撞內側車道後翻覆，駕駛與同車乘客雙雙倒臥路上，遭來車輾壓，就連肇事車輛也被追撞起火，整起事故總共波及8車、釀成2死1傷，詳細肇事原因仍待警方調查。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038217+08:00"
+    },
+    {
+     "id": "dd17ccd73784",
+     "title": "合歡山降冰霰吸引追雪族 天候不穩有車輛一度受困",
+     "link": "https://news.pts.org.tw/article/836801",
+     "date": "2026-11-22T13:01:02+08:00",
+     "summary": "受到冷氣團影響，合歡山20日降下冰霰，吸引追雪族週末假期上山碰運氣，不過山區天候不穩，也發生車輛受困意外。另外低溫也帶動烏魚洄游，彰化漁民趁勢出海捕撈，一舉捕獲上千尾野生烏魚，迎來豐收。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038218+08:00"
+    },
+    {
+     "id": "4ce365f4a324",
+     "title": "新北選戰藍綠三重辦造勢晚會 李四川、蘇巧慧隔空拚場",
+     "link": "https://news.pts.org.tw/article/836790",
+     "date": "2026-11-22T11:43:20+08:00",
+     "summary": "選前黃金週末，藍綠新北市長選戰全力催票，李四川與蘇巧慧昨（21）晚都選在三重舉辦造勢晚會隔空拚人氣，白天更透過板橋車掃與本命區固樁全力催票，要在最後關頭衝高氣勢。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038223+08:00"
+    },
+    {
+     "id": "c2a7b5b72068",
+     "title": "全球暖化導致海冰消融 南極皇帝企鵝被列入瀕危",
+     "link": "https://news.pts.org.tw/article/836781",
+     "date": "2026-11-22T11:42:44+08:00",
+     "summary": "根據國際自然保護聯盟，最新發布的瀕危物種紅色名錄，南極的皇帝企鵝從近危升級到瀕危。科學家警告，如果全球暖化持續，到了2080年代，皇帝企鵝數量可能會減半。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038224+08:00"
+    },
+    {
+     "id": "3719354bbd37",
+     "title": "新北選戰藍綠陣營三重造勢 李四川、蘇巧慧拚場較勁",
+     "link": "https://news.pts.org.tw/article/836774",
+     "date": "2026-11-21T19:59:12+08:00",
+     "summary": "新北市長選戰膠著，選前黃金週，民進黨候選人蘇巧慧今（21）日在「本命區」樹林、鶯歌造勢，前總統蔡英文、副總統蕭美琴合體站台，希望衝高綠營選情。另一方面，國民黨候選人李四川則是合體新北市長侯友宜，在板橋車掃。藍綠雙方晚間更在三重舉辦造勢晚會，比拚人氣。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038224+08:00"
+    },
+    {
+     "id": "c71ffc7d5a93",
+     "title": "高雄選戰賴瑞隆邀卓揆助講 柯志恩找韓國瑜站台",
+     "link": "https://news.pts.org.tw/article/836758",
+     "date": "2026-11-21T19:58:40+08:00",
+     "summary": "高雄選情的部分，國民兩黨的市長候選人分別在今（21）日下午及晚間，舉辦大型造勢。賴瑞隆請來行政院長卓榮泰等黨內要角助講，柯志恩則邀了立法院長韓國瑜第3度站台相挺。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038226+08:00"
+    },
+    {
+     "id": "a20b08a6b44e",
+     "title": "助理涉散布不實性影像遭搜索 徐欣瑩靜坐抗議批司法介入選舉",
+     "link": "https://news.pts.org.tw/article/836757",
+     "date": "2026-11-21T19:58:16+08:00",
+     "summary": "國民黨新竹縣長候選人徐欣瑩，不滿助理因涉嫌散布不實性影像被檢警搜索，昨（20）晚與支持者到新竹地檢署外，展開絕食靜坐抗議，國民黨主席鄭麗文今（21）日上午9時半也到場聲援，兩人痛批司法介入選舉。而遭不實性影像與謠言攻擊的民進黨竹北市長候選人曾聖凱則質疑，徐欣瑩是否早知道助理的作為，應該要對外說清楚。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038227+08:00"
+    },
+    {
+     "id": "7ffad28a6628",
+     "title": "台中榮總醫師涉收廠商回扣 遭羈押禁見、停職",
+     "link": "https://news.pts.org.tw/article/836755",
+     "date": "2026-11-21T19:57:39+08:00",
+     "summary": "台中榮總再爆醫療弊案，神經醫學中心副主任涉嫌收受醫材廠商回扣，網路更流傳他疑似在診間收錢、數鈔票的影片。檢調昨（20）日兵分9路搜索，今（21）日向法院聲請羈押禁見獲准。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038228+08:00"
+    },
+    {
+     "id": "ca6fa82cbe70",
+     "title": "中壢毒駕車禍釀1死6傷 肇事駕駛遭聲押",
+     "link": "https://news.pts.org.tw/article/836754",
+     "date": "2026-11-21T19:57:21+08:00",
+     "summary": "桃園中壢昨（20）晚發生毒駕車禍，造成6人受傷，1名菲律賓籍的女性移工不幸身亡。檢察官今（21）日重返現場勘驗，並完成死者相驗，向法院聲請羈押這名肇事駕駛。仲介公司表示，會協助家屬求償。民團則呼籲，除了加強取締，也要在人潮密集路段，設置「防撞車阻」，訂定全國統一標準，保障行人安全。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038228+08:00"
+    },
+    {
+     "id": "aa2d9c8dc173",
+     "title": "波蘭控俄2飛彈墜落訓練場附近 蓄意挑釁「志願者聯盟」軍演",
+     "link": "https://news.pts.org.tw/article/836753",
+     "date": "2026-11-21T19:56:47+08:00",
+     "summary": "俄羅斯20日空襲烏克蘭，結果2枚飛彈和1架疑似無人機，落入了波蘭東南部，所幸無人受傷。不過，當時歐洲多國正在波蘭舉行軍演，為的是戰後可能赴烏克蘭的任務做準備。俄軍的行動引發了北約與各國的強烈譴責。波蘭總理圖斯克就指控，這是俄方蓄意挑釁。",
+     "source": "公視新聞",
+     "added_date": "2026-11-22T21:29:26.038230+08:00"
+    },
+    {
+     "id": "seedn01",
+     "title": "黃仁勳稱若能回鍋輝達深感榮幸 董事長：已啟動執行長遴選程序",
+     "link": "https://news.pts.org.tw/article/836249",
+     "date": "2026-11-18T13:47:32+08:00",
+     "summary": "",
+     "source": "公視新聞",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedn02",
+     "title": "輝達宣示擴大供應鏈合作 台積電、鴻海等多個台廠入列",
+     "link": "https://news.pts.org.tw/article/836248",
+     "date": "2026-11-18T13:45:28+08:00",
+     "summary": "",
+     "source": "公視新聞",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedn03",
+     "title": "大陸冷高壓南下 今入夜後全台降溫明顯",
+     "link": "https://news.pts.org.tw/article/836247",
+     "date": "2026-11-18T13:44:52+08:00",
+     "summary": "",
+     "source": "公視新聞",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedn04",
+     "title": "蔣萬安合體謝龍介掃街 沈伯洋重返內湖花市衝刺",
+     "link": "https://news.pts.org.tw/article/836246",
+     "date": "2026-11-18T13:44:21+08:00",
+     "summary": "",
+     "source": "公視新聞",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedn06",
+     "title": "台中里長候選人涉當詐團車手 開競選車面交收款遭警方逮捕",
+     "link": "https://news.pts.org.tw/article/836245",
+     "date": "2026-11-18T13:43:54+08:00",
+     "summary": "",
+     "source": "公視新聞",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedn05",
+     "title": "廢非核公投意見會／洪毓祥推以核養綠提升能源韌性 王守誠：應正視台灣地質風險",
+     "link": "https://news.pts.org.tw/article/836250",
+     "date": "2026-11-18T13:07:59+08:00",
+     "summary": "",
+     "source": "公視新聞",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    }
    ]
   },
   "technews": {
-   "name": "科技與海外市場", "source": "TechNews 科技新報", "url": "https://cdn.technews.tw/feed/",
-   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "name": "科技與海外市場",
+   "source": "TechNews 科技新報",
+   "url": "https://cdn.technews.tw/feed/",
+   "updated_at": "2026-11-22T21:29:27.041729+08:00",
+   "ok": true,
    "items": [
-    {"id":"seedt01","title":"美嚴控先進 AI 晶片出口，集邦：部分訂單可能遞延","link":"https://technews.tw/","date":"2026-11-17T18:30:40+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"TechNews 科技新報","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedt02","title":"東元瞄準歐洲 AI 基建需求，模組化資料中心最快 9 個月交付","link":"https://technews.tw/","date":"2026-11-17T17:57:16+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"TechNews 科技新報","added_date":"2026-11-18T14:30:00+08:00"}
+    {
+     "id": "1892b3063d5e",
+     "title": "台股跌逾 17% 失守年線還未完？安聯投信：後市盯緊四大止穩訊號",
+     "link": "https://finance.technews.tw/2026/11/22/falling-below-the-annual-moving-average/",
+     "date": "2026-11-22T17:35:50+08:00",
+     "summary": "台股近期修正壓力快速升高，若自 11 月 13 日收盤 43,675.12 點計算，台股短短一週修正幅度已逾 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041676+08:00"
+    },
+    {
+     "id": "3e0f22dc8dcf",
+     "title": "輝達遭勒索組織暗網威脅十天後洩漏資料，但官方稱系統未遭入侵",
+     "link": "https://infosecu.technews.tw/2026/11/22/nvidia-ransom-demand-by-the-gentlemen-leak-timer-under-10-days/",
+     "date": "2026-11-22T17:00:16+08:00",
+     "summary": "勒索軟體組織 The Gentlemen 18 日將輝達（NVIDIA）列入暗網資料外洩網站，聲稱取得公司資料 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041681+08:00"
+    },
+    {
+     "id": "e1cce9ec48f4",
+     "title": "AI 顛覆航空收益管理，「訂票後最佳化」啟動營收與滿意度三贏革命",
+     "link": "https://technews.tw/2026/11/22/ai-boosts-post-booking-optimization-aviation-industry/",
+     "date": "2026-11-22T16:30:47+08:00",
+     "summary": "人工智慧（AI）正為航空業的收益管理帶來顛覆性的動態變革！最新產業分析指出，航空公司的營運焦點已不再侷限於「訂 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041682+08:00"
+    },
+    {
+     "id": "f3e5f733d795",
+     "title": "改變全球電腦操作卻沒賺大錢，揭密 1970 年首款「木製滑鼠」誕生史",
+     "link": "https://ccc.technews.tw/2026/11/22/why-mouse-called-mouse/",
+     "date": "2026-11-22T16:00:32+08:00",
+     "summary": "動動滑鼠、按幾個鍵，就能開啟檔案、瀏覽網頁，甚至完成各種複雜的工作。不過，在滑鼠出現之前，操作電腦可不像現在這 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041683+08:00"
+    },
+    {
+     "id": "48f47d79655a",
+     "title": "AI 文字偵測器學會邊用邊調整，識破偽裝文字準確率逾九成",
+     "link": "https://technews.tw/2026/11/22/helping-ai-text-detectors-keep-up-with-changing-conditions/",
+     "date": "2026-11-22T15:30:52+08:00",
+     "summary": "麻省理工學院（MIT）與康乃爾大學用「測試時調適」（test-time adaptation，TTA）技術，讓 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041685+08:00"
+    },
+    {
+     "id": "3bc94438f3f3",
+     "title": "信紘科奪 49 億機電工程大單！攜手中工打造台塑大樓 220 億都更案",
+     "link": "https://finance.technews.tw/2026/11/22/mechanical-and-electrical-engineering/",
+     "date": "2026-11-22T15:21:10+08:00",
+     "summary": "信紘科與中華工程近日宣布共同投入台北市重大都市更新指標工程「台塑大樓都市更新新建工程」，全案由台塑建設擔任實施 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041686+08:00"
+    },
+    {
+     "id": "5c225f239cb7",
+     "title": "睡不好讓你疲憊、慢半拍？研究揭密：大腦關鍵結構已悄悄發生改變",
+     "link": "https://technews.tw/2026/11/22/sleep-disorders-brain-structure-changes/",
+     "date": "2026-11-22T15:00:58+08:00",
+     "summary": "長期的睡眠障礙帶來的影響遠不止於隔日疲憊。美國佛羅里達國際大學（FIU）發表於《Scientific Repo [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041687+08:00"
+    },
+    {
+     "id": "f0a3281241ca",
+     "title": "KAIST 讀唇 AI 先抓最清楚的嘴型，無聲辨識詞錯誤率降至 19.4%",
+     "link": "https://technews.tw/2026/11/22/scientists-taught-ai-to-read-lips-in-total-silence-and-the-results-are-pretty-impressive/",
+     "date": "2026-11-22T14:30:55+08:00",
+     "summary": "韓國科學技術院（KAIST）教授 Yong Man Ro 團隊開發讀唇人工智慧系統 DLLM-VSR，不需要任 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041688+08:00"
+    },
+    {
+     "id": "b0c798f3cf7b",
+     "title": "全新 3M 被動輻射冷卻膜協助車隊及鐵路營運商降低車廂內部溫度，並提升營運效率",
+     "link": "https://technews.tw/2026/11/22/3m-passive-cooling-film-fleet-railway-lower-temp-improve-efficiency/",
+     "date": "2026-11-22T14:00:32+08:00",
+     "summary": "3M 正式推出 3M™ 被動輻射冷卻膜。這款應用於車輛車頂的熱管理解決方案，旨在協助降低車廂內部溫度、減少冷卻 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041689+08:00"
+    },
+    {
+     "id": "adb056d02354",
+     "title": "NIH 人體生物分子圖譜入口網站更新，逾 9 千筆器官與單細胞資料可免費存取",
+     "link": "https://technews.tw/2026/11/22/hubmap-updates-data-portal-for-studying-human-tissues-at-single-cell-resolution/",
+     "date": "2026-11-22T13:30:11+08:00",
+     "summary": "美國國家衛生研究院（NIH）資助的人體生物分子圖譜計畫（Human BioMolecular Atlas Pr [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041690+08:00"
+    },
+    {
+     "id": "4a63bf9831e3",
+     "title": "跨境匯款今年衝 500 億元！數位至匯 11/25 將以參考價 120 元登錄興櫃",
+     "link": "https://finance.technews.tw/2026/11/22/small-amount-foreign-exchange/",
+     "date": "2026-11-22T13:09:35+08:00",
+     "summary": "數位至匯 11 月 25 日將以每股參考價 120 元登錄興櫃，董事長暨執行長魏仁裕表示，2023 年取得金管 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041691+08:00"
+    },
+    {
+     "id": "84e8a1769d8c",
+     "title": "玩美移動為何告別美股？訊連揭 4 大原因：市值太小、AI 衝擊 SaaS 估值",
+     "link": "https://finance.technews.tw/2026/11/22/perfect-corp-delists-us-stocks-cyberlink-reveals-4-reasons-small-market-cap-ai-saas-valuation-impact/",
+     "date": "2026-11-22T11:00:23+08:00",
+     "summary": "訊連旗下美妝 AI 公司玩美移動（Perfect Corp.）10 月 23 日完成私有化，正式從紐約證券交易 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041692+08:00"
+    },
+    {
+     "id": "e729fd2f6a8c",
+     "title": "Anthropic 史上最大 IPO 難救市！美股 AI 蒸發 4 兆美元背後投資人恐慌",
+     "link": "https://finance.technews.tw/2026/11/22/can-ai-deliver-returns/",
+     "date": "2026-11-22T10:56:53+08:00",
+     "summary": "自 2022 年 ChatGPT 問世，並開啟新一輪改變全球技術與資本市場的新週期以來，投資者首次展現出強烈的 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041693+08:00"
+    },
+    {
+     "id": "9a71be296dae",
+     "title": "美國 AI 大管制時代來臨！黃仁勳下台效應：打擊中國算力還是逼出紅色自主供應鏈？",
+     "link": "https://finance.technews.tw/2026/11/22/without-jensen-usa-ai-is-slower/",
+     "date": "2026-11-22T10:00:36+08:00",
+     "summary": "黃仁勳一宣布請辭，最先跳起來的不只輝達股東，還有中國的 AI 公司。路透 11 月 12 日引述知情人士報導， [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041694+08:00"
+    },
+    {
+     "id": "c6cedf35e559",
+     "title": "台股上週崩跌 7,641 點！國安基金證實進場、金管會祭「全面禁空令」救市",
+     "link": "https://finance.technews.tw/2026/11/22/total-no-fly-zone/",
+     "date": "2026-11-22T09:03:31+08:00",
+     "summary": "輝達（NVIDIA）執行長黃仁勳辭任引發市場劇烈震盪，疊加美國 AI 監管趨嚴等利空夾擊，台股上週遭遇史詩級拋 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041695+08:00"
+    },
+    {
+     "id": "f1a570808b66",
+     "title": "永豐餘前三季獲利飆新高！業外投資大進補，無懼中國造紙「內捲」逆風",
+     "link": "https://finance.technews.tw/2026/11/22/yfy-losses-deepen-as-it-pushes-for-transformation/",
+     "date": "2026-11-22T09:00:02+08:00",
+     "summary": "台灣紙業龍頭永豐餘投控及旗下中華紙漿 11 月 16 日舉行 2026 年第三季法說會。根據《財訊》雙週刊報導 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041696+08:00"
+    },
+    {
+     "id": "9bf56e073995",
+     "title": "AI 加速科學研究，資料品質與驗證機制成新瓶頸",
+     "link": "https://technews.tw/2026/11/22/ai-raises-the-stakes-for-discovery-data/",
+     "date": "2026-11-22T08:30:25+08:00",
+     "summary": "人工智慧正快速改變科學研究的運作方式，也讓研究資料的價值與審視標準同步升高。最新觀點指出，AI 已從單純的分析 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041697+08:00"
+    },
+    {
+     "id": "f1d541c195ba",
+     "title": "從報關行到跨入高科技物流，建新二代北上打造「超級冰箱」盤算曝光",
+     "link": "https://technews.tw/2026/11/22/chienshing/",
+     "date": "2026-11-22T08:00:53+08:00",
+     "summary": "今年滿 50 歲的建新國際，從傳統報關行跨足高科技物流。負責這場轉型戰的二代陳彥銘（首圖左），一手打造出北台灣 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041698+08:00"
+    },
+    {
+     "id": "055787a4e48e",
+     "title": "80 年一遇的北冕座 T 新星爆發倒數中，天文學家：幾年內很可能登場",
+     "link": "https://technews.tw/2026/11/22/mystery-t-coronae-borealis-yet-erupt/",
+     "date": "2026-11-22T00:00:56+08:00",
+     "summary": "有「火焰星」（Blaze Star）之稱的北冕座 T（T Coronae Borealis）近期成為全球天文迷 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041699+08:00"
+    },
+    {
+     "id": "02db5d4272aa",
+     "title": "韋伯望遠鏡捕捉仙女座罕見恆星合併，小伴星只花 7 年就被超巨星吞噬",
+     "link": "https://technews.tw/2026/11/22/webb-telescope-captures-giant-star-swallowing-its-companion-in-andromeda-galaxy/",
+     "date": "2026-11-22T00:00:41+08:00",
+     "summary": "天文學家在仙女座星系中觀測到一場罕見的恆星合併事件：一顆質量略低於太陽的伴星以螺旋狀的公轉軌道逐漸靠近一顆膨脹 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041700+08:00"
+    },
+    {
+     "id": "077a8b21836c",
+     "title": "280 萬人基因分析揭阿茲海默症新線索，48 個風險區域首度現身",
+     "link": "https://technews.tw/2026/11/22/massive-study-of-2-8-million-people-reveals-new-secrets-of-alzheimers-disease/",
+     "date": "2026-11-22T00:00:05+08:00",
+     "summary": "由荷蘭阿姆斯特丹自由大學主導、迄今規模最大的阿茲海默症基因關聯研究，分析約 280 萬人的基因資料，找到 48 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041701+08:00"
+    },
+    {
+     "id": "0893f22d59a7",
+     "title": "〈GTA 6〉暗藏〈GTA 7〉趣味彩蛋，自嘲開發漫長",
+     "link": "https://technews.tw/2026/11/21/gta-6-easter-egg-sees-rockstar-poke-fun-at-its-long-development-process/",
+     "date": "2026-11-21T17:00:36+08:00",
+     "summary": "〈GTA 6〉歷經多年開發終於正式推出。遊戲內藏有趣味彩蛋，既自嘲 Rockstar 開發本作歷時多年，也暗指 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041702+08:00"
+    },
+    {
+     "id": "f204c2837fe4",
+     "title": "研究發現太平洋錳結核內藏數千隻微型生物，深海採礦恐摧毀專屬棲地",
+     "link": "https://technews.tw/2026/11/21/deep-sea-mining-targets-rocks-that-are-habitats-inside-and-out/",
+     "date": "2026-11-21T16:30:29+08:00",
+     "summary": "一項最新研究顯示，太平洋海底被視為採礦目標的錳結核（Manganese nodules），不只是富含鎳、鈷與銅 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041703+08:00"
+    },
+    {
+     "id": "1bbc5854c842",
+     "title": "從羊毛氈玩偶到虛擬追思空間，韓國寵物紀念商機與告別文化興起",
+     "link": "https://technews.tw/2026/11/21/south-korea-pet-memorial-business-farewell-culture-rise-felt-dolls-virtual-memorial-spaces/",
+     "date": "2026-11-21T16:00:33+08:00",
+     "summary": "對許多飼主來說，長年和自己相伴的寵物早已成為生命中不可或缺的家人。然而，當熟悉的身影離開，飼主們該如何面對這份 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041704+08:00"
+    },
+    {
+     "id": "74515749837c",
+     "title": "AI 評分也有「口音偏見」？研究：美英口音最吃香，中文、奈及利亞口音墊底",
+     "link": "https://technews.tw/2026/11/21/ai-voice-model-accent-bias/",
+     "date": "2026-11-21T15:30:20+08:00",
+     "summary": "華盛頓大學（University of Washington）最新研究指出，當人工智慧（AI）模型被用於面試、 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041705+08:00"
+    },
+    {
+     "id": "a91099328533",
+     "title": "腦波變「孤單」害你忘東忘西？科學家揪出阿茲海默症與深度睡眠的隱藏殺手",
+     "link": "https://technews.tw/2026/11/21/unraveling-mystery-brain-loneliness-waves/",
+     "date": "2026-11-21T15:00:24+08:00",
+     "summary": "剛走出超市，卻想不起車停哪？這種「情節記憶」的衰退是老化過程常見的困擾。加州大學柏克萊分校（UC Berkel [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041706+08:00"
+    },
+    {
+     "id": "93e889970f5e",
+     "title": "AI 也有雙面性格，研究：AI 得知受監控時會隱藏真實意圖",
+     "link": "https://technews.tw/2026/11/21/ai-surveillance-behavioral-differences-study/",
+     "date": "2026-11-21T14:30:16+08:00",
+     "summary": "一項最新研究揭露，人工智慧（AI）模型的表現並非始終如一，而是會強烈受到「是否被監看」的影響。研究團隊在針對 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041707+08:00"
+    },
+    {
+     "id": "8c24b0d5aee0",
+     "title": "Microsoft 聯同跨行業機構推出 AI 透明度倡議，加強企業對 AI 模型及代理的信任",
+     "link": "https://infosecu.technews.tw/2026/11/21/microsoft-launches-ai-transparency-initiative/",
+     "date": "2026-11-21T14:00:02+08:00",
+     "summary": "機構雖然能夠監察與 AI 模型相關的大部分活動，卻往往無法還原由提出請求到產生結果之間的過程，因此難以獨立驗證 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041708+08:00"
+    },
+    {
+     "id": "14a149c9b022",
+     "title": "強鹿推免費 AI 助理「JD」告別繁瑣數據，一句話秒解農場大小事",
+     "link": "https://technews.tw/2026/11/21/john-deere-jd-ai-assistant/",
+     "date": "2026-11-21T13:30:16+08:00",
+     "summary": "農機大廠強鹿（John Deere）近期推出全新 AI 助理「JD」，讓農民能以自然對話的方式，輕鬆分析多年來 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041709+08:00"
+    },
+    {
+     "id": "68c6eaa703eb",
+     "title": "34 噸車身搭載 120 公釐主砲，捷土合作 Karpat 中型戰車首度公開實彈展示",
+     "link": "https://technews.tw/2026/11/21/csg-and-fnss-collabeorated-cfl-120-karpat-medium-tank-public-demo/",
+     "date": "2026-11-21T12:50:41+08:00",
+     "summary": "捷克軍工集團 CSG 與土耳其 FNSS 合作開發的 CFL-120 Karpat 中型戰車，近日在斯洛伐克 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041710+08:00"
+    },
+    {
+     "id": "b3b1a6619bb1",
+     "title": "Anthropic 研究員宣稱利用 Claude，解開困擾數學界超過 150 年黎曼猜想難題",
+     "link": "https://technews.tw/2026/11/21/anthropic-solve-riemann-problem-with-claude/",
+     "date": "2026-11-21T11:29:13+08:00",
+     "summary": "Anthropic 於 11 月 19 日正式在美國那斯達克掛牌上市，創全球資本市場史上最大規模 IPO 紀錄 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041711+08:00"
+    },
+    {
+     "id": "a0fb2fd0f130",
+     "title": "幾百元小單也不放過，華碩靠「客戶終身價值」將零碎需求變長尾商機",
+     "link": "https://technews.tw/2026/11/21/asus-customer-lifetime-value-small-orders-fragmented-demands-long-tail-opportunities/",
+     "date": "2026-11-21T11:00:04+08:00",
+     "summary": "對習慣做企業採購案的 B2B 業務來說，一筆每月只收幾百元的軟體訂閱，通常不值得投入太多人力。因為在成交前，業 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041711+08:00"
+    },
+    {
+     "id": "d4b4b00dbb5e",
+     "title": "麻州大學研發生物混合網狀採集器，讓細胞成為植入式醫材的電源",
+     "link": "https://technews.tw/2026/11/21/energy-harvesting-mesh-could-replace-batteries-in-implantable-medical-devices/",
+     "date": "2026-11-21T10:30:43+08:00",
+     "summary": "心律調節器、植入式心臟整流去顫器等植入式醫療器材的電池，平均壽命約 5~15 年，實際長短取決於預設參數與裝置 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041712+08:00"
+    },
+    {
+     "id": "3dba43e9ef33",
+     "title": "堅持「算力留美」！川普揚言對海外建資料中心的美企課重稅",
+     "link": "https://technews.tw/2026/11/21/trump-data-centers-abroad-tax/",
+     "date": "2026-11-21T10:22:18+08:00",
+     "summary": "美國總統川普揚言將對前往海外興建資料中心的美國企業課徵高額稅負，但他並未詳細說明將如何執行這項措施，以及可能依 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041713+08:00"
+    },
+    {
+     "id": "6383fdfef03a",
+     "title": "輝達再遭政府盯上！路透：美 SEC 正調查輝達會計處理方式",
+     "link": "https://technews.tw/2026/11/21/nvidia-us-sec-investigation/",
+     "date": "2026-11-21T10:06:27+08:00",
+     "summary": "輝達（NVIDIA）近期接連陷入監管風暴，如今再傳出遭美國證券交易委員會（SEC）調查會計處理方式。兩名知情人 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041714+08:00"
+    },
+    {
+     "id": "9838c6c1a2e7",
+     "title": "無聲 30 年，一出手就換掉 CEO！輝達董事會失職的真相",
+     "link": "https://finance.technews.tw/2026/11/21/nvidia-board-30-years-silence-ceo-replaced-dereliction-duty-truth/",
+     "date": "2026-11-21T10:00:03+08:00",
+     "summary": "拉下黃仁勳的董事會，竟然有人是賣墨西哥捲餅出身的。 「這就是替曾經全球最值錢的公司做決定的董事會？」11月14 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041715+08:00"
+    },
+    {
+     "id": "768c098691f7",
+     "title": "AI 讓詐騙信件不再錯字連篇，資安防線轉向驗證流程",
+     "link": "https://infosecu.technews.tw/2026/11/21/ai-cybersecurity-terms-explained-10-definitions-to-know/",
+     "date": "2026-11-21T09:30:49+08:00",
+     "summary": "生成式 AI 並沒有替駭客開闢新入侵途徑，卻讓既有手法更便宜更快，也更難察覺。美國媒體 Quartz 近日整理 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041716+08:00"
+    },
+    {
+     "id": "1efd8653e46a",
+     "title": "美曝 H200 出口許可申請量！中科技巨頭瘋搶百萬顆，實際獲批落差大",
+     "link": "https://technews.tw/2026/11/21/us-2026-h200-export-china/",
+     "date": "2026-11-21T09:12:04+08:00",
+     "summary": "美國近期依據《出口管制改革法案》（ECRA）行使法定權限，公開商務部工業與安全局（BIS）涉及輝達（NVIDI [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041716+08:00"
+    },
+    {
+     "id": "e2ce11e39ce7",
+     "title": "海龍風場完工、永冠同步下市，台灣離岸風電的 2026 年喜憂參半",
+     "link": "https://technews.tw/2026/11/21/hai-long-offshore-wind-project-connects-to-taiwan-grid/",
+     "date": "2026-11-21T09:00:58+08:00",
+     "summary": "根據《財訊》雙週刊報導，亞洲最大單一風場，由日本三井物產、加拿大北陸能源及馬來西亞淨達力共同投資開發的海龍離岸 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041718+08:00"
+    },
+    {
+     "id": "5f026f0b9349",
+     "title": "被質疑就改口，UNESCO 研究：AI 回答氣候問題九成正確，卻很容易被說服",
+     "link": "https://technews.tw/2026/11/21/ai-models-mislead-on-climate-science/",
+     "date": "2026-11-21T08:30:19+08:00",
+     "summary": "聯合國教科文組織（UNESCO）與倫敦大學學院（UCL）最新發布的研究指出，人工智慧模型雖然能在氣候科學的基礎 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-22T21:29:27.041719+08:00"
+    },
+    {
+     "id": "seedt01",
+     "title": "美嚴控先進 AI 晶片出口，集邦：部分訂單可能遞延",
+     "link": "https://technews.tw/",
+     "date": "2026-11-17T18:30:40+08:00",
+     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedt02",
+     "title": "東元瞄準歐洲 AI 基建需求，模組化資料中心最快 9 個月交付",
+     "link": "https://technews.tw/",
+     "date": "2026-11-17T17:57:16+08:00",
+     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    }
    ]
   },
   "techorange": {
-   "name": "數位轉型", "source": "TechOrange 科技報橘", "url": "https://techorange.com/feed/",
-   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true, "items": []
+   "name": "數位轉型",
+   "source": "TechOrange 科技報橘",
+   "url": "https://techorange.com/feed/",
+   "updated_at": "2026-11-22T21:29:29.112455+08:00",
+   "ok": true,
+   "items": [
+    {
+     "id": "aea1bbbea10c",
+     "title": "【Visa 全球數位匯款報告】近七成民眾更看重「由誰提供」，信任與防詐是穩定幣普及關鍵",
+     "link": "https://techorange.com/2026/11/21/future-of-global-money-movement/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-21T06:29:00+08:00",
+     "summary": "全球數位支付機構 Visa 正式發布《Money Travels: 2026 Digital Remittances Adoption Report》（2026 年數位匯款採用報告），調查涵蓋全球 20 國、共 45,000 名跨國匯款參與者；報告揭示跨境支付的競爭焦點已從早期的「數位管道普及」轉向「機構信任與安全保障」，顯示制度信任是推動新興支付走向大眾普…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112417+08:00"
+    },
+    {
+     "id": "6dfe1b279c28",
+     "title": "美國零售雙雄 Q3 財報秀 AI 實力：Target 逾九成品項導入 AI 補貨，Walmart 為「自帶 AI 代理」鋪路",
+     "link": "https://techorange.com/2026/11/20/target-walmart-q3-ai-strategy/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T18:54:24+08:00",
+     "summary": "走進超市卻發現想買的牛奶缺貨，或是在網購時滑了幾百則評價還是不知道該不該下手——這些日常購物最讓人頭痛的小事，正是美國兩大零售巨頭目標百貨（Target）與沃爾瑪（Walmart）在 2026 年第三季財報中聚焦的核心之一。兩家公司分別針對 AI 助攻營運的環節有所側重：Target 專注把後端補貨與 App 逛街購物體驗做得更細膩；Walmart 則在會員…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112423+08:00"
+    },
+    {
+     "id": "3ae1512467c3",
+     "title": "Google Chrome 打造「鏡像維度」合成網路，以 30 倍效率安全測試 AI 瀏覽代理",
+     "link": "https://techorange.com/2026/11/20/chrome-mirror-dimension-ai-agent-security/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T18:41:54+08:00",
+     "summary": "具備網頁操作能力的 AI 代理（Web-use Agents）走入日常，人們開始習慣交辦跨網站的複雜任務。例如：請瀏覽器直接幫你進行網購比價，或對著智慧電視遙控器用語音尋找特定電影在哪個串流平台並直接播放。用戶並未提供具體網址，AI 必須自行判斷目標網站、跨平台搜尋並完成一連串操作。然而，當 AI 獲得了在瀏覽器中點擊、輸入甚至登入帳號的權限時，如何確保它們…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112425+08:00"
+    },
+    {
+     "id": "c17a74514ba8",
+     "title": "Uber 清技術債，為何不全交給 AI 代理？拆解傳統工具、審查代理如何層層把關",
+     "link": "https://techorange.com/2026/11/20/using-ai-delete-code-agentic-tech-debt-cleanup/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T18:22:06+08:00",
+     "summary": "Uber 近日在工程部落格公開 AI 程式碼清理系統 AutoClean，能自動找出已全面上線、卻仍殘留在程式碼中的過期功能開關（feature flag），並產出經過測試、可供人工審查的程式碼差異（diff）。Uber 表示，AutoClean 過去幾年已清理超過 1.6 萬個功能開關、逾 100 萬行程式碼。這套系統並非讓 AI 代理（AI agent）…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112427+08:00"
+    },
+    {
+     "id": "acf3dcc7595b",
+     "title": "Genesis AI 募資 5 億美元、稱已攻克靈巧操作，Eno 離上產線還有多遠？",
+     "link": "https://techorange.com/2026/11/20/genesis-ai-500m-eno-deployment/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T15:25:10+08:00",
+     "summary": "法國機器人新創 Genesis AI 於 11/17 宣布完成 5 億美元 A 輪募資，公司表示估值達 35 億美元，由 Premji Invest、Khosla Ventures 與 Eclipse 共同領投，NVIDIA 旗下創投 NVentures、AMD Ventures 等也參與投資，前 Google 執行長 Eric Schmidt 等人則以個人…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112428+08:00"
+    },
+    {
+     "id": "4ef948002594",
+     "title": "NVIDIA 的麻煩 AMD 也躲不掉？放空機構點名中國黑名單與客戶融資兩大隱憂",
+     "link": "https://techorange.com/2026/11/20/amd-shares-slide-report-china-links-invite-scrutiny/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T13:12:03+08:00",
+     "summary": "同時經營新聞編輯室與避險基金的 Hunterbrook 近日發布兩份報告，質疑晶片商 AMD 的中國業務與客戶融資模式。旗下媒體 Hunterbrook Media 指稱，AMD 與部分遭美國列入黑名單的中國企業有所往來，可能引來美國監管機構更嚴格的審查；Hunterbrook 今年 6 月收購的電子報《The Bear Cave》則質疑，AMD 為客戶提供…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112429+08:00"
+    },
+    {
+     "id": "388e5bdcc396",
+     "title": "Anthropic 上市募資 813 億美元，1,040 億美元淨損從何而來？",
+     "link": "https://techorange.com/2026/11/20/anthropic-ipo-pricing-moskovitz/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T11:35:44+08:00",
+     "summary": "Anthropic 美國時間 11/18 以每股 83 美元完成首次公開發行（IPO）定價，高於原訂的 70～78 美元區間，並擴大發行至約 9.8 億股，募資 813 億美元。以未含超額配售的規模比較，這筆金額高於 SpaceX 今年 6 月 IPO 的 750 億美元，《CNBC》稱為史上最大的 IPO。若計入超額配售，SpaceX 最終募得 857 億…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112431+08:00"
+    },
+    {
+     "id": "44c95bf5de8f",
+     "title": "【企業資料掀起石油探勘式熱潮】AI 開發商砸錢收購員工私訊，連倒閉公司數據都有人買",
+     "link": "https://techorange.com/2026/11/20/enterprise-employee-data-ai-training/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T10:21:59+08:00",
+     "summary": "企業員工的私訊、對話還有一切工作紀錄，開始成為 AI 開發商最新的收購目標，AI 巨頭希望將公司數據用於訓練 AI 模型與 AI 代理，然而卻也造成資安隱私風險與員工反彈。",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112432+08:00"
+    },
+    {
+     "id": "16ea1f719df8",
+     "title": "NEXCOM RoboWIZ AI 機器人開放平台擴大招募生態系夥伴",
+     "link": "https://techorange.com/2026/11/20/nexcom-robowiz-physicalai/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T10:00:00+08:00",
+     "summary": "號召全球產業菁英，共築 Physical AI 具身智慧生態系加速機器人發展進程 新漢集團旗下創博（NexCOBOT, NEXCOM Robotic Solutions）上月於輝達柏林GTC 大會上串聯德美機器人生態系夥伴，共同發表 RoboWIZ AI 機器人開放平台，此為該平台繼八月於台北自動化展正式發表後的首場海外串聯，隨即在國際市場與機器人相關領域引…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112433+08:00"
+    },
+    {
+     "id": "8222d5c3931e",
+     "title": "旗艦 GPU 還能再升級？OpenAI 用 AI 重寫 RTL 電路，助 AMD PPA 最高再提升 14%",
+     "link": "https://techorange.com/2026/11/20/openai-amd-chip-design/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T08:30:00+08:00",
+     "summary": "當製程微縮成本日益高昂，如今 OpenAI 能深入最核心的前端微架構，其模型能對 RTL 進行推理，在晶片設計上進行改善工作，甚至縮短開發時程。 OpenAI 先前與 AMD 達成策略合作，雙方從多代硬體到產品路線圖深度協同，AMD 執行長蘇姿丰形容這是推動整體生態系的「真正雙贏」。今年 9 月 OpenAI 與新思科技（Synopsys）簽署多年協議，共同…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112434+08:00"
+    },
+    {
+     "id": "ddad929dacfd",
+     "title": "當每件商品都只有一件，怎麼賣得快？二手精品平台 The RealReal 用兩套 AI 改造倉庫與搜尋",
+     "link": "https://techorange.com/2026/11/20/the-realreal-dual-ai-athena-ask-trr/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T08:10:00+08:00",
+     "summary": "美國二手奢侈品交易平台 The RealReal 正透過雙軌 AI 策略，同步優化供應端的商品處理流程與需求端的線上購物體驗。這項布局由後端系統 Athena 與前端購物代理 Ask TRR 共同構成，分別解決二手市場中鑑定量能龐大與商品搜尋困難的長期痛點，試圖改善整體營運效率並提升消費者的平台黏著度。 Athena 自動化商品處理流程，降低鑑定與上架成本…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112436+08:00"
+    },
+    {
+     "id": "9cdd0a7a7f30",
+     "title": "【科技早餐】Anthropic 813 億美元 IPO 創紀錄！AI 模型競爭轉向算力與資本",
+     "link": "https://techorange.com/2026/11/20/anthropic-record-ipo-ai-compute-competition/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-20T05:30:00+08:00",
+     "summary": "【科技早餐】今天精選 6 則國內外重要科技新聞。 ＊Anthropic 813 億美元 IPO 創全球紀錄，AI 模型競爭加速資本集中 美國 AI 模型開發商 Anthropic 11 月 18 日以每股 83 美元確定首次公開募股（IPO）發行價，公開發售總額約 813 億美元，創下全球最大 IPO 紀錄。以定價計算，公司估值約 1.5 兆美元，這是發行定…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112437+08:00"
+    },
+    {
+     "id": "914090312599",
+     "title": "AI 代理學會自己整理筆記？Google 記下「為何這樣改」、Meta 試著把技巧練進模型",
+     "link": "https://techorange.com/2026/11/19/google-meta-ai-self-improving-memory/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T17:12:40+08:00",
+     "summary": "Google 與 Meta 近日分別發表研究，探討如何讓 AI 代理（AI agent）從過去的執行經驗中持續改進。兩項研究都著眼於 AI 代理的工作框架（harness），也就是管理上下文、工具與執行流程的機制；這類設計目前多仰賴人工反覆調整與評測，記憶管理方式也多由人工撰寫的提示詞決定。 兩者的技術路徑並不相同。Google 提出的 Self-Impro…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112438+08:00"
+    },
+    {
+     "id": "41c2dcc33697",
+     "title": "網銀帳密交給 AI 代理，連外洩被盜用都算客戶的？花旗改條款，美國大銀行陸續劃定責任歸屬",
+     "link": "https://techorange.com/2026/11/19/us-banks-ai-agent-liability/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T16:26:41+08:00",
+     "summary": "美國第三大商業銀行花旗（Citi）11 月更新線上用戶協議，新增「使用第三方 AI 代理」專節：客戶若把網路銀行登入帳密（Online Credentials，下稱網銀帳密）交給第三方 AI 代理（AI Agent），代理的所有存取與操作，花旗都會視為客戶授權；這組帳密若再遭轉傳或外洩，其他人或代理用它進行的操作也一樣。花旗透過自家網銀 Citi Onlin…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112440+08:00"
+    },
+    {
+     "id": "01addd4f7ab5",
+     "title": "Gemini 4 Neon 程式評測逼近 Opus 5.5，API 標價卻比 Anthropic、OpenAI 中階模型貴 5 成：企業該怎麼算？",
+     "link": "https://techorange.com/2026/11/19/google-ai-models-gemini-4-neon/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T12:39:05+08:00",
+     "summary": "Google 近日推出新款中階 AI 模型 Gemini 4 Neon。Google 表示，這款模型能在複雜軟體工程、知識工作與科學研究流程中，「以前沿等級的智慧，快速完成端到端任務」。《The Decoder》指出，這是 Google 四週內推出的第四款 Gemini 4 新模型。 Neon 已在 Google AI Studio 與 Android St…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112441+08:00"
+    },
+    {
+     "id": "98cc91352d56",
+     "title": "不禁用、改點名：川普政府研議要求美企揭露使用中國 AI 模型，能降低依賴嗎？",
+     "link": "https://techorange.com/2026/11/19/us-chinese-ai-disclosure/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T12:23:37+08:00",
+     "summary": "據《Reuters》11/18 獨家報導，川普政府正考慮要求美國企業公開揭露使用了哪些中國 AI 模型。3 名知情人士指出，美國財政部與白宮科技政策辦公室（OSTP）已討論過這項方案，適用對象包括以阿里巴巴千問（Qwen）驅動 AI 客服的 Airbnb；依方案構想，這類企業須在官網公布相關資訊。不過，方案是否在政府內部獲得支持、推進後是否會走正式的規則制定…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112442+08:00"
+    },
+    {
+     "id": "c846b6c4688a",
+     "title": "摩根大通攜手韓國現代信用卡完成 AI 自主換匯測試，商用前仍須跨過「治理高牆」",
+     "link": "https://techorange.com/2026/11/19/ai-agent-autonomous-payments/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T11:09:50+08:00",
+     "summary": "全球金融業正迎來一場「無人工參與」的支付革命。美國銀行巨頭摩根大通與韓國現代信用卡近期完成一項概念驗證，讓雙方的 AI 代理人在沒有人員直接介入下，獨立完成跨國企業的模擬外匯交易。摩根大通旗下區塊鏈部門 Kinexys 洞察全球主管 Wee Kee Toh 更預告，雙方將於 2027 年上半年把測試範圍擴大，並推進至更複雜的「多代理人自主協商與議價」階段。…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112443+08:00"
+    },
+    {
+     "id": "a6166d0280ea",
+     "title": "【Toyota 規劃 40 萬台機器人進工廠】起步晚於現代與特斯拉，強項在整合 AI 與生產流程",
+     "link": "https://techorange.com/2026/11/19/toyota-humanoid-robot-race/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T09:55:22+08:00",
+     "summary": "今年 4 月，東京豐田體育館（Toyota Arena Tokyo）的職籃賽事中場，一台黑紅配色的人形機器人走上球場，運球、出手，球應聲入網。這是豐田 AI 籃球機器人 CUE 的第 7 代 Cue7。 不過，會投籃的機器人並不稀奇，中國製人形機器人早已會跳舞、打拳。Cue7 的意義在於出場時機。 差不多同一時間，豐田高層正向全球投資人推銷一套機器人戰略，包…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112444+08:00"
+    },
+    {
+     "id": "413ed776de91",
+     "title": "AI Agent 搶走購物入口：Airbnb、The RealReal 如何守住流量與交易秩序？",
+     "link": "https://techorange.com/2026/11/19/ai-agents-shopping-airbnb-the-realreal/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T08:10:00+08:00",
+     "summary": "當科技公司將 AI Agent 推向市場，主打能為數十億用戶排定會議、籌辦派對與購買商品時，網路購物迅速成為這些代理人的熱門應用。以 Meta 推出的 Muse 為例，該軟體在美國上線 40 天內即突破 1,000 萬次下載，Meta 在第三季財報電話會議中更透露「購物」是目前最常出現的使用情境，平均交易金額超過 200 美元。這股趨勢顯示 AI Agent…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112445+08:00"
+    },
+    {
+     "id": "60c4e3fcedba",
+     "title": "【科技早餐】黃仁勳卸任後 NVIDIA 營收飆 1,158 億美元！上修成長預測、台積電等供應鏈擴產",
+     "link": "https://techorange.com/2026/11/19/nvidia-earnings-jensen-huang-tsmc-ai-supply-chain/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-19T05:30:00+08:00",
+     "summary": "【科技早餐】今天精選 7 則國內外重要科技新聞。 ＊黃仁勳卸任後 NVIDIA 營收年增 103%！上修 2028 財年預測，擴大台積電供應鏈產能 NVIDIA 11 月 17 日公布 2027 財年第三季財報，單季營收達 1,158 億美元，年增 103%、季增 20%，再次創下歷史新高。其中，資料中心業務營收達 1,076 億美元，年增 110%，占整體…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-22T21:29:29.112446+08:00"
+    }
+   ]
   },
   "motive": {
-   "name": "行銷趨勢", "source": "Motive 商業洞察", "url": "https://www.motive.com.tw/?feed=rss2",
-   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "name": "行銷趨勢",
+   "source": "Motive 商業洞察",
+   "url": "https://www.motive.com.tw/?feed=rss2",
+   "updated_at": "2026-11-18T14:30:00+08:00",
+   "ok": false,
    "items": [
-    {"id":"seedm01","title":"品牌重塑其實不只是包裝設計","link":"https://www.motive.com.tw/","date":"2026-09-17T00:00:00+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"Motive 商業洞察","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedm02","title":"從 UNIQLO 學：品牌老化的任務要怎麼解？","link":"https://www.motive.com.tw/","date":"2026-09-17T00:00:00+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"Motive 商業洞察","added_date":"2026-11-18T14:30:00+08:00"}
-   ]
+    {
+     "id": "seedm01",
+     "title": "品牌重塑其實不只是包裝設計",
+     "link": "https://www.motive.com.tw/",
+     "date": "2026-09-17T00:00:00+08:00",
+     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
+     "source": "Motive 商業洞察",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedm02",
+     "title": "從 UNIQLO 學：品牌老化的任務要怎麼解？",
+     "link": "https://www.motive.com.tw/",
+     "date": "2026-09-17T00:00:00+08:00",
+     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
+     "source": "Motive 商業洞察",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    }
+   ],
+   "error": "syntax error: line 1, column 0"
   },
   "managertoday": {
-   "name": "企劃與方法論", "source": "經理人 Managertoday", "url": "https://rss.bnextmedia.com.tw/feed/managertoday/",
-   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "name": "企劃與方法論",
+   "source": "經理人 Managertoday",
+   "url": "https://rss.bnextmedia.com.tw/feed/managertoday/",
+   "updated_at": "2026-11-18T14:30:00+08:00",
+   "ok": false,
    "items": [
-    {"id":"seedg01","title":"美國 Apple Pay 湧入 2300 筆問題回報！蘋果認了：內部更新惹禍、排除網路攻擊","link":"https://www.managertoday.com.tw/articles/view/73361","date":"2026-11-18T14:21:11+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedg02","title":"Q3 營收超出預期！輝達法說會交出漂亮成績單，為何市場仍眉頭深鎖？","link":"https://www.managertoday.com.tw/articles/view/73357","date":"2026-11-18T11:54:06+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedg03","title":"黃仁勳辭職後首發文喊回鍋，輝達董事會鐵心不讓步，只剩 15% 股東門檻最後一搏","link":"https://www.managertoday.com.tw/articles/view/73356","date":"2026-11-18T11:20:16+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedg04","title":"盤中零股新制！首次撮合 12/7 起提前至 9 點，交易時間、下單方式與手續費完整攻略","link":"https://www.managertoday.com.tw/articles/view/59023","date":"2026-11-18T11:22:16+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
-    {"id":"seedg05","title":"金剛經、隨他們去都上榜！誠品 2026 年度暢銷榜，台灣讀者靠這 9 本書對抗內耗","link":"https://www.managertoday.com.tw/articles/view/73359","date":"2026-11-18T13:41:55+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"}
-   ]
+    {
+     "id": "seedg01",
+     "title": "美國 Apple Pay 湧入 2300 筆問題回報！蘋果認了：內部更新惹禍、排除網路攻擊",
+     "link": "https://www.managertoday.com.tw/articles/view/73361",
+     "date": "2026-11-18T14:21:11+08:00",
+     "summary": "",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedg02",
+     "title": "Q3 營收超出預期！輝達法說會交出漂亮成績單，為何市場仍眉頭深鎖？",
+     "link": "https://www.managertoday.com.tw/articles/view/73357",
+     "date": "2026-11-18T11:54:06+08:00",
+     "summary": "",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedg03",
+     "title": "黃仁勳辭職後首發文喊回鍋，輝達董事會鐵心不讓步，只剩 15% 股東門檻最後一搏",
+     "link": "https://www.managertoday.com.tw/articles/view/73356",
+     "date": "2026-11-18T11:20:16+08:00",
+     "summary": "",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedg04",
+     "title": "盤中零股新制！首次撮合 12/7 起提前至 9 點，交易時間、下單方式與手續費完整攻略",
+     "link": "https://www.managertoday.com.tw/articles/view/59023",
+     "date": "2026-11-18T11:22:16+08:00",
+     "summary": "",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedg05",
+     "title": "金剛經、隨他們去都上榜！誠品 2026 年度暢銷榜，台灣讀者靠這 9 本書對抗內耗",
+     "link": "https://www.managertoday.com.tw/articles/view/73359",
+     "date": "2026-11-18T13:41:55+08:00",
+     "summary": "",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    }
+   ],
+   "error": "解析後 0 則"
   }
  },
  "veg": {
-  "updated_at": "2026-11-18T14:30:00+08:00",
-  "latest_date": "115.11.17",
+  "updated_at": "2026-11-22T21:29:36.204870+08:00",
+  "latest_date": "115.11.22",
   "market_label": "台北各批發市場",
   "source": "農業部 農產品批發市場交易行情",
   "source_url": "https://data.moa.gov.tw/",
-  "ok": true,
   "items": [
-   {"crop":"藍莓-進口","market":"台北二","date":"115.11.17","avg":220.9,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":876.0,"upper":312.3,"lower":144.6,"history":[{"d":"115.11.17","v":220.9}]},
-   {"crop":"草莓","market":"台北二","date":"115.11.17","avg":173.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":261.0,"upper":238.0,"lower":127.6,"history":[{"d":"115.11.17","v":173.4}]},
-   {"crop":"釋迦-鳳梨釋迦","market":"台北二","date":"115.11.17","avg":96.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":451.0,"upper":131.6,"lower":66.4,"history":[{"d":"115.11.17","v":96.4}]},
-   {"crop":"百香果-其他","market":"台北二","date":"115.11.17","avg":91.0,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":985.0,"upper":120.0,"lower":53.3,"history":[{"d":"115.11.17","v":91.0}]},
-   {"crop":"釋迦","market":"台北二","date":"115.11.17","avg":85.7,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":2019.0,"upper":131.7,"lower":52.9,"history":[{"d":"115.11.17","v":85.7}]},
-   {"crop":"椰子-剝殼","market":"台北二","date":"115.11.17","avg":17.0,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":30.0,"upper":17.0,"lower":17.0,"history":[{"d":"115.11.17","v":17.0}]},
-   {"crop":"椰子","market":"台北二","date":"115.11.17","avg":15.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":799.0,"upper":19.9,"lower":13.0,"history":[{"d":"115.11.17","v":15.4}]}
+   {
+    "crop": "休市",
+    "market": "台北市場",
+    "date": "115.11.22",
+    "avg": 0.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 0.0,
+    "upper": 0.0,
+    "lower": 0.0,
+    "history": [
+     {
+      "d": "115.11.22",
+      "v": 0.0
+     }
+    ]
+   },
+   {
+    "crop": "椰子",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 11.5,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 753.0,
+    "upper": 14.4,
+    "lower": 7.8,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 11.5
+     }
+    ]
+   },
+   {
+    "crop": "椰子-剝殼進口",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 35.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 750.0,
+    "upper": 35.6,
+    "lower": 35.6,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 35.6
+     }
+    ]
+   },
+   {
+    "crop": "棗子",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 110.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 44.0,
+    "upper": 150.0,
+    "lower": 81.8,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 110.0
+     }
+    ]
+   },
+   {
+    "crop": "釋迦",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 82.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 1305.0,
+    "upper": 118.4,
+    "lower": 56.7,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 82.4
+     }
+    ]
+   },
+   {
+    "crop": "釋迦-鳳梨釋迦",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 80.7,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 624.0,
+    "upper": 106.0,
+    "lower": 57.5,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 80.7
+     }
+    ]
+   },
+   {
+    "crop": "草莓",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 201.3,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 134.0,
+    "upper": 292.0,
+    "lower": 139.9,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 201.3
+     }
+    ]
+   },
+   {
+    "crop": "藍莓-進口",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 181.8,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 334.0,
+    "upper": 233.3,
+    "lower": 90.2,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 181.8
+     }
+    ]
+   },
+   {
+    "crop": "百香果-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 95.1,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 833.0,
+    "upper": 110.0,
+    "lower": 60.4,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 95.1
+     }
+    ]
+   },
+   {
+    "crop": "百香果-改良種",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 71.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 4942.0,
+    "upper": 115.8,
+    "lower": 40.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 71.4
+     }
+    ]
+   },
+   {
+    "crop": "小番茄-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 149.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 163.0,
+    "upper": 170.2,
+    "lower": 124.8,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 149.4
+     }
+    ]
+   },
+   {
+    "crop": "小番茄-聖女",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 88.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 3786.0,
+    "upper": 113.9,
+    "lower": 62.1,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 88.9
+     }
+    ]
+   },
+   {
+    "crop": "小番茄-玉女",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 254.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 950.0,
+    "upper": 403.3,
+    "lower": 135.5,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 254.4
+     }
+    ]
+   },
+   {
+    "crop": "紅龍果-白肉",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 82.7,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 1280.0,
+    "upper": 101.8,
+    "lower": 63.5,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 82.7
+     }
+    ]
+   },
+   {
+    "crop": "紅龍果-紅肉",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 53.8,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 10319.0,
+    "upper": 67.4,
+    "lower": 39.9,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 53.8
+     }
+    ]
+   },
+   {
+    "crop": "紅龍果-雙色紅龍果",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 137.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 552.0,
+    "upper": 167.7,
+    "lower": 113.2,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 137.9
+     }
+    ]
+   },
+   {
+    "crop": "櫻桃-進口",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 234.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 769.0,
+    "upper": 284.0,
+    "lower": 125.4,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 234.0
+     }
+    ]
+   },
+   {
+    "crop": "榴槤-進口",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 100.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 550.0,
+    "upper": 100.0,
+    "lower": 100.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 100.0
+     }
+    ]
+   },
+   {
+    "crop": "其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 36.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 3585.0,
+    "upper": 64.0,
+    "lower": 21.4,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 36.9
+     }
+    ]
+   },
+   {
+    "crop": "香蕉-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 15.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 11.0,
+    "upper": 15.0,
+    "lower": 15.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 15.0
+     }
+    ]
+   },
+   {
+    "crop": "香蕉",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 42.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 6883.0,
+    "upper": 59.3,
+    "lower": 30.3,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 42.6
+     }
+    ]
+   },
+   {
+    "crop": "香蕉-芭蕉紅芭蕉",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 50.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 2387.0,
+    "upper": 84.2,
+    "lower": 29.2,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 50.4
+     }
+    ]
+   },
+   {
+    "crop": "香蕉-旦蕉",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 85.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 15.0,
+    "upper": 85.0,
+    "lower": 85.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 85.0
+     }
+    ]
+   },
+   {
+    "crop": "香蕉-越旦",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 35.8,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 519.0,
+    "upper": 41.8,
+    "lower": 29.2,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 35.8
+     }
+    ]
+   },
+   {
+    "crop": "鳳梨-金鑽鳳梨",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 25.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 3182.0,
+    "upper": 57.3,
+    "lower": 11.1,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 25.4
+     }
+    ]
+   },
+   {
+    "crop": "柑橘-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 45.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 84.0,
+    "upper": 70.0,
+    "lower": 32.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 45.6
+     }
+    ]
+   },
+   {
+    "crop": "椪柑",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 48.8,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 29702.0,
+    "upper": 71.6,
+    "lower": 24.6,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 48.8
+     }
+    ]
+   },
+   {
+    "crop": "佛利蒙柑",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 43.8,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 3546.0,
+    "upper": 73.7,
+    "lower": 19.8,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 43.8
+     }
+    ]
+   },
+   {
+    "crop": "珍珠柑",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 60.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 196.0,
+    "upper": 65.0,
+    "lower": 54.5,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 60.9
+     }
+    ]
+   },
+   {
+    "crop": "柑橘-進口",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 301.1,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 60.0,
+    "upper": 366.7,
+    "lower": 263.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 301.1
+     }
+    ]
+   },
+   {
+    "crop": "甜橙-柳橙",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 29.2,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 4242.0,
+    "upper": 45.2,
+    "lower": 19.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 29.2
+     }
+    ]
+   },
+   {
+    "crop": "甜橙-紅肉柳橙",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 36.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 170.0,
+    "upper": 39.8,
+    "lower": 28.2,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 36.4
+     }
+    ]
+   },
+   {
+    "crop": "甜橙-進口",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 32.5,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 351.0,
+    "upper": 36.7,
+    "lower": 15.8,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 32.5
+     }
+    ]
+   },
+   {
+    "crop": "雜柑-檸檬",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 35.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 84.0,
+    "upper": 49.8,
+    "lower": 20.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 35.6
+     }
+    ]
+   },
+   {
+    "crop": "雜柑-金棗",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 81.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 35.0,
+    "upper": 85.0,
+    "lower": 80.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 81.6
+     }
+    ]
+   },
+   {
+    "crop": "雜柑-桔子",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 66.5,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 111.0,
+    "upper": 92.5,
+    "lower": 27.6,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 66.5
+     }
+    ]
+   },
+   {
+    "crop": "雜柑-無子檸檬",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 54.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 1221.0,
+    "upper": 95.8,
+    "lower": 23.2,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 54.9
+     }
+    ]
+   },
+   {
+    "crop": "黃秋葵",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 57.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 1572.0,
+    "upper": 97.8,
+    "lower": 27.6,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 57.9
+     }
+    ]
+   },
+   {
+    "crop": "花椰菜-青梗",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 28.7,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 7469.0,
+    "upper": 48.9,
+    "lower": 12.1,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 28.7
+     }
+    ]
+   },
+   {
+    "crop": "胡瓜-黑刺",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 24.5,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 4038.0,
+    "upper": 33.2,
+    "lower": 15.7,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 24.5
+     }
+    ]
+   },
+   {
+    "crop": "花胡瓜-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 88.8,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 231.0,
+    "upper": 123.1,
+    "lower": 21.7,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 88.8
+     }
+    ]
+   },
+   {
+    "crop": "花胡瓜",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 50.2,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 9707.0,
+    "upper": 69.4,
+    "lower": 33.9,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 50.2
+     }
+    ]
+   },
+   {
+    "crop": "冬瓜-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 18.1,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 58.0,
+    "upper": 25.0,
+    "lower": 5.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 18.1
+     }
+    ]
+   },
+   {
+    "crop": "冬瓜-白皮",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 9.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 2059.0,
+    "upper": 14.6,
+    "lower": 5.4,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 9.9
+     }
+    ]
+   },
+   {
+    "crop": "絲瓜-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 36.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 359.0,
+    "upper": 41.6,
+    "lower": 31.1,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 36.6
+     }
+    ]
+   },
+   {
+    "crop": "絲瓜",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 40.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 3970.0,
+    "upper": 59.8,
+    "lower": 28.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 40.6
+     }
+    ]
+   },
+   {
+    "crop": "絲瓜-角瓜",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 55.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 68.0,
+    "upper": 60.0,
+    "lower": 52.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 55.9
+     }
+    ]
+   },
+   {
+    "crop": "苦瓜-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 38.2,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 2510.0,
+    "upper": 42.4,
+    "lower": 31.9,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 38.2
+     }
+    ]
+   },
+   {
+    "crop": "苦瓜-白大米",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 52.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 4778.0,
+    "upper": 68.9,
+    "lower": 31.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 52.0
+     }
+    ]
+   },
+   {
+    "crop": "苦瓜-翠綠",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 41.9,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 440.0,
+    "upper": 48.3,
+    "lower": 34.2,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 41.9
+     }
+    ]
+   },
+   {
+    "crop": "扁蒲-長形",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 16.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 30.0,
+    "upper": 16.0,
+    "lower": 16.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 16.0
+     }
+    ]
+   },
+   {
+    "crop": "扁蒲-花蒲",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 16.1,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 4270.0,
+    "upper": 26.6,
+    "lower": 9.7,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 16.1
+     }
+    ]
+   },
+   {
+    "crop": "扁蒲-梨子蒲",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 21.8,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 1407.0,
+    "upper": 36.3,
+    "lower": 13.5,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 21.8
+     }
+    ]
+   },
+   {
+    "crop": "茄子-其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 111.5,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 26.0,
+    "upper": 115.0,
+    "lower": 100.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 111.5
+     }
+    ]
+   },
+   {
+    "crop": "茄子-麻荸茄",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 52.3,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 4157.0,
+    "upper": 73.8,
+    "lower": 39.1,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 52.3
+     }
+    ]
+   },
+   {
+    "crop": "茄子-日本種",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 38.5,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 184.0,
+    "upper": 46.0,
+    "lower": 33.8,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 38.5
+     }
+    ]
+   },
+   {
+    "crop": "番茄-黑柿",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 76.0,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 394.0,
+    "upper": 90.0,
+    "lower": 55.9,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 76.0
+     }
+    ]
+   },
+   {
+    "crop": "番茄-牛番茄",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 71.4,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 9371.0,
+    "upper": 107.1,
+    "lower": 31.6,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 71.4
+     }
+    ]
+   },
+   {
+    "crop": "甜椒-新香",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 36.6,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 138.0,
+    "upper": 49.4,
+    "lower": 13.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 36.6
+     }
+    ]
+   },
+   {
+    "crop": "甜椒-彩色種 其他",
+    "market": "台北二",
+    "date": "115.11.20",
+    "avg": 47.7,
+    "prev_date": null,
+    "prev_avg": null,
+    "change_pct": null,
+    "qty": 74.0,
+    "upper": 106.2,
+    "lower": 20.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 47.7
+     }
+    ]
+   }
   ]
  }
 }
