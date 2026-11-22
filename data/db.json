@@ -1,0 +1,67 @@
+{
+ "updated_at": "2026-11-18T14:30:00+08:00",
+ "seed_note": "這是隨專案附上的種子資料（部分為實際抓取的真實條目），讓你在還沒設定 GitHub Actions 前打開就看得到東西。跑過一次 workflow 後會被完整的即時資料覆蓋。",
+ "status": {"ok": [], "failed": []},
+ "feeds": {
+  "news": {
+   "name": "時事", "source": "公視新聞", "url": "https://news.pts.org.tw/xml/newsfeed.xml",
+   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "items": [
+    {"id":"seedn01","title":"黃仁勳稱若能回鍋輝達深感榮幸 董事長：已啟動執行長遴選程序","link":"https://news.pts.org.tw/article/836249","date":"2026-11-18T13:47:32+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedn02","title":"輝達宣示擴大供應鏈合作 台積電、鴻海等多個台廠入列","link":"https://news.pts.org.tw/article/836248","date":"2026-11-18T13:45:28+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedn03","title":"大陸冷高壓南下 今入夜後全台降溫明顯","link":"https://news.pts.org.tw/article/836247","date":"2026-11-18T13:44:52+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedn04","title":"蔣萬安合體謝龍介掃街 沈伯洋重返內湖花市衝刺","link":"https://news.pts.org.tw/article/836246","date":"2026-11-18T13:44:21+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedn05","title":"廢非核公投意見會／洪毓祥推以核養綠提升能源韌性 王守誠：應正視台灣地質風險","link":"https://news.pts.org.tw/article/836250","date":"2026-11-18T13:07:59+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedn06","title":"台中里長候選人涉當詐團車手 開競選車面交收款遭警方逮捕","link":"https://news.pts.org.tw/article/836245","date":"2026-11-18T13:43:54+08:00","summary":"","source":"公視新聞","added_date":"2026-11-18T14:30:00+08:00"}
+   ]
+  },
+  "technews": {
+   "name": "科技與海外市場", "source": "TechNews 科技新報", "url": "https://cdn.technews.tw/feed/",
+   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "items": [
+    {"id":"seedt01","title":"美嚴控先進 AI 晶片出口，集邦：部分訂單可能遞延","link":"https://technews.tw/","date":"2026-11-17T18:30:40+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"TechNews 科技新報","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedt02","title":"東元瞄準歐洲 AI 基建需求，模組化資料中心最快 9 個月交付","link":"https://technews.tw/","date":"2026-11-17T17:57:16+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"TechNews 科技新報","added_date":"2026-11-18T14:30:00+08:00"}
+   ]
+  },
+  "techorange": {
+   "name": "數位轉型", "source": "TechOrange 科技報橘", "url": "https://techorange.com/feed/",
+   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true, "items": []
+  },
+  "motive": {
+   "name": "行銷趨勢", "source": "Motive 商業洞察", "url": "https://www.motive.com.tw/?feed=rss2",
+   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "items": [
+    {"id":"seedm01","title":"品牌重塑其實不只是包裝設計","link":"https://www.motive.com.tw/","date":"2026-09-17T00:00:00+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"Motive 商業洞察","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedm02","title":"從 UNIQLO 學：品牌老化的任務要怎麼解？","link":"https://www.motive.com.tw/","date":"2026-09-17T00:00:00+08:00","summary":"種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。","source":"Motive 商業洞察","added_date":"2026-11-18T14:30:00+08:00"}
+   ]
+  },
+  "managertoday": {
+   "name": "企劃與方法論", "source": "經理人 Managertoday", "url": "https://rss.bnextmedia.com.tw/feed/managertoday/",
+   "updated_at": "2026-11-18T14:30:00+08:00", "ok": true,
+   "items": [
+    {"id":"seedg01","title":"美國 Apple Pay 湧入 2300 筆問題回報！蘋果認了：內部更新惹禍、排除網路攻擊","link":"https://www.managertoday.com.tw/articles/view/73361","date":"2026-11-18T14:21:11+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedg02","title":"Q3 營收超出預期！輝達法說會交出漂亮成績單，為何市場仍眉頭深鎖？","link":"https://www.managertoday.com.tw/articles/view/73357","date":"2026-11-18T11:54:06+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedg03","title":"黃仁勳辭職後首發文喊回鍋，輝達董事會鐵心不讓步，只剩 15% 股東門檻最後一搏","link":"https://www.managertoday.com.tw/articles/view/73356","date":"2026-11-18T11:20:16+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedg04","title":"盤中零股新制！首次撮合 12/7 起提前至 9 點，交易時間、下單方式與手續費完整攻略","link":"https://www.managertoday.com.tw/articles/view/59023","date":"2026-11-18T11:22:16+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"},
+    {"id":"seedg05","title":"金剛經、隨他們去都上榜！誠品 2026 年度暢銷榜，台灣讀者靠這 9 本書對抗內耗","link":"https://www.managertoday.com.tw/articles/view/73359","date":"2026-11-18T13:41:55+08:00","summary":"","source":"經理人 Managertoday","added_date":"2026-11-18T14:30:00+08:00"}
+   ]
+  }
+ },
+ "veg": {
+  "updated_at": "2026-11-18T14:30:00+08:00",
+  "latest_date": "115.11.17",
+  "market_label": "台北各批發市場",
+  "source": "農業部 農產品批發市場交易行情",
+  "source_url": "https://data.moa.gov.tw/",
+  "ok": true,
+  "items": [
+   {"crop":"藍莓-進口","market":"台北二","date":"115.11.17","avg":220.9,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":876.0,"upper":312.3,"lower":144.6,"history":[{"d":"115.11.17","v":220.9}]},
+   {"crop":"草莓","market":"台北二","date":"115.11.17","avg":173.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":261.0,"upper":238.0,"lower":127.6,"history":[{"d":"115.11.17","v":173.4}]},
+   {"crop":"釋迦-鳳梨釋迦","market":"台北二","date":"115.11.17","avg":96.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":451.0,"upper":131.6,"lower":66.4,"history":[{"d":"115.11.17","v":96.4}]},
+   {"crop":"百香果-其他","market":"台北二","date":"115.11.17","avg":91.0,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":985.0,"upper":120.0,"lower":53.3,"history":[{"d":"115.11.17","v":91.0}]},
+   {"crop":"釋迦","market":"台北二","date":"115.11.17","avg":85.7,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":2019.0,"upper":131.7,"lower":52.9,"history":[{"d":"115.11.17","v":85.7}]},
+   {"crop":"椰子-剝殼","market":"台北二","date":"115.11.17","avg":17.0,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":30.0,"upper":17.0,"lower":17.0,"history":[{"d":"115.11.17","v":17.0}]},
+   {"crop":"椰子","market":"台北二","date":"115.11.17","avg":15.4,"prev_date":null,"prev_avg":null,"change_pct":null,"qty":799.0,"upper":19.9,"lower":13.0,"history":[{"d":"115.11.17","v":15.4}]}
+  ]
+ }
+}
