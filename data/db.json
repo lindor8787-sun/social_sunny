@@ -1,25 +1,249 @@
 {
- "updated_at": "2026-11-22T22:02:13.873248+08:00",
+ "updated_at": "2026-11-23T16:24:41.723571+08:00",
  "seed_note": "這是隨專案附上的種子資料（部分為實際抓取的真實條目），讓你在還沒設定 GitHub Actions 前打開就看得到東西。跑過一次 workflow 後會被完整的即時資料覆蓋。",
  "status": {
   "ok": [
    "公視新聞",
    "TechNews 科技新報",
    "TechOrange 科技報橘",
+   "經理人 Managertoday",
    "農業部菜價"
   ],
-  "failed": [
-   "經理人 Managertoday"
-  ]
+  "failed": []
  },
  "feeds": {
   "news": {
    "name": "時事",
    "source": "公視新聞",
    "url": "https://news.pts.org.tw/xml/newsfeed.xml",
-   "updated_at": "2026-11-22T22:00:48.145654+08:00",
+   "updated_at": "2026-11-23T16:23:31.718870+08:00",
    "ok": true,
    "items": [
+    {
+     "id": "fa1e7e51a4af",
+     "title": "沖繩首里城正殿經7年重生 古屋圭司不滿未提台灣贈紅檜協助",
+     "link": "https://news.pts.org.tw/article/836905",
+     "date": "2026-11-23T15:59:46+08:00",
+     "summary": "7年前遭大火焚毀的日本沖繩的世界遺產「首里城」，正殿部分經過多年的修復工程，於昨（22）日舉辦完工典禮。由於首里城重建工程中，使用了部分台灣捐贈的紅檜作為材料，但日本官員出席致詞時，並未提及台灣，遭友台的眾議院議員古屋圭司批評。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718827+08:00"
+    },
+    {
+     "id": "d86f2517e571",
+     "title": "國安基金進場、限空令3.0啟動 台股盤中3萬6上下震盪",
+     "link": "https://news.pts.org.tw/article/836902",
+     "date": "2026-11-23T15:23:17+08:00",
+     "summary": "上週台股大跌17.5%，今（23）日在3萬6000點上下震盪，最低一度跌逾500點。不過，在國安基金進場護盤、金管會限空令3.0版上路等政策支撐下，台股盤中維持百點震盪。行政院長卓榮泰下午將與產業界負責人和公協會領袖討論如何因應，也傳出政府考慮將融資維持率調降至120%。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718835+08:00"
+    },
+    {
+     "id": "68bb25394364",
+     "title": "環團籲加速化石燃料退場 環境部：持續落實AI減碳",
+     "link": "https://news.pts.org.tw/article/836899",
+     "date": "2026-11-23T15:19:13+08:00",
+     "summary": "雖然COP31未達共識，國內環團期望，政府政策應該要加速推動化石燃料的退場，環境部也回應台灣不會等待，將會持續加速落實減碳機制。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718837+08:00"
+    },
+    {
+     "id": "0000bae34309",
+     "title": "雲林林內私地變更殯葬用地 村民抗議反對設鄰避設施",
+     "link": "https://news.pts.org.tw/article/836903",
+     "date": "2026-11-23T15:14:20+08:00",
+     "summary": "近期有業者申請將林內鄉九芎段987、988、989地號私人土地變更為殯葬用地，但鄰近的村民卻都不知情，23日上午數十名村民舉著白布條堅決反對包括設置火葬場、納骨塔等訴求。對此雲縣府表示，業者依法申請變更用地並無不法，但未來若要新建相關嫌避設施一定會舉辦公聽會及說明會，讓所有鄉親能夠理解才會核發相關證照。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718833+08:00"
+    },
+    {
+     "id": "143415666b36",
+     "title": "台東全民運動館內無健身器材 團委會：設備訂製擬12月交付",
+     "link": "https://news.pts.org.tw/article/836880",
+     "date": "2026-11-23T15:13:50+08:00",
+     "summary": "台東縣上個月才啟用的全民運動館，有民眾週末到館內要運動，結果發現館內沒有健身器材，非常失望。由於台東縣全民運動館是委託救國團台東縣團委會管理經營，台東團委會表示，健身器材和入館的管理系統需要訂製，下個月廠商就會交付使用。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718857+08:00"
+    },
+    {
+     "id": "407ceb6b55da",
+     "title": "宜蘭小貨車路邊違法燒垃圾 環保局依廢清法開罰",
+     "link": "https://news.pts.org.tw/article/836884",
+     "date": "2026-11-23T15:11:18+08:00",
+     "summary": "宜蘭縣五結鄉有民眾拍下，有人開著小貨車停在路邊燃燒垃圾，包含廢棄保麗龍、木板等，因此向環保局檢舉。環保局表示，獲報後到場只剩下餘燼，難以用《空污法》開罰，但現場有遺留廢棄物，經以車追人找到涉案人後，依《廢清法》開罰，同樣可罰1200元至10萬元以下罰鍰。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718853+08:00"
+    },
+    {
+     "id": "1a1aa5d3df81",
+     "title": "薔琵颱風重創吉安米 2期稻作現空包彈收成率減半",
+     "link": "https://news.pts.org.tw/article/836883",
+     "date": "2026-11-23T15:10:50+08:00",
+     "summary": "受到今（2026）年10月份薔琵颱風影響，花蓮吉安鄉吉安米2期稻作出現了不輾實的空包彈情況，收成率至少降低5成，預估12月份開始就會無米可賣，農民大嘆今年血本無歸。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718854+08:00"
+    },
+    {
+     "id": "7cb4b1861a26",
+     "title": "岡山國小教師霸凌案校長遭解職 教師工會召退休教師陳抗",
+     "link": "https://news.pts.org.tw/article/836882",
+     "date": "2026-11-23T15:10:27+08:00",
+     "summary": "高雄市岡山國小教師林晉如申訴遭校園職場霸凌案，經高雄市勞工局認定成立，教育局也解除校長職務，但隨之而來的卻是更多在網路的爭議。高雄市教師職業工會23日召了退休校長和教師等30多人前往高市府陳情抗議，相挺被解職的校長，要求要釐清職場霸凌新法。但高雄市教育產業工會認為，教師工會的核心價值應該是保障教師工作權益，對於已認定成立的職場霸凌案件，更應支持受害教師。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718855+08:00"
+    },
+    {
+     "id": "9eddb2d4232d",
+     "title": "卓榮泰批龍科三期延宕 張善政指已審查通過待政院核定",
+     "link": "https://news.pts.org.tw/article/836891",
+     "date": "2026-11-23T15:07:00+08:00",
+     "summary": "選戰進入最後倒數，針對行政院長卓榮泰到桃園為黃世杰站台，指控過去幾年建設停滯，導致龍科3期延宕，藍營反擊，龍科3期核定公文9月經國發會通過後，已在卓院長桌上躺了2個月，痛批政治操作。另一方面，針對國民黨市議員候選人古振豐捲入20多年前的少女刑事爭議，雖然市黨部已聲明不再支持，但綠營砲轟市長張善政至今沒有明確表態、企圖模糊帶過。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718846+08:00"
+    },
+    {
+     "id": "e0773f73dfb5",
+     "title": "2名外籍遊客不顧勸阻 闖越阿里山林鐵軌道恐遭罰",
+     "link": "https://news.pts.org.tw/article/836890",
+     "date": "2026-11-23T15:06:24+08:00",
+     "summary": "阿里山林鐵昨（22）日被民眾目擊2名外籍遊客不顧勸阻，闖越有列車接近中的林鐵軌道，將被依《道交條例》及《鐵路法》開罰；另外還有鐵道迷發現，林鐵的外包廠商粗魯拆卸後續要修復、展示的1925年代貴賓車等珍貴木造車廂，因此目前也先要求廠商停工，追究疏失責任。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718848+08:00"
+    },
+    {
+     "id": "66a66727dff3",
+     "title": "健保署推移除患者鼻胃管保尊嚴 9月起納入住宿型機構",
+     "link": "https://news.pts.org.tw/article/836887",
+     "date": "2026-11-23T15:05:56+08:00",
+     "summary": "長期留置鼻胃管患者身心備受煎熬，健保統計，去（2025）年全國近28萬人申報胃管插入，其中2萬5000人連續使用3個月以上，多為住宿型機構住民。為了提高患者生活品質、保有晚年尊嚴，健保署擴大醫療院所移除鼻胃管試辦計畫，9月起納入住宿型機構。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718851+08:00"
+    },
+    {
+     "id": "1c8c20235a28",
+     "title": "彰化潭墘國小迎復校曙光 31名學童新學年盼轉回就讀",
+     "link": "https://news.pts.org.tw/article/836881",
+     "date": "2026-11-23T15:05:32+08:00",
+     "summary": "受到少子化衝擊，彰化縣大城鄉的潭墘國小3年前被縣府公告停辦，但最高行政法院判決，認定縣府決策未尊重兒童權利公約，程序存有瑕疵，判決撤銷廢校處分，也讓潭墘國小燃起復校希望。居民今（23）日舉辦記者會，宣布潭墘國小即將復校，不反對未來與遊學中心並存，希望讓地方教育有新的契機。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718856+08:00"
+    },
+    {
+     "id": "26c1b2f2513d",
+     "title": "印尼糖果工廠大火延燒約16小時 已知3死、37人失聯",
+     "link": "https://news.pts.org.tw/article/836893",
+     "date": "2026-11-23T14:45:27+08:00",
+     "summary": "印尼西爪哇一間糖果工廠21日發生大火，截至23日已確認3人死亡、15人獲救、4人受傷送醫，但還有約37人落不明。救援人員已從火場移出24個屍袋，部分遺體嚴重燒毀，需要進行DNA比對鑑定，罹難人數可能增加。由於火場有坍塌危險，搜救行動從22日晚間暫停，23日上午才繼續進行。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718844+08:00"
+    },
+    {
+     "id": "0bcefe363fcc",
+     "title": "臉塗藻礁淤泥赴總統府旁陳情 環團籲停建三接南防波堤",
+     "link": "https://news.pts.org.tw/article/836892",
+     "date": "2026-11-23T14:44:56+08:00",
+     "summary": "關心桃園大潭藻礁的生態狀況，搶救大潭藻礁行動聯盟聯合多個團體，上午到總統府旁陳情，指控中油第3天然氣接收站工程導致藻礁嚴重淤積，呼籲政府正視生態衝擊、停止南防波堤開發並履行保育承諾，不過中油日前對此發聲明強調，三接建站以來，都有依環評承諾進行生態監測。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718845+08:00"
+    },
+    {
+     "id": "476bba6fb561",
+     "title": "新店駕駛疑酒駕停車道上昏睡 驚醒拒檢撞警車逃逸",
+     "link": "https://news.pts.org.tw/article/836889",
+     "date": "2026-11-23T14:44:27+08:00",
+     "summary": "今（2026）年前8月酒駕致人死傷案件全台發生5200多件，隨著年末到，來往往是酒駕高峰期，案件可能大幅增加。昨（22）日在新北市新店有特斯拉駕駛停在車道上昏睡，驚醒後卻衝撞警車逃逸，造成員警受傷，警方後續在他住處抓到人，經採血驗出酒測值超標，懷疑他疑涉嫌酒後上路，全案將依公共危險等罪嫌偵辦。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718849+08:00"
+    },
+    {
+     "id": "20e63c33522a",
+     "title": "三峽製毒廠偽裝殯葬業 警喬裝工人深入蒐證逮人",
+     "link": "https://news.pts.org.tw/article/836888",
+     "date": "2026-11-23T14:43:58+08:00",
+     "summary": "刑事局破獲新北三峽一處鐵皮工廠以殯葬器材當掩護，實則作為製毒據點。警方喬裝成園藝工人、管線工人等不同身分，深入周邊蒐證，掌握製毒情資後展開搜索，不僅當場逮捕2名嫌犯，更查獲愷他命成品、半成品及大量製毒原料，若全數製成毒品市價高達3507萬元。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718850+08:00"
+    },
+    {
+     "id": "d9e22d396c43",
+     "title": "研究分析東亞族群4處基因變異 成思覺失調症遺傳關鍵線索",
+     "link": "https://news.pts.org.tw/article/836886",
+     "date": "2026-11-23T14:43:23+08:00",
+     "summary": "思覺失調症和遺傳有關，根據國家衛生研究院最新研究，跨國分析台灣、中國、日本等東亞及歐洲族群近8萬人的基因資料，其中4個新發現區域的基因變異在東亞族群出現頻率遠高於歐洲族群，成為思覺失調症遺傳的關鍵線索。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718852+08:00"
+    },
+    {
+     "id": "515a9561c13f",
+     "title": "卓榮泰擬邀金融、工商產業會面 稱景氣燈號仍樂觀",
+     "link": "https://news.pts.org.tw/article/836901",
+     "date": "2026-11-23T14:23:19+08:00",
+     "summary": "近期台股劇烈震盪，行政院長卓榮泰今（23）日下午將邀金融業、科技及工商產業公協會代表會面。卓榮泰也強調，台灣景氣燈號連10個月亮紅燈，創1984年以來最長紀錄，顯示目前整體景氣呈現穩定、樂觀態勢。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718836+08:00"
+    },
+    {
+     "id": "c8e553c65114",
+     "title": "天冷減產、飼料漲價 雞蛋每台斤漲至50元",
+     "link": "https://news.pts.org.tw/article/836898",
+     "date": "2026-11-23T14:22:24+08:00",
+     "summary": "最近經常買雞蛋的民眾，應該都能感受到蛋價明顯調漲。雜糧行業者表示，，批發價已來到每台斤50元，接近2023年缺蛋潮時每台斤55元的價位，擔心缺蛋危機重演。不過蛋商公會指出，價格上揚主要受天候及產地減產影響，若產地供應回穩，價格就有望下修。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718838+08:00"
+    },
+    {
+     "id": "c37659060c2b",
+     "title": "遭柯文哲質疑適任性 沈伯洋籲回歸市政討論",
+     "link": "https://news.pts.org.tw/article/836897",
+     "date": "2026-11-23T14:21:59+08:00",
+     "summary": "選戰倒數，前台北市長柯文哲今（23）日用詞強烈，再度質疑民進黨候選人沈伯洋是否適任台北市長。沈伯洋回應，任何討論都應「對事不對人」，即便很多想法不贊同，還是可針對食安、社宅議題向柯文哲請益。而另一方面，要將來藍白合作最大化的台北市長蔣萬安，今日陪同民眾黨的北市議員候選人車掃，但出發不到20分鐘，有支持者為了揮手，沒注意到前面車輛、導致車禍，蔣萬安隨後也緊急下…",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718840+08:00"
+    },
+    {
+     "id": "f60e1bd1f2ec",
+     "title": "新北選戰倒數5天 李四川、蘇巧慧均赴汐金萬車掃",
+     "link": "https://news.pts.org.tw/article/836896",
+     "date": "2026-11-23T14:21:26+08:00",
+     "summary": "新北市長選舉倒數5天，藍綠兩位候選人今（23）日都安排在汐止、金山、萬里車隊掃街拜票。行政院長卓榮泰昨日為蘇巧慧站台時批評李四川沒有魄力，還以此稱讚蘇巧慧的魄力像是直達車一路走向新北市。李四川上午除了舉出過去表現反擊，還說自己是公務人員出身，一階一階向上，無法直達，並以此質疑對手蘇巧慧是坐直達車，蘇巧慧對此不願回應，強調要以正面陽光選戰贏得選民支持。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718841+08:00"
+    },
+    {
+     "id": "dbde57e8be82",
+     "title": "網傳疑似賴瑞隆私人錄音 團隊稱變造音檔已提告",
+     "link": "https://news.pts.org.tw/article/836895",
+     "date": "2026-11-23T14:20:43+08:00",
+     "summary": "選戰將近，網路近來流傳疑似民進黨高雄市長候選人賴瑞隆的對話錄音，賴瑞隆團隊表示內容都是變造，已報警提告。國民黨高雄市長候選人柯志恩今（23）日上午沒有公開行程，22日已公開回應，支持賴瑞隆提告不實變造音檔，強調不分黨派都有政治人物因造假影片、音檔受害，呼籲檢方應在選後公布查明結果，是真是假都可還給當事人清白。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718842+08:00"
+    },
+    {
+     "id": "1036c1df198a",
+     "title": "AI作弊風波延燒 南韓教長崔教振請辭獲准",
+     "link": "https://news.pts.org.tw/article/836894",
+     "date": "2026-11-23T14:20:17+08:00",
+     "summary": "南韓剛結束一年一度的大學入學考試，教育部長崔教振昨（22）日突然宣布請辭，總統李在明隨即批准。原因是日前南韓稅務師考試的榜首，事後坦承利用微型攝影機與AI工具作弊，結果上週質詢的時候，72歲的崔教振說自己年紀大，沒有信心能在大學入學考試時抓到作弊者，引發民眾強烈反彈。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718843+08:00"
+    },
+    {
+     "id": "d2a954443397",
+     "title": "南韓股市也被外資大提款 啟動穩定基金準備防再重挫",
+     "link": "https://news.pts.org.tw/article/836904",
+     "date": "2026-11-23T12:52:55+08:00",
+     "summary": "台股上週大跌，金管會今（23）日起實施第三波限空令等5項穩定股市措施，南韓政府也在昨（22）日召開緊急市場情勢評估會議，啟動股市穩定基金準備工作，若市場持續暴跌，將視情況投入；另放寬企業每日庫藏股回購數量限制，並加強監管非法放空。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718832+08:00"
+    },
+    {
+     "id": "d51646eae345",
+     "title": "COP31延會逾48小時創紀錄 協議草案未提化石燃料多國拒簽",
+     "link": "https://news.pts.org.tw/article/836873",
+     "date": "2026-11-23T09:24:00+08:00",
+     "summary": "在土耳其舉行的COP31聯合國氣候大會，在延會超過48小時，創下史上最長會議紀錄後，22日宣告談判破局。由於最終協議草案，隻字未提引發全球暖化的主因化石燃料，引發歐盟、英國及馬紹爾群島等多國強烈不滿，並拒絕簽署。我國環境部對此回應，雖然COP31未達共識，但台灣不會等待，將持續加速落實減碳行動。",
+     "source": "公視新聞",
+     "added_date": "2026-11-23T16:23:31.718858+08:00"
+    },
     {
      "id": "4dfdc55d2453",
      "title": "沈伯洋辦城市行動展與民眾互動 蔣萬安邀盧秀燕、韓國瑜車掃",
@@ -305,9 +529,369 @@
    "name": "科技與海外市場",
    "source": "TechNews 科技新報",
    "url": "https://cdn.technews.tw/feed/",
-   "updated_at": "2026-11-22T22:00:49.028494+08:00",
+   "updated_at": "2026-11-23T16:23:32.732146+08:00",
    "ok": true,
    "items": [
+    {
+     "id": "1686873f0d5f",
+     "title": "戳破科技業過度樂觀神話，諾華執行長：AI 難在 10 年內治癒癌症",
+     "link": "https://technews.tw/2026/11/23/novartis-rejects-ai-industry-hopes-to-cure-cancer-in-five-to-10-years/",
+     "date": "2026-11-23T16:20:50+08:00",
+     "summary": "諾華（Novartis）執行長萬思瀚（Vas Narasimhan）11 月 23 日表示，外界對人工智慧在醫 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732088+08:00"
+    },
+    {
+     "id": "02ae7de4713e",
+     "title": "科林研發攜手 LEGO Education，提升兒童 STEM 教育學習機會",
+     "link": "https://technews.tw/2026/11/23/lam-research-lego-education-stem/",
+     "date": "2026-11-23T16:20:16+08:00",
+     "summary": "科林研發（Lam Research）宣布與 LEGO Education 合作，擴大兒童及青少年參與科學、科技 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732095+08:00"
+    },
+    {
+     "id": "dbfbae0d7d8b",
+     "title": "鈉離子電池也能助攻 AI？LG 結合 SST 打造新一代供電架構",
+     "link": "https://technews.tw/2026/11/23/sodium-ion-batteries-power-ai-lg-combines-sst-create-new-generation-power-architecture/",
+     "date": "2026-11-23T16:15:21+08:00",
+     "summary": "AI 資料中心除了面臨電力供應不足的挑戰，GPU 運算所帶來的瞬間負載變化，也對供電系統提出更高要求。韓國電池 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732096+08:00"
+    },
+    {
+     "id": "aa81d0874011",
+     "title": "微軟推 RDMA over USB4 技術，多台 Windows PC 地端執行大模型",
+     "link": "https://technews.tw/2026/11/23/microsoft-introduces-rdma-over-usb4-on-windows/",
+     "date": "2026-11-23T16:14:00+08:00",
+     "summary": "微軟開發出一項全新的 Windows 11 功能，能讓多台 PC 得以透過 USB4 連結，將彼此的記憶體與 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732097+08:00"
+    },
+    {
+     "id": "2f2485838781",
+     "title": "川普再次力挺黃仁勳，籲輝達董事會重新聘回任執行長",
+     "link": "https://finance.technews.tw/2026/11/23/trump-again-urges-nvidia-board-to-bring-back-jensen/",
+     "date": "2026-11-23T16:10:32+08:00",
+     "summary": "美國總統川普今天呼籲人工智慧（AI）晶片大廠輝達（Nvidia）董事會重新聘回黃仁勳，重申這位前執行長仍是執掌 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732098+08:00"
+    },
+    {
+     "id": "ca7918fea950",
+     "title": "美情報總監示警，系統汰舊換新恐釀更多科技當機",
+     "link": "https://infosecu.technews.tw/2026/11/23/us-intelligence-director-system-upgrades-tech-outages/",
+     "date": "2026-11-23T16:00:51+08:00",
+     "summary": "美國近期接連發生航班停飛、銀行系統故障等科技當機事件，國家情報總監克萊頓今天表示，隨著企業與政府機關汰換老舊系 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732099+08:00"
+    },
+    {
+     "id": "07316211f187",
+     "title": "記憶體漲價衝擊印手機市場，銷量暴跌 22%",
+     "link": "https://technews.tw/2026/11/23/memory-phone-cost-india/",
+     "date": "2026-11-23T15:59:39+08:00",
+     "summary": "AI 資料中心持續推升記憶體需求，DRAM 與 NAND 價格上漲的影響正逐漸擴及智慧型手機市場。研調機構 C [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732100+08:00"
+    },
+    {
+     "id": "4f5f7dc96ae1",
+     "title": "追趕美／中廠 安川電機：2030 年推 AI 人型機器人",
+     "link": "https://technews.tw/2026/11/23/yaskawa-electric-to-launch-ai-humanoid-robots-by-2030/",
+     "date": "2026-11-23T15:10:43+08:00",
+     "summary": "追趕美、中廠商，日本工業機器人大廠安川電機（Yaskawa Electric）將在 2030 年推出搭載 AI [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732101+08:00"
+    },
+    {
+     "id": "e5c2869ba759",
+     "title": "華邦電攜手成大成立共同研發中心，每年千萬元聚焦前瞻技術研發及人才培育",
+     "link": "https://technews.tw/2026/11/23/winbond-partners-with-ncku-to-establish-joint-rd-center/",
+     "date": "2026-11-23T15:00:53+08:00",
+     "summary": "記憶體大廠華邦電子攜手國立成功大學成立「華邦─成大共同研發中心」，並於11月6日上午在成大勝利校區未來館舉行揭 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732102+08:00"
+    },
+    {
+     "id": "927463fef825",
+     "title": "川普迷因幣晚宴大退燒，規模與價值雙雙暴跌",
+     "link": "https://finance.technews.tw/2026/11/23/trump-hosts-gala-for-meme-coin-investors-as-his-token-plunges-to-record-lows/",
+     "date": "2026-11-23T14:50:58+08:00",
+     "summary": "美國總統川普 22 日晚間出席在華盛頓郊區舉辦的第 3 場迷因幣晚宴，獲邀貴賓皆是川普迷因幣 $TRUMP 的 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732103+08:00"
+    },
+    {
+     "id": "0865a5dbce4c",
+     "title": "突破 AI 散熱瓶頸，12 吋碳化矽跨足先進封裝生態系",
+     "link": "https://technews.tw/2026/11/23/12-inch-silicon-carbide-enters-the-advanced-packaging-ecosystem/",
+     "date": "2026-11-23T14:45:10+08:00",
+     "summary": "隨著人工智慧（AI）運算需求爆發，高階處理器面臨嚴峻的散熱考驗。過去，以高壓功率元件為主的碳化矽（SiC）材料 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732105+08:00"
+    },
+    {
+     "id": "332ad674abac",
+     "title": "三星機海戰術升級，2027 年一口氣推 5 摺疊機、1 卷軸手機",
+     "link": "https://technews.tw/2026/11/23/galaxy-foldable-phone-rollable-phone/",
+     "date": "2026-11-23T14:45:00+08:00",
+     "summary": "三星持續擴大摺疊手機產品布局，最新消息指出，三星計劃於 2027 年推出多達 6 款摺疊裝置，除了既有的 Ga [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732106+08:00"
+    },
+    {
+     "id": "d913a7f58b84",
+     "title": "不會等 F/A-XX，美國海軍 CCA 將先和 F-35 搭配服役",
+     "link": "https://technews.tw/2026/11/23/us-navy-will-not-wait-for-fa-xx-and-will-integrate-cca-with-f35s-first/",
+     "date": "2026-11-23T14:43:09+08:00",
+     "summary": "美國海軍艦載無人僚機有望先與現役 F-35C 匿蹤戰機搭配，代理美國海軍部次長的托蒂（William Toti [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732107+08:00"
+    },
+    {
+     "id": "6a507f118385",
+     "title": "卓榮泰：景氣燈號連 10 紅史上最長，整體穩定樂觀",
+     "link": "https://finance.technews.tw/2026/11/23/economic-monitoring-indicator-stays-red-for-10-straight-months-a-record/",
+     "date": "2026-11-23T14:40:56+08:00",
+     "summary": "行政院長卓榮泰今天表示，台灣景氣燈號連 10 個月紅燈創史上最長紀錄，顯示目前整體景氣呈現穩定、樂觀態勢，且出 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732108+08:00"
+    },
+    {
+     "id": "b4431bc0086a",
+     "title": "AI 助攻星系模擬提速 20 倍，日本研發「PHEASANT」系統首創單一恆星解析度",
+     "link": "https://technews.tw/2026/11/23/ai-galaxy-simulation/",
+     "date": "2026-11-23T14:30:19+08:00",
+     "summary": "日本東京大學與理化學研究所（RIKEN）等研究人員開發出名為「PHEASANT」的星系模擬系統，透過 AI 模 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732109+08:00"
+    },
+    {
+     "id": "405e029d89ed",
+     "title": "多角化布局開花結果！高通汽車晶片營收上看 80 億美元，挑戰英飛凌、恩智浦",
+     "link": "https://technews.tw/2026/11/23/qualcomm-automotive-chip-business/",
+     "date": "2026-11-23T14:28:19+08:00",
+     "summary": "高通近年致力於擺脫過度依賴景氣波動的智慧手機市場，根據最新產業數據顯示，高通近年的多角化布局正逐漸開花結果。 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732110+08:00"
+    },
+    {
+     "id": "42a0a77e5285",
+     "title": "三星 SDI 進攻 AI 資料中心，儲能、UPS、BBU 三路並進",
+     "link": "https://technews.tw/2026/11/23/samsung-sdi-targets-ai-data-centers-three-pronged-approach-energy-storage-ups-bbu/",
+     "date": "2026-11-23T14:22:51+08:00",
+     "summary": "AI 資料中心電力需求持續攀升，帶動儲能及備援電池市場發展。韓國電池大廠三星 SDI 於北美能源展 RE+ 2 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732111+08:00"
+    },
+    {
+     "id": "affc752974ef",
+     "title": "韓國三星證券遭駭，逾 8,000 名客戶個資外洩",
+     "link": "https://infosecu.technews.tw/2026/11/23/samsung-securities-data-breach/",
+     "date": "2026-11-23T14:20:44+08:00",
+     "summary": "韓國金融業接連發生駭客入侵事件，三星證券今天也證實遭到外部入侵，共有 8,241 名客戶的個人資料外洩。 綜合 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732112+08:00"
+    },
+    {
+     "id": "e30ba5e7ed72",
+     "title": "不只是輝達，謝金河：世界發現不能沒有黃仁勳",
+     "link": "https://technews.tw/2026/11/23/the-world-has-discovered-it-cannot-do-without-jensen-huang/",
+     "date": "2026-11-23T14:15:01+08:00",
+     "summary": "針對近期的全球與台灣股市的雪崩式下殺，縱然是投資人重新審視 AI 的估值過高，未來能不能在巨額投資下實現獲利的 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732113+08:00"
+    },
+    {
+     "id": "1251a37c4dad",
+     "title": "駭客鎖定貿易命脈，美國港口每日面臨數千次網攻",
+     "link": "https://infosecu.technews.tw/2026/11/23/us-ports-face-cyber-attack-onslaught-as-hackers-target-vital-trade-routes/",
+     "date": "2026-11-23T14:10:17+08:00",
+     "summary": "駭客對美國港口與貨輪發動的網路攻擊持續升級，每天試圖入侵多達數千次，直指全球貿易命脈；這些手法日益精密的攻擊者 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732114+08:00"
+    },
+    {
+     "id": "60a924fb6f35",
+     "title": "紐時：黃樂與中國情報官員接觸逾一年，時間與黃仁勳婚外情重疊",
+     "link": "https://technews.tw/2026/11/23/nyt-huang-le-contacted-chinese-intelligence-officials-over-year-overlapping-jensen-huang-affair/",
+     "date": "2026-11-23T14:05:15+08:00",
+     "summary": "知情人士透露，美國情報報告顯示，中國籍女商人黃樂在和輝達（Nvidia）前執行長黃仁勳祕戀期間，與中國最高情報 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732115+08:00"
+    },
+    {
+     "id": "95d32f4458f3",
+     "title": "物理 AI 領軍企業思靈機器人完成 5 億美元 F 輪融資",
+     "link": "https://finance.technews.tw/2026/11/23/agile-robots-f/",
+     "date": "2026-11-23T14:00:15+08:00",
+     "summary": "總部位於慕尼黑的物理 AI 公司思靈機器人（Agile Robots）已完成 F 輪融資，融資金額 5 億美元 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732116+08:00"
+    },
+    {
+     "id": "ac88fe1cf94b",
+     "title": "黃仁勳溫情喊話「願重掌兵符」遭拒，輝達首場無創辦人法說會淪接班角力戰",
+     "link": "https://finance.technews.tw/2026/11/23/colette-kress-earnings-call-signals-a-new-era-for-nvidia/",
+     "date": "2026-11-23T13:58:21+08:00",
+     "summary": "2026 年 11 月 18 日，輝達舉行了 33 年來首次沒有創辦人黃仁勳領軍的法說會。但當法說前夕，儘管黃 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732117+08:00"
+    },
+    {
+     "id": "48dc892899b3",
+     "title": "擴廠無塵室需求旺！聖暉在手訂單衝 840 億元，大和喊目標價 1,415 元",
+     "link": "https://technews.tw/2026/11/23/daiwa-see-acter/",
+     "date": "2026-11-23T13:46:33+08:00",
+     "summary": "日系外資大和出具最新報告指出，受惠 AI 基礎建設與半導體產業持續擴張，全球無塵室工程需求持續升溫，帶動聖暉在 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732118+08:00"
+    },
+    {
+     "id": "cdf711b9f37a",
+     "title": "南電 10 月獲利年增 389%，大摩喊加碼、目標價上看 2,000 元",
+     "link": "https://technews.tw/2026/11/23/morgan-stanley-2026-nan-ya-pcb/",
+     "date": "2026-11-23T13:24:48+08:00",
+     "summary": "美系外資摩根士丹利（大摩）出具最新報告指出，南電 10 月稅後淨利率升至 23.4%，高於第三季的 20.1% [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732119+08:00"
+    },
+    {
+     "id": "86adc898181f",
+     "title": "35 歲「超級任天堂」也能聊 AI，神人借力〈耀西島〉同款加速晶片讓 ChatGPT 登上古董主機",
+     "link": "https://ccc.technews.tw/2026/11/23/35-year-old-super-nintendo-chatgpt/",
+     "date": "2026-11-23T13:00:09+08:00",
+     "summary": "一款看似荒誕卻確實可運作的 AI 聊天機器人，近日被搬上了高齡 35 歲的經典主機超級任天堂（SNES）。由復 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732120+08:00"
+    },
+    {
+     "id": "cff25c5f1c4b",
+     "title": "Amazon 揭露：中國駭客出動自主 AI 代理，僅 11 分鐘挖出零時差漏洞攻陷大學伺服器",
+     "link": "https://infosecu.technews.tw/2026/11/23/chinese-hackers-leverage-ai-agents-launch-automated-attacks/",
+     "date": "2026-11-23T12:50:32+08:00",
+     "summary": "Amazon 資安團隊近日揭露一起疑似具備中國背景的網路攻擊事件。駭客利用一款名為「Cairn」的自主 AI [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732121+08:00"
+    },
+    {
+     "id": "aafb0e534c19",
+     "title": "薪資漲也沒用，日本人愈來愈省拖累經濟",
+     "link": "https://technews.tw/2026/11/23/wage-hikes-wont-help-japanese-consumers-growing-frugality-could-trigger-an-economic-crisis/",
+     "date": "2026-11-23T12:48:22+08:00",
+     "summary": "日本經濟再度亮起警訊。最新數據顯示，日本第三季經濟意外萎縮，終結連續三季成長，雖然政府將部分原因歸咎於豪雨、地 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732122+08:00"
+    },
+    {
+     "id": "ddecef6f53d3",
+     "title": "郭明錤爆 Google 砍博通百萬顆 TPU 聯發科受惠？",
+     "link": "https://technews.tw/2026/11/23/ming-chi-kuo-google-cuts-millions-broadcom-tpus-mediatek-benefit/",
+     "date": "2026-11-23T12:45:58+08:00",
+     "summary": "天風國際證券分析師郭明錤（Ming-Chi Kuo）在最新供應鏈調查指出，Google 已下修 2027 年由 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732123+08:00"
+    },
+    {
+     "id": "28ebe84eab17",
+     "title": "記憶體暴漲 4 倍釀連鎖效應，AI 伺服器廠簽約後再向客戶加價",
+     "link": "https://finance.technews.tw/2026/11/23/ai-servers-surge-contract-price-hikes/",
+     "date": "2026-11-23T12:40:24+08:00",
+     "summary": "AI 伺服器供應鏈的漲價壓力，正從零組件端一路蔓延至終端買家。根據 22 日的最新消息，包含戴爾（Dell）、 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732124+08:00"
+    },
+    {
+     "id": "57a9dcb4e719",
+     "title": "美連鎖披薩市場退燒 瘦瘦針也是衝擊原因",
+     "link": "https://finance.technews.tw/2026/11/23/us-pizza-chains-lose-their-appeal/",
+     "date": "2026-11-23T12:30:46+08:00",
+     "summary": "美國物價漲聲不斷，外食族更加精打細算，連鎖披薩業者面臨經營壓力。由於外送平台提供更多元的平價餐飲選擇，加上 G [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732125+08:00"
+    },
+    {
+     "id": "a3911cee9fcc",
+     "title": "Neuralink 釋出最新實測影片靠意念暢玩〈GTA 6〉，馬斯克讚：簡直是心靈感應",
+     "link": "https://ccc.technews.tw/2026/11/23/neuralink-bci-tested-playing-games-thoughts/",
+     "date": "2026-11-23T12:20:52+08:00",
+     "summary": "知名腦機介面公司 Neuralink 近日在 X 平台發布了一段震撼影片，展示一名臨床試驗參與者如何透過腦部植 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732125+08:00"
+    },
+    {
+     "id": "8d17c7b8fc2b",
+     "title": "輝達晶片走私風暴擴大：黃樂涉染紅，36 億美元中國政府資金暗中撐腰",
+     "link": "https://technews.tw/2026/11/23/nvidia-chip-smuggling-inside-story-revealed/",
+     "date": "2026-11-23T12:10:11+08:00",
+     "summary": "最新調查顯示，與輝達（Nvidia）前執行長黃仁勳傳出緋聞的中國商界高層黃樂（Alice Huang），正成為 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732126+08:00"
+    },
+    {
+     "id": "81e67eb31aa1",
+     "title": "NASA 火星任務遭雙重打擊：毅力號通訊異常、25 年老將「奧德賽號」恐迎來終點",
+     "link": "https://technews.tw/2026/11/23/nasa-mars-rovers-dual-malfunction-crisis/",
+     "date": "2026-11-23T12:00:03+08:00",
+     "summary": "美國太空總署（NASA）近日證實，火星探測任務正面臨嚴峻挑戰。火星探測車「毅力號」（Perseverance） [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732127+08:00"
+    },
+    {
+     "id": "ebe2ef408414",
+     "title": "記憶體股崩跌 超低本益比恐暗示獲利恐見頂",
+     "link": "https://finance.technews.tw/2026/11/23/memory-stocks-plunge-as-profit-growth-may-have-peaked/",
+     "date": "2026-11-23T11:50:03+08:00",
+     "summary": "AI 交易急轉直下，儲存、記憶體股從高點崩跌，儘管現價位看似便宜，專家示警，超低本益比可能暗示著獲利高峰已過。 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732128+08:00"
+    },
+    {
+     "id": "d268f4a9d623",
+     "title": "三星手錶傳改採「兩年一更」週期，2027 暫無 Galaxy Watch 新品計畫",
+     "link": "https://technews.tw/2026/11/23/samsung-smartwatch-biennial-update-cycle-2027/",
+     "date": "2026-11-23T11:40:11+08:00",
+     "summary": "三星（Samsung）智慧手錶產品線傳出重大變革。根據業界最新消息，三星內部已決定放慢硬體更新步調，未來 Ga [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732129+08:00"
+    },
+    {
+     "id": "7cd5b7f607c2",
+     "title": "NASA 完成 RS-25 引擎 200 秒點火測試，為阿提米絲登月任務鋪路",
+     "link": "https://technews.tw/2026/11/23/nasa-conducts-latest-rs-25-engine-test-in-support-of-future-artemis-missions/",
+     "date": "2026-11-23T11:30:52+08:00",
+     "summary": "NASA 近日在密西西比州的史坦尼茲太空中心完成一項關鍵推進測試，將開發中的 RS-25 引擎 10001 號 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732130+08:00"
+    },
+    {
+     "id": "39b2d333073d",
+     "title": "貝佐斯 2026 年捐股逾 6 億美元，仍不到持股價值的 0.3%",
+     "link": "https://finance.technews.tw/2026/11/23/jeff-bezos-donated-198-9-million-in-amazon-stock-in-two-days/",
+     "date": "2026-11-23T11:20:17+08:00",
+     "summary": "亞馬遜（Amazon）創辦人傑夫‧貝佐斯（Jeff Bezos）在兩天內捐出價值約 1.989 億美元的亞馬遜 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732131+08:00"
+    },
+    {
+     "id": "cf1223a2e06b",
+     "title": "IPO 後 Anthropic 手握驚人現金儲備，超過四大科技公司總和",
+     "link": "https://finance.technews.tw/2026/11/23/anthropic-builds-up-a-huge-cash-pile-amid-the-ai-boom/",
+     "date": "2026-11-23T11:19:13+08:00",
+     "summary": "Anthropic 以 810 億美元的募資規模創下史上最大 IPO 紀錄，另透過與特定投資人進行的私募配售取 [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732132+08:00"
+    },
+    {
+     "id": "0de6480e6a04",
+     "title": "Pat Gelsinger：摩爾定律沒死，AI 時代需要 1 萬倍運算效率躍升",
+     "link": "https://technews.tw/2026/11/23/pat-gelsinger-moores-law-not-dead-ai-era-10000x-computing-efficiency-leap/",
+     "date": "2026-11-23T11:15:55+08:00",
+     "summary": "英特爾（Intel）前執行長、現任深科技創投 Playground Global 合夥人季辛格（Pat Gel [&#8230;]",
+     "source": "TechNews 科技新報",
+     "added_date": "2026-11-23T16:23:32.732133+08:00"
+    },
     {
      "id": "1892b3063d5e",
      "title": "台股跌逾 17% 失守年線還未完？安聯投信：後市盯緊四大止穩訊號",
@@ -487,204 +1071,6 @@
      "summary": "天文學家在仙女座星系中觀測到一場罕見的恆星合併事件：一顆質量略低於太陽的伴星以螺旋狀的公轉軌道逐漸靠近一顆膨脹 [&#8230;]",
      "source": "TechNews 科技新報",
      "added_date": "2026-11-22T21:29:27.041700+08:00"
-    },
-    {
-     "id": "077a8b21836c",
-     "title": "280 萬人基因分析揭阿茲海默症新線索，48 個風險區域首度現身",
-     "link": "https://technews.tw/2026/11/22/massive-study-of-2-8-million-people-reveals-new-secrets-of-alzheimers-disease/",
-     "date": "2026-11-22T00:00:05+08:00",
-     "summary": "由荷蘭阿姆斯特丹自由大學主導、迄今規模最大的阿茲海默症基因關聯研究，分析約 280 萬人的基因資料，找到 48 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041701+08:00"
-    },
-    {
-     "id": "0893f22d59a7",
-     "title": "〈GTA 6〉暗藏〈GTA 7〉趣味彩蛋，自嘲開發漫長",
-     "link": "https://technews.tw/2026/11/21/gta-6-easter-egg-sees-rockstar-poke-fun-at-its-long-development-process/",
-     "date": "2026-11-21T17:00:36+08:00",
-     "summary": "〈GTA 6〉歷經多年開發終於正式推出。遊戲內藏有趣味彩蛋，既自嘲 Rockstar 開發本作歷時多年，也暗指 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041702+08:00"
-    },
-    {
-     "id": "f204c2837fe4",
-     "title": "研究發現太平洋錳結核內藏數千隻微型生物，深海採礦恐摧毀專屬棲地",
-     "link": "https://technews.tw/2026/11/21/deep-sea-mining-targets-rocks-that-are-habitats-inside-and-out/",
-     "date": "2026-11-21T16:30:29+08:00",
-     "summary": "一項最新研究顯示，太平洋海底被視為採礦目標的錳結核（Manganese nodules），不只是富含鎳、鈷與銅 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041703+08:00"
-    },
-    {
-     "id": "1bbc5854c842",
-     "title": "從羊毛氈玩偶到虛擬追思空間，韓國寵物紀念商機與告別文化興起",
-     "link": "https://technews.tw/2026/11/21/south-korea-pet-memorial-business-farewell-culture-rise-felt-dolls-virtual-memorial-spaces/",
-     "date": "2026-11-21T16:00:33+08:00",
-     "summary": "對許多飼主來說，長年和自己相伴的寵物早已成為生命中不可或缺的家人。然而，當熟悉的身影離開，飼主們該如何面對這份 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041704+08:00"
-    },
-    {
-     "id": "74515749837c",
-     "title": "AI 評分也有「口音偏見」？研究：美英口音最吃香，中文、奈及利亞口音墊底",
-     "link": "https://technews.tw/2026/11/21/ai-voice-model-accent-bias/",
-     "date": "2026-11-21T15:30:20+08:00",
-     "summary": "華盛頓大學（University of Washington）最新研究指出，當人工智慧（AI）模型被用於面試、 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041705+08:00"
-    },
-    {
-     "id": "a91099328533",
-     "title": "腦波變「孤單」害你忘東忘西？科學家揪出阿茲海默症與深度睡眠的隱藏殺手",
-     "link": "https://technews.tw/2026/11/21/unraveling-mystery-brain-loneliness-waves/",
-     "date": "2026-11-21T15:00:24+08:00",
-     "summary": "剛走出超市，卻想不起車停哪？這種「情節記憶」的衰退是老化過程常見的困擾。加州大學柏克萊分校（UC Berkel [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041706+08:00"
-    },
-    {
-     "id": "93e889970f5e",
-     "title": "AI 也有雙面性格，研究：AI 得知受監控時會隱藏真實意圖",
-     "link": "https://technews.tw/2026/11/21/ai-surveillance-behavioral-differences-study/",
-     "date": "2026-11-21T14:30:16+08:00",
-     "summary": "一項最新研究揭露，人工智慧（AI）模型的表現並非始終如一，而是會強烈受到「是否被監看」的影響。研究團隊在針對 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041707+08:00"
-    },
-    {
-     "id": "8c24b0d5aee0",
-     "title": "Microsoft 聯同跨行業機構推出 AI 透明度倡議，加強企業對 AI 模型及代理的信任",
-     "link": "https://infosecu.technews.tw/2026/11/21/microsoft-launches-ai-transparency-initiative/",
-     "date": "2026-11-21T14:00:02+08:00",
-     "summary": "機構雖然能夠監察與 AI 模型相關的大部分活動，卻往往無法還原由提出請求到產生結果之間的過程，因此難以獨立驗證 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041708+08:00"
-    },
-    {
-     "id": "14a149c9b022",
-     "title": "強鹿推免費 AI 助理「JD」告別繁瑣數據，一句話秒解農場大小事",
-     "link": "https://technews.tw/2026/11/21/john-deere-jd-ai-assistant/",
-     "date": "2026-11-21T13:30:16+08:00",
-     "summary": "農機大廠強鹿（John Deere）近期推出全新 AI 助理「JD」，讓農民能以自然對話的方式，輕鬆分析多年來 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041709+08:00"
-    },
-    {
-     "id": "68c6eaa703eb",
-     "title": "34 噸車身搭載 120 公釐主砲，捷土合作 Karpat 中型戰車首度公開實彈展示",
-     "link": "https://technews.tw/2026/11/21/csg-and-fnss-collabeorated-cfl-120-karpat-medium-tank-public-demo/",
-     "date": "2026-11-21T12:50:41+08:00",
-     "summary": "捷克軍工集團 CSG 與土耳其 FNSS 合作開發的 CFL-120 Karpat 中型戰車，近日在斯洛伐克 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041710+08:00"
-    },
-    {
-     "id": "b3b1a6619bb1",
-     "title": "Anthropic 研究員宣稱利用 Claude，解開困擾數學界超過 150 年黎曼猜想難題",
-     "link": "https://technews.tw/2026/11/21/anthropic-solve-riemann-problem-with-claude/",
-     "date": "2026-11-21T11:29:13+08:00",
-     "summary": "Anthropic 於 11 月 19 日正式在美國那斯達克掛牌上市，創全球資本市場史上最大規模 IPO 紀錄 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041711+08:00"
-    },
-    {
-     "id": "a0fb2fd0f130",
-     "title": "幾百元小單也不放過，華碩靠「客戶終身價值」將零碎需求變長尾商機",
-     "link": "https://technews.tw/2026/11/21/asus-customer-lifetime-value-small-orders-fragmented-demands-long-tail-opportunities/",
-     "date": "2026-11-21T11:00:04+08:00",
-     "summary": "對習慣做企業採購案的 B2B 業務來說，一筆每月只收幾百元的軟體訂閱，通常不值得投入太多人力。因為在成交前，業 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041711+08:00"
-    },
-    {
-     "id": "d4b4b00dbb5e",
-     "title": "麻州大學研發生物混合網狀採集器，讓細胞成為植入式醫材的電源",
-     "link": "https://technews.tw/2026/11/21/energy-harvesting-mesh-could-replace-batteries-in-implantable-medical-devices/",
-     "date": "2026-11-21T10:30:43+08:00",
-     "summary": "心律調節器、植入式心臟整流去顫器等植入式醫療器材的電池，平均壽命約 5~15 年，實際長短取決於預設參數與裝置 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041712+08:00"
-    },
-    {
-     "id": "3dba43e9ef33",
-     "title": "堅持「算力留美」！川普揚言對海外建資料中心的美企課重稅",
-     "link": "https://technews.tw/2026/11/21/trump-data-centers-abroad-tax/",
-     "date": "2026-11-21T10:22:18+08:00",
-     "summary": "美國總統川普揚言將對前往海外興建資料中心的美國企業課徵高額稅負，但他並未詳細說明將如何執行這項措施，以及可能依 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041713+08:00"
-    },
-    {
-     "id": "6383fdfef03a",
-     "title": "輝達再遭政府盯上！路透：美 SEC 正調查輝達會計處理方式",
-     "link": "https://technews.tw/2026/11/21/nvidia-us-sec-investigation/",
-     "date": "2026-11-21T10:06:27+08:00",
-     "summary": "輝達（NVIDIA）近期接連陷入監管風暴，如今再傳出遭美國證券交易委員會（SEC）調查會計處理方式。兩名知情人 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041714+08:00"
-    },
-    {
-     "id": "9838c6c1a2e7",
-     "title": "無聲 30 年，一出手就換掉 CEO！輝達董事會失職的真相",
-     "link": "https://finance.technews.tw/2026/11/21/nvidia-board-30-years-silence-ceo-replaced-dereliction-duty-truth/",
-     "date": "2026-11-21T10:00:03+08:00",
-     "summary": "拉下黃仁勳的董事會，竟然有人是賣墨西哥捲餅出身的。 「這就是替曾經全球最值錢的公司做決定的董事會？」11月14 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041715+08:00"
-    },
-    {
-     "id": "768c098691f7",
-     "title": "AI 讓詐騙信件不再錯字連篇，資安防線轉向驗證流程",
-     "link": "https://infosecu.technews.tw/2026/11/21/ai-cybersecurity-terms-explained-10-definitions-to-know/",
-     "date": "2026-11-21T09:30:49+08:00",
-     "summary": "生成式 AI 並沒有替駭客開闢新入侵途徑，卻讓既有手法更便宜更快，也更難察覺。美國媒體 Quartz 近日整理 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041716+08:00"
-    },
-    {
-     "id": "1efd8653e46a",
-     "title": "美曝 H200 出口許可申請量！中科技巨頭瘋搶百萬顆，實際獲批落差大",
-     "link": "https://technews.tw/2026/11/21/us-2026-h200-export-china/",
-     "date": "2026-11-21T09:12:04+08:00",
-     "summary": "美國近期依據《出口管制改革法案》（ECRA）行使法定權限，公開商務部工業與安全局（BIS）涉及輝達（NVIDI [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041716+08:00"
-    },
-    {
-     "id": "e2ce11e39ce7",
-     "title": "海龍風場完工、永冠同步下市，台灣離岸風電的 2026 年喜憂參半",
-     "link": "https://technews.tw/2026/11/21/hai-long-offshore-wind-project-connects-to-taiwan-grid/",
-     "date": "2026-11-21T09:00:58+08:00",
-     "summary": "根據《財訊》雙週刊報導，亞洲最大單一風場，由日本三井物產、加拿大北陸能源及馬來西亞淨達力共同投資開發的海龍離岸 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041718+08:00"
-    },
-    {
-     "id": "5f026f0b9349",
-     "title": "被質疑就改口，UNESCO 研究：AI 回答氣候問題九成正確，卻很容易被說服",
-     "link": "https://technews.tw/2026/11/21/ai-models-mislead-on-climate-science/",
-     "date": "2026-11-21T08:30:19+08:00",
-     "summary": "聯合國教科文組織（UNESCO）與倫敦大學學院（UCL）最新發布的研究指出，人工智慧模型雖然能在氣候科學的基礎 [&#8230;]",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-22T21:29:27.041719+08:00"
-    },
-    {
-     "id": "seedt01",
-     "title": "美嚴控先進 AI 晶片出口，集邦：部分訂單可能遞延",
-     "link": "https://technews.tw/",
-     "date": "2026-11-17T18:30:40+08:00",
-     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-18T14:30:00+08:00"
-    },
-    {
-     "id": "seedt02",
-     "title": "東元瞄準歐洲 AI 基建需求，模組化資料中心最快 9 個月交付",
-     "link": "https://technews.tw/",
-     "date": "2026-11-17T17:57:16+08:00",
-     "summary": "種子資料，連結指向來源首頁；首次更新後會換成真實文章連結。",
-     "source": "TechNews 科技新報",
-     "added_date": "2026-11-18T14:30:00+08:00"
     }
    ]
   },
@@ -692,9 +1078,81 @@
    "name": "數位轉型",
    "source": "TechOrange 科技報橘",
    "url": "https://techorange.com/feed/",
-   "updated_at": "2026-11-22T22:00:51.114823+08:00",
+   "updated_at": "2026-11-23T16:23:33.882656+08:00",
    "ok": true,
    "items": [
+    {
+     "id": "68e56fe83286",
+     "title": "量子運算最先見效的可能是能源，而非新藥？電網調度、製氫觸媒已展開測試",
+     "link": "https://techorange.com/2026/11/23/quantum-computing-energy-applications/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T15:47:15+08:00",
+     "summary": "量子運算長期被寄望用來模擬分子行為、開發新藥，或最佳化供應鏈與航班排程，但《CNBC》指出，許多最大的目標可能還要數年、甚至數十年才能實現。相較之下，量子軟體已經在一個更迫切的課題上進行測試：能源轉型，從維持電網穩定，到尋找更好的太陽能電池與製氫材料。 在電網相關的試點中，量子電腦並非單獨運算，而是與傳統運算分工，處理調度、排程這類特定的最佳化問題。對評估新…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882629+08:00"
+    },
+    {
+     "id": "7aab082df1f8",
+     "title": "AI 代理從零設計全新 CPU 架構「Frostbite」！Architect Labs 宣稱流片前模擬每瓦效能達循序核心 4.59 倍",
+     "link": "https://techorange.com/2026/11/23/architect-labs-ai-cpu-frostbite/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T15:00:14+08:00",
+     "summary": "位於美國矽谷帕羅奧圖（Palo Alto）的新創公司 Architect Labs 近日發表研究部落格文章指出，旗下 AI 系統發現、設計並驗證出一款具備全新指令集的通用 CPU「Frostbite」。在 7 奈米製程的流片前（Pre-silicon，指實際送交晶圓廠生產前的模擬測試）評估中，橫跨 25 項運算任務的測試顯示，由四個運算區塊組成的 Frost…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882634+08:00"
+    },
+    {
+     "id": "9347b9dc3e36",
+     "title": "AI 提示詞送出後誰看得到？近 200 萬筆誘餌實測：標記「零資料保留」的請求也遭竊，OpenRouter 下架 3 家推論服務供應商",
+     "link": "https://techorange.com/2026/11/23/security-ai-leaky-supply-chain/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T12:51:22+08:00",
+     "summary": "工業資安公司 Dragos 研究長 HD Moore 近日公布一項大規模實驗：研究團隊在近 200 萬筆 AI 提示詞（prompt）中植入獨一無二、可追蹤的誘餌憑證與秘密連結，再觀察這些秘密在哪裡出現。結果有證據顯示，至少三家 AI 推論服務供應商（inference provider，又稱主機服務商）遭攻擊者入侵，攻擊者利用存取權竊取這些業者收到的提示詞…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882636+08:00"
+    },
+    {
+     "id": "07a0f3146541",
+     "title": "OpenAI 公開內部「困惑度」數據，想替業界訂「煞車線」：這把量尺能成為共同標準嗎？",
+     "link": "https://techorange.com/2026/11/23/openai-perplexity-common-limits/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T11:56:55+08:00",
+     "summary": "OpenAI 首席科學家帕喬基（Jakub Pachocki）美國時間 11/22 在官方部落格發表〈Perplexity and Intelligence〉，公開公司內部追蹤的歷代模型「困惑度」（perplexity）數據，並提議前沿 AI 業者以困惑度和其他指標訂出共同上限。如《TechCrunch》提醒，這裡的困惑度是衡量模型的指標，與同名的 AI 搜…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882637+08:00"
+    },
+    {
+     "id": "3d611eb50532",
+     "title": "【2027 製造業五大趨勢】AI、混合雲、人力、供應鏈與永續同時到來，統一營運平台可望成整合關鍵",
+     "link": "https://techorange.com/2026/11/23/manufacturing-trends-2027/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T10:37:09+08:00",
+     "summary": "美國全國製造商協會（NAM）2026 年第 2 季調查顯示，83.1% 的製造商把原物料成本上漲列為最大挑戰，71.8% 把貿易不確定性排在第二。 在這樣的壓力下，2027 年製造業還將同時面對 AI、混合雲、人力、供應鏈韌性與永續 5 項趨勢。若把它們當成各自獨立的專案推動，製造商會花得更多、成效更低；改用統一的製造營運管理（MOM）平台，也就是整合生產、…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882639+08:00"
+    },
+    {
+     "id": "87d60bb5a972",
+     "title": "【用氛圍編碼的方式教機器人】Machenta 以「模擬資料」取代真實世界蒐集，主打示範一次就教會新任務",
+     "link": "https://techorange.com/2026/11/23/ai-machenta-instant-learning-robot/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T09:49:05+08:00",
+     "summary": "英國新創團隊 Machenta 認為模擬技術才是達成快速、高效率，而且能夠低成本訓練 AI 機器人模型的最大關鍵；若可以讓機器人擁有即時學習能力，將徹底改變 AI 機器人產業經濟模式。",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882640+08:00"
+    },
+    {
+     "id": "b73be06c239a",
+     "title": "RFID 抓單品數據、AI 做事後分析，Kroger 如何讓庫存決策一次比一次準？",
+     "link": "https://techorange.com/2026/11/23/kroger-rfid-ai-inventory-management/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T08:59:01+08:00",
+     "summary": "零售業的庫存管理正面臨新的技術變革。當商品種類增加、供應鏈與門市營運日益複雜，如何即時掌握商品數量、位置與銷售狀況，成為零售商提升營運效率的重要課題。美國連鎖超市 Kroger 正加速整合無線射頻辨識（RFID）、數位架上標籤（Digital Shelf Labels）、機器人與人工智慧（AI），改善商品庫存流動、鮮度管理及貨架供應率。 盤點速度提升近 70…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882641+08:00"
+    },
+    {
+     "id": "b9cc9e07a297",
+     "title": "【科技早餐】美國 AI 晶片新規生效！台積電、三星暫停部分對中出貨，阿里巴巴雲端成長承壓",
+     "link": "https://techorange.com/2026/11/23/us-ai-chip-export-rules-tsmc-samsung-china/?utm_source=rss&utm_medium=feed&utm_campaign=techorange_rss",
+     "date": "2026-11-23T05:30:00+08:00",
+     "summary": "【科技早餐】今天精選 8 則國內外重要科技新聞。 ＊美國 AI 晶片新規生效！台積電、三星暫停部分對中出貨，川普稱只賣舊款晶片 美國商務部工業暨安全局（BIS）11 月 19 日生效的 AI 晶片出口新規，進一步收緊中國企業取得先進算力的管道。據《Reuters》引述消息人士指出，台積電已暫停部分中國客戶採用 16 奈米及更先進製程的訂單，除非客戶取得美國出…",
+     "source": "TechOrange 科技報橘",
+     "added_date": "2026-11-23T16:23:33.882642+08:00"
+    },
     {
      "id": "aea1bbbea10c",
      "title": "【Visa 全球數位匯款報告】近七成民眾更看重「由誰提供」，信任與防詐是穩定幣普及關鍵",
@@ -881,14 +1339,113 @@
    "name": "企劃與方法論",
    "source": "經理人 Managertoday",
    "url": "https://rss.bnextmedia.com.tw/feed/managertoday/",
-   "updated_at": "2026-11-18T14:30:00+08:00",
-   "ok": false,
+   "updated_at": "2026-11-23T16:23:34.694826+08:00",
+   "ok": true,
    "items": [
+    {
+     "id": "436cda2f7bdd",
+     "title": "資歷亮眼的你，為什麼沒被錄取？面試官最怕的不是能力不足，而是「不受教」",
+     "link": "https://www.managertoday.com.tw/articles/view/73394",
+     "date": "2026-11-23T16:06:56+08:00",
+     "summary": "面試緊張卡詞不扣分，說「沒有失敗經驗」才讓你出局！研究顯示新人失敗主因「不受教」占 26%，遠高於技術不足。學會坦誠分享犯錯與改進，展現受教度才能錄取。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694804+08:00"
+    },
+    {
+     "id": "29546feb806a",
+     "title": "LINE 年底前注意！網頁版 2027 將退場、未綁電話刪帳號、無聲訊息轉付費，Premium 月費、怎麼訂一次看",
+     "link": "https://www.managertoday.com.tw/articles/view/73316",
+     "date": "2026-11-23T15:58:08+08:00",
+     "summary": "LINE年底前有多項新制與功能更新！Chrome 網頁版將於 2027 年退場，另外僅連結臉書、未綁電話的帳號須在12月31日前完成設定，無聲訊息也將轉為付費功能，另外還有通行金鑰、通話錄製、預約訊息等新功能，使用方式與限制一次看",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694812+08:00"
+    },
+    {
+     "id": "d10bd6813803",
+     "title": "敬老卡不只能搭車？2027 敬老卡懶人包｜22 縣市點數、使用範圍、查詢與補辦方式",
+     "link": "https://www.managertoday.com.tw/articles/view/73408",
+     "date": "2026-11-23T15:51:42+08:00",
+     "summary": "2027 年起，台北、新北、桃園敬老卡點數將擴大到超商、藥局、農會與醫療健檢，高雄也規劃換發二代「至尊卡」。一次整理全台 22 縣市敬老卡點數、用途、新制與常見問題。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694811+08:00"
+    },
+    {
+     "id": "e6c3b83520e9",
+     "title": "下班收到主管LINE該不該回、算不算加班？一次看懂勞動部最新「下班聯繫規則」",
+     "link": "https://www.managertoday.com.tw/articles/view/73404",
+     "date": "2026-11-23T15:45:12+08:00",
+     "summary": "勞動部最新版《工作規則參考手冊》增訂第22條之1，企業下班後因緊急公務聯繫員工，聯繫方式與時間都要事先協商。本文整理新條文重點、加班認定原則，以及企業與員工該怎麼做。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694815+08:00"
+    },
+    {
+     "id": "039753f5ec89",
+     "title": "融資維持率 11/24 起降到 120%！已被追繳者一律取消、不處分擔保品",
+     "link": "https://www.managertoday.com.tw/articles/view/73400",
+     "date": "2026-11-23T15:44:51+08:00",
+     "summary": "證交所宣布 11 月 24 日起融資維持率由 130% 降至 120%，24 日前已被追繳者一律取消、不處分擔保品，可望緩解短線斷頭壓力，券商則憂授信與風控風險升高。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694810+08:00"
+    },
+    {
+     "id": "685ca2f2a573",
+     "title": "危機就是轉機！成功者如何把麻煩變商機？掌握 3 種思維，培養實現願望的力量",
+     "link": "https://www.managertoday.com.tw/books/view/73238",
+     "date": "2026-11-23T15:26:25+08:00",
+     "summary": "想改變人生、實現夢想，必須先突破既有思維，從危機中尋找機會、從日常觀察市場需求，並善用30秒自我介紹拓展人脈、透過視覺化訓練商業敏銳度。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694813+08:00"
+    },
+    {
+     "id": "8249e7615541",
+     "title": "想靠興趣賺錢，光有熱情還不夠！5 個條件找出最有機會變現的方向",
+     "link": "https://www.managertoday.com.tw/books/view/73236",
+     "date": "2026-11-23T15:18:46+08:00",
+     "summary": "如何靠喜歡的事賺錢？透過五圓法則，盤點個人興趣、專長、經驗、顧客需求及市場趨勢，找出五者交集，鎖定具備獲利潛力的方向並持續深耕。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694817+08:00"
+    },
+    {
+     "id": "623d297ffe44",
+     "title": "勞退該月領還是一次領？先搞懂它在退休規劃裡扮演的 3 種角色",
+     "link": "https://www.managertoday.com.tw/books/view/73396",
+     "date": "2026-11-23T15:17:19+08:00",
+     "summary": "每月薪資單上看得到勞保費，雇主另外提繳的退休金又去了哪裡？從一名月薪五萬元的上班族算起，看看多一筆勞退自提，三十年後個人專戶能累積多少退休金。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694816+08:00"
+    },
+    {
+     "id": "92260d1a85f7",
+     "title": "報告被主管說「不夠完整」，卻不知道漏了什麼？用逆向思考二分法，跳脫習慣的思考路線",
+     "link": "https://www.managertoday.com.tw/books/view/73405",
+     "date": "2026-11-23T14:48:06+08:00",
+     "summary": "業績不好就加強銷售訓練，品質出問題就提升員工技能——這些反應當下看起來都合理，但都只看到了問題的一個面向。《主管的最強工作術》作者彭建文指出，高效創新主管的核心能力之一，是能夠帶領組織突破慣性框架。「逆向思考二分法」就是透過設定一組「對立的兩個面向」來檢視問題，確保在看到 A 面的同時，也系統性地走進 B 面，避免讓慣性思維在單一路徑上獨走。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694818+08:00"
+    },
+    {
+     "id": "2d93be0def54",
+     "title": "2026 年 11 月除息 ETF 一覽｜00878、006208、00891 配息金額、除息日、最後買進日總整理",
+     "link": "https://www.managertoday.com.tw/articles/view/73232",
+     "date": "2026-11-23T12:34:19+08:00",
+     "summary": "2026 年 11 月除息 ETF 有哪些？本文整理 00878、006208、00891 等熱門 ETF 的最後買進日、除息日與發放日，配息金額隨投信公告更新。",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-23T16:23:34.694819+08:00"
+    },
     {
      "id": "seedg01",
      "title": "美國 Apple Pay 湧入 2300 筆問題回報！蘋果認了：內部更新惹禍、排除網路攻擊",
      "link": "https://www.managertoday.com.tw/articles/view/73361",
      "date": "2026-11-18T14:21:11+08:00",
+     "summary": "",
+     "source": "經理人 Managertoday",
+     "added_date": "2026-11-18T14:30:00+08:00"
+    },
+    {
+     "id": "seedg05",
+     "title": "金剛經、隨他們去都上榜！誠品 2026 年度暢銷榜，台灣讀者靠這 9 本書對抗內耗",
+     "link": "https://www.managertoday.com.tw/articles/view/73359",
+     "date": "2026-11-18T13:41:55+08:00",
      "summary": "",
      "source": "經理人 Managertoday",
      "added_date": "2026-11-18T14:30:00+08:00"
@@ -903,15 +1460,6 @@
      "added_date": "2026-11-18T14:30:00+08:00"
     },
     {
-     "id": "seedg03",
-     "title": "黃仁勳辭職後首發文喊回鍋，輝達董事會鐵心不讓步，只剩 15% 股東門檻最後一搏",
-     "link": "https://www.managertoday.com.tw/articles/view/73356",
-     "date": "2026-11-18T11:20:16+08:00",
-     "summary": "",
-     "source": "經理人 Managertoday",
-     "added_date": "2026-11-18T14:30:00+08:00"
-    },
-    {
      "id": "seedg04",
      "title": "盤中零股新制！首次撮合 12/7 起提前至 9 點，交易時間、下單方式與手續費完整攻略",
      "link": "https://www.managertoday.com.tw/articles/view/59023",
@@ -921,33 +1469,726 @@
      "added_date": "2026-11-18T14:30:00+08:00"
     },
     {
-     "id": "seedg05",
-     "title": "金剛經、隨他們去都上榜！誠品 2026 年度暢銷榜，台灣讀者靠這 9 本書對抗內耗",
-     "link": "https://www.managertoday.com.tw/articles/view/73359",
-     "date": "2026-11-18T13:41:55+08:00",
+     "id": "seedg03",
+     "title": "黃仁勳辭職後首發文喊回鍋，輝達董事會鐵心不讓步，只剩 15% 股東門檻最後一搏",
+     "link": "https://www.managertoday.com.tw/articles/view/73356",
+     "date": "2026-11-18T11:20:16+08:00",
      "summary": "",
      "source": "經理人 Managertoday",
      "added_date": "2026-11-18T14:30:00+08:00"
     }
-   ],
-   "error": "解析後 0 則"
+   ]
   }
  },
  "veg": {
-  "updated_at": "2026-11-22T22:02:13.872466+08:00",
-  "latest_date": "115.11.20",
+  "updated_at": "2026-11-23T16:24:41.722471+08:00",
+  "latest_date": "115.11.22",
   "market_label": "台北一、台北二",
   "source": "農業部 農產品批發市場交易行情",
   "source_url": "https://data.moa.gov.tw/",
   "items": [
    {
+    "crop": "甜椒-其他",
+    "market": "台北二",
+    "date": "115.11.21",
+    "avg": 135.0,
+    "prev_date": "115.11.15",
+    "prev_avg": 20.0,
+    "change_pct": 575.0,
+    "qty": 20.0,
+    "upper": 20.0,
+    "lower": 20.0,
+    "history": [
+     {
+      "d": "115.11.15",
+      "v": 20.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 135.0
+     }
+    ]
+   },
+   {
+    "crop": "薑-薑黃",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 50.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 11.1,
+    "change_pct": 350.5,
+    "qty": 98.0,
+    "upper": 31.1,
+    "lower": 20.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 27.4
+     },
+     {
+      "d": "115.11.14",
+      "v": 22.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 95.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 24.0
+     },
+     {
+      "d": "115.11.19",
+      "v": 25.2
+     },
+     {
+      "d": "115.11.20",
+      "v": 23.5
+     },
+     {
+      "d": "115.11.21",
+      "v": 11.1
+     },
+     {
+      "d": "115.11.22",
+      "v": 50.0
+     }
+    ]
+   },
+   {
+    "crop": "奇異果",
+    "market": "台北一",
+    "date": "115.11.21",
+    "avg": 90.0,
+    "prev_date": "115.11.19",
+    "prev_avg": 24.3,
+    "change_pct": 270.4,
+    "qty": 375.0,
+    "upper": 78.0,
+    "lower": 6.6,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 36.4
+     },
+     {
+      "d": "115.11.14",
+      "v": 50.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 72.5
+     },
+     {
+      "d": "115.11.17",
+      "v": 33.3
+     },
+     {
+      "d": "115.11.19",
+      "v": 24.3
+     },
+     {
+      "d": "115.11.21",
+      "v": 90.0
+     }
+    ]
+   },
+   {
+    "crop": "柚子-西施柚",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 32.9,
+    "prev_date": "115.11.21",
+    "prev_avg": 9.0,
+    "change_pct": 265.6,
+    "qty": 105.0,
+    "upper": 8.0,
+    "lower": 8.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 8.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 14.8
+     },
+     {
+      "d": "115.11.15",
+      "v": 6.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 8.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 8.0
+     },
+     {
+      "d": "115.11.19",
+      "v": 7.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 9.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 9.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 32.9
+     }
+    ]
+   },
+   {
+    "crop": "芹菜-芹菜管",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 60.0,
+    "prev_date": "115.11.20",
+    "prev_avg": 20.0,
+    "change_pct": 200.0,
+    "qty": 140.0,
+    "upper": 35.0,
+    "lower": 30.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 32.9
+     },
+     {
+      "d": "115.11.14",
+      "v": 27.5
+     },
+     {
+      "d": "115.11.15",
+      "v": 27.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 29.4
+     },
+     {
+      "d": "115.11.18",
+      "v": 24.6
+     },
+     {
+      "d": "115.11.19",
+      "v": 15.4
+     },
+     {
+      "d": "115.11.20",
+      "v": 20.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 60.0
+     }
+    ]
+   },
+   {
+    "crop": "青蔥-珠蔥",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 60.0,
+    "prev_date": "115.11.20",
+    "prev_avg": 20.0,
+    "change_pct": 200.0,
+    "qty": 20.0,
+    "upper": 20.0,
+    "lower": 20.0,
+    "history": [
+     {
+      "d": "115.11.20",
+      "v": 20.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 60.0
+     }
+    ]
+   },
+   {
+    "crop": "甜椒-其他",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 67.2,
+    "prev_date": "115.11.21",
+    "prev_avg": 22.7,
+    "change_pct": 196.0,
+    "qty": 40.0,
+    "upper": 75.0,
+    "lower": 65.0,
+    "history": [
+     {
+      "d": "115.11.15",
+      "v": 67.5
+     },
+     {
+      "d": "115.11.17",
+      "v": 28.3
+     },
+     {
+      "d": "115.11.18",
+      "v": 38.7
+     },
+     {
+      "d": "115.11.19",
+      "v": 30.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 30.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 22.7
+     },
+     {
+      "d": "115.11.22",
+      "v": 67.2
+     }
+    ]
+   },
+   {
+    "crop": "薑-其他",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 100.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 35.0,
+    "change_pct": 185.7,
+    "qty": 50.0,
+    "upper": 75.0,
+    "lower": 32.3,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 50.5
+     },
+     {
+      "d": "115.11.14",
+      "v": 46.1
+     },
+     {
+      "d": "115.11.15",
+      "v": 50.2
+     },
+     {
+      "d": "115.11.17",
+      "v": 63.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 58.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 50.2
+     },
+     {
+      "d": "115.11.21",
+      "v": 35.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 100.0
+     }
+    ]
+   },
+   {
+    "crop": "蠔菇-鮑魚菇",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 95.0,
+    "prev_date": "115.11.20",
+    "prev_avg": 34.4,
+    "change_pct": 176.2,
+    "qty": 175.0,
+    "upper": 76.0,
+    "lower": 40.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 58.9
+     },
+     {
+      "d": "115.11.14",
+      "v": 47.4
+     },
+     {
+      "d": "115.11.15",
+      "v": 40.1
+     },
+     {
+      "d": "115.11.17",
+      "v": 37.2
+     },
+     {
+      "d": "115.11.18",
+      "v": 27.1
+     },
+     {
+      "d": "115.11.19",
+      "v": 95.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 34.4
+     },
+     {
+      "d": "115.11.22",
+      "v": 95.0
+     }
+    ]
+   },
+   {
+    "crop": "蘿蔔-甜菜根",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 35.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 13.6,
+    "change_pct": 157.4,
+    "qty": 50.0,
+    "upper": 35.0,
+    "lower": 32.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 33.6
+     },
+     {
+      "d": "115.11.15",
+      "v": 40.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 40.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 37.5
+     },
+     {
+      "d": "115.11.19",
+      "v": 43.6
+     },
+     {
+      "d": "115.11.20",
+      "v": 35.5
+     },
+     {
+      "d": "115.11.21",
+      "v": 13.6
+     },
+     {
+      "d": "115.11.22",
+      "v": 35.0
+     }
+    ]
+   },
+   {
+    "crop": "玉米-超甜白",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 20.0,
+    "prev_date": "115.11.18",
+    "prev_avg": 8.0,
+    "change_pct": 150.0,
+    "qty": 88.0,
+    "upper": 16.0,
+    "lower": 16.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 16.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 18.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 8.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 20.0
+     }
+    ]
+   },
+   {
+    "crop": "苦瓜-翠綠",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 65.4,
+    "prev_date": "115.11.21",
+    "prev_avg": 26.4,
+    "change_pct": 147.7,
+    "qty": 329.0,
+    "upper": 55.3,
+    "lower": 32.4,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 42.9
+     },
+     {
+      "d": "115.11.14",
+      "v": 48.5
+     },
+     {
+      "d": "115.11.15",
+      "v": 40.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 43.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 49.9
+     },
+     {
+      "d": "115.11.19",
+      "v": 39.6
+     },
+     {
+      "d": "115.11.20",
+      "v": 41.9
+     },
+     {
+      "d": "115.11.21",
+      "v": 26.4
+     },
+     {
+      "d": "115.11.22",
+      "v": 65.4
+     }
+    ]
+   },
+   {
+    "crop": "洋香瓜-阿露斯",
+    "market": "台北二",
+    "date": "115.11.21",
+    "avg": 80.2,
+    "prev_date": "115.11.20",
+    "prev_avg": 32.4,
+    "change_pct": 147.5,
+    "qty": 122.0,
+    "upper": 147.6,
+    "lower": 110.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 126.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 135.8
+     },
+     {
+      "d": "115.11.15",
+      "v": 107.9
+     },
+     {
+      "d": "115.11.17",
+      "v": 98.8
+     },
+     {
+      "d": "115.11.18",
+      "v": 32.8
+     },
+     {
+      "d": "115.11.19",
+      "v": 38.8
+     },
+     {
+      "d": "115.11.20",
+      "v": 32.4
+     },
+     {
+      "d": "115.11.21",
+      "v": 80.2
+     }
+    ]
+   },
+   {
+    "crop": "芒果-其他",
+    "market": "台北二",
+    "date": "115.11.17",
+    "avg": 140.0,
+    "prev_date": "115.11.13",
+    "prev_avg": 60.0,
+    "change_pct": 133.3,
+    "qty": 16.0,
+    "upper": 60.0,
+    "lower": 60.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 60.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 140.0
+     }
+    ]
+   },
+   {
+    "crop": "南瓜-黃如意",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 55.8,
+    "prev_date": "115.11.21",
+    "prev_avg": 24.3,
+    "change_pct": 129.6,
+    "qty": 125.0,
+    "upper": 126.4,
+    "lower": 39.8,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 94.5
+     },
+     {
+      "d": "115.11.14",
+      "v": 32.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 31.1
+     },
+     {
+      "d": "115.11.17",
+      "v": 26.6
+     },
+     {
+      "d": "115.11.18",
+      "v": 29.5
+     },
+     {
+      "d": "115.11.19",
+      "v": 23.9
+     },
+     {
+      "d": "115.11.20",
+      "v": 33.5
+     },
+     {
+      "d": "115.11.21",
+      "v": 24.3
+     },
+     {
+      "d": "115.11.22",
+      "v": 55.8
+     }
+    ]
+   },
+   {
+    "crop": "甜椒-進口 彩色種",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 95.4,
+    "prev_date": "115.11.21",
+    "prev_avg": 45.0,
+    "change_pct": 112.0,
+    "qty": 600.0,
+    "upper": 97.1,
+    "lower": 45.0,
+    "history": [
+     {
+      "d": "115.11.15",
+      "v": 78.7
+     },
+     {
+      "d": "115.11.17",
+      "v": 79.3
+     },
+     {
+      "d": "115.11.18",
+      "v": 61.2
+     },
+     {
+      "d": "115.11.19",
+      "v": 47.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 47.5
+     },
+     {
+      "d": "115.11.21",
+      "v": 45.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 95.4
+     }
+    ]
+   },
+   {
+    "crop": "絲瓜-角瓜",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 158.9,
+    "prev_date": "115.11.21",
+    "prev_avg": 76.3,
+    "change_pct": 108.3,
+    "qty": 1220.0,
+    "upper": 58.8,
+    "lower": 20.9,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 37.4
+     },
+     {
+      "d": "115.11.14",
+      "v": 36.5
+     },
+     {
+      "d": "115.11.15",
+      "v": 44.2
+     },
+     {
+      "d": "115.11.17",
+      "v": 48.8
+     },
+     {
+      "d": "115.11.18",
+      "v": 48.4
+     },
+     {
+      "d": "115.11.19",
+      "v": 42.4
+     },
+     {
+      "d": "115.11.20",
+      "v": 62.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 76.3
+     },
+     {
+      "d": "115.11.22",
+      "v": 158.9
+     }
+    ]
+   },
+   {
     "crop": "玉米-其他",
     "market": "台北二",
-    "date": "115.11.20",
-    "avg": 135.0,
-    "prev_date": "115.11.19",
-    "prev_avg": 17.4,
-    "change_pct": 675.9,
+    "date": "115.11.22",
+    "avg": 76.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 37.1,
+    "change_pct": 104.9,
     "qty": 280.0,
     "upper": 65.0,
     "lower": 61.3,
@@ -979,17 +2220,339 @@
      {
       "d": "115.11.20",
       "v": 135.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 37.1
+     },
+     {
+      "d": "115.11.22",
+      "v": 76.0
+     }
+    ]
+   },
+   {
+    "crop": "蛋黃果-仙桃",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 20.4,
+    "prev_date": "115.11.21",
+    "prev_avg": 10.0,
+    "change_pct": 104.0,
+    "qty": 42.0,
+    "upper": 20.0,
+    "lower": 17.0,
+    "history": [
+     {
+      "d": "115.11.19",
+      "v": 18.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 24.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 10.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 20.4
+     }
+    ]
+   },
+   {
+    "crop": "甘藍-進口 初秋",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 11.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 5.4,
+    "change_pct": 103.7,
+    "qty": 700.0,
+    "upper": 28.0,
+    "lower": 15.3,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 22.9
+     },
+     {
+      "d": "115.11.15",
+      "v": 14.4
+     },
+     {
+      "d": "115.11.21",
+      "v": 5.4
+     },
+     {
+      "d": "115.11.22",
+      "v": 11.0
+     }
+    ]
+   },
+   {
+    "crop": "絲瓜-長絲瓜",
+    "market": "台北一",
+    "date": "115.11.21",
+    "avg": 40.0,
+    "prev_date": "115.11.18",
+    "prev_avg": 20.0,
+    "change_pct": 100.0,
+    "qty": 75.0,
+    "upper": 24.0,
+    "lower": 24.0,
+    "history": [
+     {
+      "d": "115.11.14",
+      "v": 24.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 20.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 40.0
+     }
+    ]
+   },
+   {
+    "crop": "芋-麵芋",
+    "market": "台北二",
+    "date": "115.11.14",
+    "avg": 20.0,
+    "prev_date": "115.11.13",
+    "prev_avg": 10.0,
+    "change_pct": 100.0,
+    "qty": 60.0,
+    "upper": 10.0,
+    "lower": 10.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 10.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 20.0
+     }
+    ]
+   },
+   {
+    "crop": "薯蕷-粉薯",
+    "market": "台北二",
+    "date": "115.11.21",
+    "avg": 38.7,
+    "prev_date": "115.11.19",
+    "prev_avg": 20.0,
+    "change_pct": 93.5,
+    "qty": 12.0,
+    "upper": 32.0,
+    "lower": 32.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 32.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 25.1
+     },
+     {
+      "d": "115.11.17",
+      "v": 28.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 25.0
+     },
+     {
+      "d": "115.11.19",
+      "v": 20.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 38.7
+     }
+    ]
+   },
+   {
+    "crop": "萵苣菜-進口 蘿美",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 57.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 29.8,
+    "change_pct": 91.3,
+    "qty": 680.0,
+    "upper": 68.3,
+    "lower": 20.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 42.3
+     },
+     {
+      "d": "115.11.14",
+      "v": 67.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 67.6
+     },
+     {
+      "d": "115.11.17",
+      "v": 80.7
+     },
+     {
+      "d": "115.11.18",
+      "v": 62.5
+     },
+     {
+      "d": "115.11.19",
+      "v": 51.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 37.5
+     },
+     {
+      "d": "115.11.21",
+      "v": 29.8
+     },
+     {
+      "d": "115.11.22",
+      "v": 57.0
+     }
+    ]
+   },
+   {
+    "crop": "芹菜-西洋芹菜",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 9.5,
+    "prev_date": "115.11.19",
+    "prev_avg": 5.0,
+    "change_pct": 90.0,
+    "qty": 48.0,
+    "upper": 10.0,
+    "lower": 10.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 10.0
+     },
+     {
+      "d": "115.11.19",
+      "v": 5.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 9.5
+     }
+    ]
+   },
+   {
+    "crop": "豌豆-進口 紅花",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 163.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 87.0,
+    "change_pct": 87.4,
+    "qty": 220.0,
+    "upper": 166.0,
+    "lower": 70.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 104.9
+     },
+     {
+      "d": "115.11.14",
+      "v": 205.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 180.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 160.0
+     },
+     {
+      "d": "115.11.18",
+      "v": 150.0
+     },
+     {
+      "d": "115.11.19",
+      "v": 160.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 87.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 163.0
+     }
+    ]
+   },
+   {
+    "crop": "梨-新興梨",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 8.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 62.5,
+    "change_pct": -87.2,
+    "qty": 548.0,
+    "upper": 72.0,
+    "lower": 33.9,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 64.2
+     },
+     {
+      "d": "115.11.14",
+      "v": 13.2
+     },
+     {
+      "d": "115.11.17",
+      "v": 30.2
+     },
+     {
+      "d": "115.11.18",
+      "v": 40.2
+     },
+     {
+      "d": "115.11.19",
+      "v": 46.8
+     },
+     {
+      "d": "115.11.20",
+      "v": 52.4
+     },
+     {
+      "d": "115.11.21",
+      "v": 62.5
+     },
+     {
+      "d": "115.11.22",
+      "v": 8.0
      }
     ]
    },
    {
     "crop": "甜橙-進口",
     "market": "台北二",
-    "date": "115.11.20",
-    "avg": 32.5,
-    "prev_date": "115.11.19",
-    "prev_avg": 8.0,
-    "change_pct": 306.2,
+    "date": "115.11.22",
+    "avg": 8.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 41.5,
+    "change_pct": -80.7,
     "qty": 17.0,
     "upper": 10.0,
     "lower": 10.0,
@@ -1021,908 +2584,36 @@
      {
       "d": "115.11.20",
       "v": 32.5
-     }
-    ]
-   },
-   {
-    "crop": "皇宮菜-大葉",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 45.2,
-    "prev_date": "115.11.19",
-    "prev_avg": 15.0,
-    "change_pct": 201.3,
-    "qty": 63.0,
-    "upper": 78.0,
-    "lower": 27.9,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 60.6
-     },
-     {
-      "d": "115.11.14",
-      "v": 31.3
-     },
-     {
-      "d": "115.11.15",
-      "v": 53.4
-     },
-     {
-      "d": "115.11.17",
-      "v": 45.7
-     },
-     {
-      "d": "115.11.18",
-      "v": 41.3
-     },
-     {
-      "d": "115.11.19",
-      "v": 15.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 45.2
-     }
-    ]
-   },
-   {
-    "crop": "薯蕷-粉薯",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 90.0,
-    "prev_date": "115.11.19",
-    "prev_avg": 30.0,
-    "change_pct": 200.0,
-    "qty": 18.0,
-    "upper": 30.0,
-    "lower": 30.0,
-    "history": [
-     {
-      "d": "115.11.19",
-      "v": 30.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 90.0
-     }
-    ]
-   },
-   {
-    "crop": "甜椒-新香",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 142.2,
-    "prev_date": "115.11.19",
-    "prev_avg": 47.7,
-    "change_pct": 198.1,
-    "qty": 138.0,
-    "upper": 55.4,
-    "lower": 39.5,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 45.6
-     },
-     {
-      "d": "115.11.14",
-      "v": 52.4
-     },
-     {
-      "d": "115.11.15",
-      "v": 66.5
-     },
-     {
-      "d": "115.11.17",
-      "v": 47.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 48.3
-     },
-     {
-      "d": "115.11.19",
-      "v": 47.7
-     },
-     {
-      "d": "115.11.20",
-      "v": 142.2
-     }
-    ]
-   },
-   {
-    "crop": "香蕉-其他",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 25.0,
-    "prev_date": "115.11.15",
-    "prev_avg": 8.4,
-    "change_pct": 197.6,
-    "qty": 52.0,
-    "upper": 30.0,
-    "lower": 20.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 26.5
-     },
-     {
-      "d": "115.11.14",
-      "v": 41.9
-     },
-     {
-      "d": "115.11.15",
-      "v": 8.4
-     },
-     {
-      "d": "115.11.20",
-      "v": 25.0
-     }
-    ]
-   },
-   {
-    "crop": "甘藍-進口 紫色",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 42.0,
-    "prev_date": "115.11.19",
-    "prev_avg": 15.0,
-    "change_pct": 180.0,
-    "qty": 78.0,
-    "upper": 15.0,
-    "lower": 10.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 11.2
-     },
-     {
-      "d": "115.11.14",
-      "v": 39.2
-     },
-     {
-      "d": "115.11.15",
-      "v": 40.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 30.1
-     },
-     {
-      "d": "115.11.18",
-      "v": 32.4
-     },
-     {
-      "d": "115.11.19",
-      "v": 15.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 42.0
-     }
-    ]
-   },
-   {
-    "crop": "薯蕷-紅薯蕷",
-    "market": "台北二",
-    "date": "115.11.19",
-    "avg": 69.0,
-    "prev_date": "115.11.18",
-    "prev_avg": 25.0,
-    "change_pct": 176.0,
-    "qty": 237.0,
-    "upper": 71.4,
-    "lower": 44.3,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 61.6
-     },
-     {
-      "d": "115.11.14",
-      "v": 58.4
-     },
-     {
-      "d": "115.11.15",
-      "v": 33.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 56.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 25.0
-     },
-     {
-      "d": "115.11.19",
-      "v": 69.0
-     }
-    ]
-   },
-   {
-    "crop": "柑橘-進口",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 301.1,
-    "prev_date": "115.11.19",
-    "prev_avg": 114.8,
-    "change_pct": 162.3,
-    "qty": 2037.0,
-    "upper": 137.8,
-    "lower": 37.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 68.6
-     },
-     {
-      "d": "115.11.14",
-      "v": 45.4
-     },
-     {
-      "d": "115.11.15",
-      "v": 132.7
-     },
-     {
-      "d": "115.11.17",
-      "v": 195.3
-     },
-     {
-      "d": "115.11.18",
-      "v": 257.1
-     },
-     {
-      "d": "115.11.19",
-      "v": 114.8
-     },
-     {
-      "d": "115.11.20",
-      "v": 301.1
-     }
-    ]
-   },
-   {
-    "crop": "芒果-其他",
-    "market": "台北二",
-    "date": "115.11.17",
-    "avg": 140.0,
-    "prev_date": "115.11.13",
-    "prev_avg": 60.0,
-    "change_pct": 133.3,
-    "qty": 16.0,
-    "upper": 60.0,
-    "lower": 60.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 60.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 140.0
-     }
-    ]
-   },
-   {
-    "crop": "大蒜-進口",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 178.5,
-    "prev_date": "115.11.15",
-    "prev_avg": 80.0,
-    "change_pct": 123.1,
-    "qty": 30.0,
-    "upper": 75.0,
-    "lower": 75.0,
-    "history": [
-     {
-      "d": "115.11.14",
-      "v": 75.0
-     },
-     {
-      "d": "115.11.15",
-      "v": 80.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 178.5
-     }
-    ]
-   },
-   {
-    "crop": "甘薯-其他",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 44.6,
-    "prev_date": "115.11.19",
-    "prev_avg": 20.0,
-    "change_pct": 123.0,
-    "qty": 319.0,
-    "upper": 28.6,
-    "lower": 20.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 21.8
-     },
-     {
-      "d": "115.11.14",
-      "v": 22.1
-     },
-     {
-      "d": "115.11.15",
-      "v": 31.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 20.4
-     },
-     {
-      "d": "115.11.18",
-      "v": 87.1
-     },
-     {
-      "d": "115.11.19",
-      "v": 20.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 44.6
-     }
-    ]
-   },
-   {
-    "crop": "木瓜-日昇種",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 115.6,
-    "prev_date": "115.11.19",
-    "prev_avg": 52.5,
-    "change_pct": 120.2,
-    "qty": 390.0,
-    "upper": 285.0,
-    "lower": 38.1,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 125.4
-     },
-     {
-      "d": "115.11.14",
-      "v": 190.7
-     },
-     {
-      "d": "115.11.15",
-      "v": 71.4
-     },
-     {
-      "d": "115.11.17",
-      "v": 146.1
-     },
-     {
-      "d": "115.11.18",
-      "v": 125.5
-     },
-     {
-      "d": "115.11.19",
-      "v": 52.5
-     },
-     {
-      "d": "115.11.20",
-      "v": 115.6
-     }
-    ]
-   },
-   {
-    "crop": "大心菜-帶葉",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 41.3,
-    "prev_date": "115.11.19",
-    "prev_avg": 19.1,
-    "change_pct": 116.2,
-    "qty": 631.0,
-    "upper": 62.0,
-    "lower": 25.1,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 46.4
-     },
-     {
-      "d": "115.11.14",
-      "v": 20.5
-     },
-     {
-      "d": "115.11.15",
-      "v": 19.1
-     },
-     {
-      "d": "115.11.17",
-      "v": 18.2
-     },
-     {
-      "d": "115.11.18",
-      "v": 19.8
-     },
-     {
-      "d": "115.11.19",
-      "v": 19.1
-     },
-     {
-      "d": "115.11.20",
-      "v": 41.3
-     }
-    ]
-   },
-   {
-    "crop": "薑-薑黃",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 35.6,
-    "prev_date": "115.11.19",
-    "prev_avg": 16.6,
-    "change_pct": 114.5,
-    "qty": 31.0,
-    "upper": 10.0,
-    "lower": 10.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 10.0
-     },
-     {
-      "d": "115.11.15",
-      "v": 28.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 22.5
-     },
-     {
-      "d": "115.11.18",
-      "v": 39.4
-     },
-     {
-      "d": "115.11.19",
-      "v": 16.6
-     },
-     {
-      "d": "115.11.20",
-      "v": 35.6
-     }
-    ]
-   },
-   {
-    "crop": "香蕉-其他",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 15.0,
-    "prev_date": "115.11.19",
-    "prev_avg": 7.0,
-    "change_pct": 114.3,
-    "qty": 62.0,
-    "upper": 20.0,
-    "lower": 12.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 14.3
-     },
-     {
-      "d": "115.11.14",
-      "v": 9.7
-     },
-     {
-      "d": "115.11.15",
-      "v": 8.4
-     },
-     {
-      "d": "115.11.17",
-      "v": 9.9
-     },
-     {
-      "d": "115.11.18",
-      "v": 15.0
-     },
-     {
-      "d": "115.11.19",
-      "v": 7.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 15.0
-     }
-    ]
-   },
-   {
-    "crop": "芹菜-芹菜管",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 51.2,
-    "prev_date": "115.11.19",
-    "prev_avg": 24.2,
-    "change_pct": 111.6,
-    "qty": 280.0,
-    "upper": 42.1,
-    "lower": 25.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 32.2
-     },
-     {
-      "d": "115.11.14",
-      "v": 51.4
-     },
-     {
-      "d": "115.11.15",
-      "v": 25.8
-     },
-     {
-      "d": "115.11.17",
-      "v": 48.2
-     },
-     {
-      "d": "115.11.18",
-      "v": 38.4
      },
      {
-      "d": "115.11.19",
-      "v": 24.2
+      "d": "115.11.21",
+      "v": 41.5
      },
-     {
-      "d": "115.11.20",
-      "v": 51.2
-     }
-    ]
-   },
-   {
-    "crop": "甜瓜-溫室吊瓜",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 240.3,
-    "prev_date": "115.11.19",
-    "prev_avg": 116.7,
-    "change_pct": 105.9,
-    "qty": 379.0,
-    "upper": 280.1,
-    "lower": 188.6,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 235.0
-     },
-     {
-      "d": "115.11.14",
-      "v": 285.3
-     },
-     {
-      "d": "115.11.15",
-      "v": 235.3
-     },
-     {
-      "d": "115.11.17",
-      "v": 247.6
-     },
-     {
-      "d": "115.11.18",
-      "v": 196.0
-     },
-     {
-      "d": "115.11.19",
-      "v": 116.7
-     },
-     {
-      "d": "115.11.20",
-      "v": 240.3
-     }
-    ]
-   },
-   {
-    "crop": "甘薯-芋仔甘薯",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 37.2,
-    "prev_date": "115.11.19",
-    "prev_avg": 18.1,
-    "change_pct": 105.5,
-    "qty": 1872.0,
-    "upper": 27.5,
-    "lower": 15.1,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 21.4
-     },
-     {
-      "d": "115.11.14",
-      "v": 42.5
-     },
-     {
-      "d": "115.11.15",
-      "v": 13.8
-     },
-     {
-      "d": "115.11.17",
-      "v": 32.5
-     },
-     {
-      "d": "115.11.18",
-      "v": 14.9
-     },
-     {
-      "d": "115.11.19",
-      "v": 18.1
-     },
-     {
-      "d": "115.11.20",
-      "v": 37.2
-     }
-    ]
-   },
-   {
-    "crop": "芋-麵芋",
-    "market": "台北二",
-    "date": "115.11.14",
-    "avg": 20.0,
-    "prev_date": "115.11.13",
-    "prev_avg": 10.0,
-    "change_pct": 100.0,
-    "qty": 60.0,
-    "upper": 10.0,
-    "lower": 10.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 10.0
-     },
-     {
-      "d": "115.11.14",
-      "v": 20.0
-     }
-    ]
-   },
-   {
-    "crop": "石蓮花",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 175.0,
-    "prev_date": "115.11.18",
-    "prev_avg": 88.0,
-    "change_pct": 98.9,
-    "qty": 54.0,
-    "upper": 100.0,
-    "lower": 100.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 100.0
-     },
-     {
-      "d": "115.11.14",
-      "v": 80.0
-     },
-     {
-      "d": "115.11.15",
-      "v": 85.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 88.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 175.0
-     }
-    ]
-   },
-   {
-    "crop": "萵苣菜-綠捲",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 139.6,
-    "prev_date": "115.11.19",
-    "prev_avg": 71.7,
-    "change_pct": 94.7,
-    "qty": 147.0,
-    "upper": 85.4,
-    "lower": 50.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 61.3
-     },
-     {
-      "d": "115.11.14",
-      "v": 74.3
-     },
-     {
-      "d": "115.11.15",
-      "v": 59.1
-     },
-     {
-      "d": "115.11.17",
-      "v": 64.2
-     },
-     {
-      "d": "115.11.18",
-      "v": 65.0
-     },
-     {
-      "d": "115.11.19",
-      "v": 71.7
-     },
-     {
-      "d": "115.11.20",
-      "v": 139.6
-     }
-    ]
-   },
-   {
-    "crop": "柚子-紅柚",
-    "market": "台北一",
-    "date": "115.11.17",
-    "avg": 15.0,
-    "prev_date": "115.11.13",
-    "prev_avg": 8.0,
-    "change_pct": 87.5,
-    "qty": 19.0,
-    "upper": 8.0,
-    "lower": 8.0,
-    "history": [
      {
-      "d": "115.11.13",
+      "d": "115.11.22",
       "v": 8.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 15.0
      }
     ]
    },
    {
-    "crop": "番石榴-水晶無子",
+    "crop": "甘藍-紫色",
     "market": "台北一",
-    "date": "115.11.20",
-    "avg": 95.3,
-    "prev_date": "115.11.19",
-    "prev_avg": 51.6,
-    "change_pct": 84.7,
-    "qty": 222.0,
-    "upper": 196.8,
-    "lower": 45.5,
+    "date": "115.11.22",
+    "avg": 10.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 46.7,
+    "change_pct": -78.6,
+    "qty": 100.0,
+    "upper": 35.0,
+    "lower": 35.0,
     "history": [
      {
       "d": "115.11.13",
-      "v": 120.6
+      "v": 35.0
      },
      {
       "d": "115.11.14",
-      "v": 75.2
-     },
-     {
-      "d": "115.11.15",
-      "v": 108.2
-     },
-     {
-      "d": "115.11.17",
-      "v": 80.7
-     },
-     {
-      "d": "115.11.18",
-      "v": 94.1
-     },
-     {
-      "d": "115.11.19",
-      "v": 51.6
-     },
-     {
-      "d": "115.11.20",
-      "v": 95.3
-     }
-    ]
-   },
-   {
-    "crop": "竹筍-綠竹筍",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 184.5,
-    "prev_date": "115.11.18",
-    "prev_avg": 100.0,
-    "change_pct": 84.5,
-    "qty": 448.0,
-    "upper": 403.5,
-    "lower": 73.5,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 200.7
-     },
-     {
-      "d": "115.11.14",
-      "v": 307.7
-     },
-     {
-      "d": "115.11.15",
-      "v": 118.3
-     },
-     {
-      "d": "115.11.17",
-      "v": 191.2
-     },
-     {
-      "d": "115.11.18",
-      "v": 100.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 184.5
-     }
-    ]
-   },
-   {
-    "crop": "蘿蔔-白玉蘿蔔",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 40.6,
-    "prev_date": "115.11.19",
-    "prev_avg": 22.0,
-    "change_pct": 84.5,
-    "qty": 664.0,
-    "upper": 49.4,
-    "lower": 28.3,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 38.8
-     },
-     {
-      "d": "115.11.14",
-      "v": 35.1
-     },
-     {
-      "d": "115.11.15",
-      "v": 30.8
-     },
-     {
-      "d": "115.11.17",
-      "v": 22.1
-     },
-     {
-      "d": "115.11.18",
-      "v": 20.5
-     },
-     {
-      "d": "115.11.19",
-      "v": 22.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 40.6
-     }
-    ]
-   },
-   {
-    "crop": "南瓜-栗子",
-    "market": "台北一",
-    "date": "115.11.19",
-    "avg": 50.5,
-    "prev_date": "115.11.18",
-    "prev_avg": 28.3,
-    "change_pct": 78.4,
-    "qty": 42.0,
-    "upper": 45.0,
-    "lower": 21.2,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 40.2
-     },
-     {
-      "d": "115.11.14",
-      "v": 38.5
+      "v": 35.0
      },
      {
       "d": "115.11.17",
@@ -1930,11 +2621,19 @@
      },
      {
       "d": "115.11.18",
-      "v": 28.3
+      "v": 35.0
      },
      {
       "d": "115.11.19",
-      "v": 50.5
+      "v": 45.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 46.7
+     },
+     {
+      "d": "115.11.22",
+      "v": 10.0
      }
     ]
    },
@@ -2003,44 +2702,94 @@
     ]
    },
    {
-    "crop": "包心白-其他",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 24.1,
-    "prev_date": "115.11.19",
-    "prev_avg": 103.8,
-    "change_pct": -76.8,
-    "qty": 40.0,
-    "upper": 158.0,
-    "lower": 158.0,
+    "crop": "豌豆-進口 紅花",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 115.4,
+    "prev_date": "115.11.21",
+    "prev_avg": 65.8,
+    "change_pct": 75.4,
+    "qty": 544.0,
+    "upper": 210.0,
+    "lower": 75.1,
     "history": [
      {
       "d": "115.11.13",
-      "v": 158.0
+      "v": 154.7
      },
      {
       "d": "115.11.14",
-      "v": 130.0
+      "v": 178.5
      },
      {
       "d": "115.11.15",
-      "v": 122.1
+      "v": 186.1
      },
      {
       "d": "115.11.17",
-      "v": 60.5
+      "v": 189.0
      },
      {
       "d": "115.11.18",
-      "v": 110.0
+      "v": 159.2
      },
      {
       "d": "115.11.19",
-      "v": 103.8
+      "v": 160.0
      },
      {
       "d": "115.11.20",
-      "v": 24.1
+      "v": 170.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 65.8
+     },
+     {
+      "d": "115.11.22",
+      "v": 115.4
+     }
+    ]
+   },
+   {
+    "crop": "甜瓜-其他",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 19.9,
+    "prev_date": "115.11.21",
+    "prev_avg": 80.0,
+    "change_pct": -75.1,
+    "qty": 42.0,
+    "upper": 80.0,
+    "lower": 80.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 80.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 80.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 24.3
+     },
+     {
+      "d": "115.11.17",
+      "v": 49.6
+     },
+     {
+      "d": "115.11.19",
+      "v": 80.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 80.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 19.9
      }
     ]
    },
@@ -2075,58 +2824,138 @@
     ]
    },
    {
-    "crop": "辣椒-其他",
+    "crop": "包心白-包頭蓮",
     "market": "台北一",
-    "date": "115.11.20",
-    "avg": 84.3,
-    "prev_date": "115.11.19",
-    "prev_avg": 327.6,
-    "change_pct": -74.3,
-    "qty": 63.0,
-    "upper": 346.0,
-    "lower": 17.2,
+    "date": "115.11.22",
+    "avg": 12.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 6.9,
+    "change_pct": 73.9,
+    "qty": 3780.0,
+    "upper": 18.5,
+    "lower": 17.6,
     "history": [
      {
       "d": "115.11.13",
-      "v": 153.6
+      "v": 18.0
      },
      {
       "d": "115.11.14",
-      "v": 131.2
+      "v": 16.6
      },
      {
       "d": "115.11.15",
-      "v": 77.1
+      "v": 17.0
      },
      {
       "d": "115.11.17",
-      "v": 115.3
+      "v": 11.0
      },
      {
       "d": "115.11.18",
-      "v": 157.1
+      "v": 11.1
      },
      {
       "d": "115.11.19",
-      "v": 327.6
+      "v": 8.4
      },
      {
       "d": "115.11.20",
-      "v": 84.3
+      "v": 7.4
+     },
+     {
+      "d": "115.11.21",
+      "v": 6.9
+     },
+     {
+      "d": "115.11.22",
+      "v": 12.0
      }
     ]
    },
    {
-    "crop": "椰子-剝殼進口",
+    "crop": "萵苣菜-紅捲",
     "market": "台北一",
-    "date": "115.11.20",
-    "avg": 47.6,
-    "prev_date": "115.11.18",
-    "prev_avg": 27.8,
-    "change_pct": 71.2,
-    "qty": 710.0,
-    "upper": 47.6,
-    "lower": 27.8,
+    "date": "115.11.22",
+    "avg": 9.3,
+    "prev_date": "115.11.21",
+    "prev_avg": 35.0,
+    "change_pct": -73.4,
+    "qty": 111.0,
+    "upper": 45.0,
+    "lower": 18.2,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 28.6
+     },
+     {
+      "d": "115.11.14",
+      "v": 24.8
+     },
+     {
+      "d": "115.11.15",
+      "v": 46.4
+     },
+     {
+      "d": "115.11.17",
+      "v": 42.6
+     },
+     {
+      "d": "115.11.18",
+      "v": 36.9
+     },
+     {
+      "d": "115.11.19",
+      "v": 30.9
+     },
+     {
+      "d": "115.11.20",
+      "v": 18.6
+     },
+     {
+      "d": "115.11.21",
+      "v": 35.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 9.3
+     }
+    ]
+   },
+   {
+    "crop": "黑甜仔菜",
+    "market": "台北一",
+    "date": "115.11.22",
+    "avg": 15.0,
+    "prev_date": "115.11.14",
+    "prev_avg": 9.1,
+    "change_pct": 64.8,
+    "qty": 7.0,
+    "upper": 10.0,
+    "lower": 8.0,
+    "history": [
+     {
+      "d": "115.11.14",
+      "v": 9.1
+     },
+     {
+      "d": "115.11.22",
+      "v": 15.0
+     }
+    ]
+   },
+   {
+    "crop": "菜豆-白色",
+    "market": "台北一",
+    "date": "115.11.21",
+    "avg": 37.4,
+    "prev_date": "115.11.20",
+    "prev_avg": 22.8,
+    "change_pct": 64.0,
+    "qty": 131.0,
+    "upper": 50.0,
+    "lower": 15.4,
     "history": [
      {
       "d": "115.11.13",
@@ -2134,285 +2963,81 @@
      },
      {
       "d": "115.11.14",
-      "v": 27.8
-     },
-     {
-      "d": "115.11.18",
-      "v": 27.8
-     },
-     {
-      "d": "115.11.20",
-      "v": 47.6
-     }
-    ]
-   },
-   {
-    "crop": "蠔菇-鮑魚菇",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 17.7,
-    "prev_date": "115.11.19",
-    "prev_avg": 56.7,
-    "change_pct": -68.8,
-    "qty": 53.0,
-    "upper": 85.6,
-    "lower": 77.7,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 82.4
-     },
-     {
-      "d": "115.11.14",
-      "v": 78.2
-     },
-     {
-      "d": "115.11.15",
-      "v": 28.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 69.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 82.8
-     },
-     {
-      "d": "115.11.19",
-      "v": 56.7
-     },
-     {
-      "d": "115.11.20",
-      "v": 17.7
-     }
-    ]
-   },
-   {
-    "crop": "柿子-筆柿",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 28.3,
-    "prev_date": "115.11.19",
-    "prev_avg": 17.0,
-    "change_pct": 66.5,
-    "qty": 192.0,
-    "upper": 17.0,
-    "lower": 17.0,
-    "history": [
-     {
-      "d": "115.11.19",
-      "v": 17.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 28.3
-     }
-    ]
-   },
-   {
-    "crop": "巴西利",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 92.2,
-    "prev_date": "115.11.19",
-    "prev_avg": 55.4,
-    "change_pct": 66.4,
-    "qty": 310.0,
-    "upper": 127.6,
-    "lower": 51.9,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 79.1
-     },
-     {
-      "d": "115.11.14",
-      "v": 44.6
-     },
-     {
-      "d": "115.11.15",
-      "v": 188.4
-     },
-     {
-      "d": "115.11.17",
-      "v": 95.8
-     },
-     {
-      "d": "115.11.18",
-      "v": 48.9
-     },
-     {
-      "d": "115.11.19",
-      "v": 55.4
-     },
-     {
-      "d": "115.11.20",
-      "v": 92.2
-     }
-    ]
-   },
-   {
-    "crop": "絲瓜-角瓜",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 55.9,
-    "prev_date": "115.11.19",
-    "prev_avg": 33.7,
-    "change_pct": 65.9,
-    "qty": 196.0,
-    "upper": 52.0,
-    "lower": 30.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 40.9
-     },
-     {
-      "d": "115.11.14",
-      "v": 40.7
-     },
-     {
-      "d": "115.11.15",
-      "v": 36.7
-     },
-     {
-      "d": "115.11.17",
-      "v": 40.6
-     },
-     {
-      "d": "115.11.18",
       "v": 47.3
      },
      {
-      "d": "115.11.19",
-      "v": 33.7
-     },
-     {
-      "d": "115.11.20",
-      "v": 55.9
-     }
-    ]
-   },
-   {
-    "crop": "柑橘-進口",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 64.3,
-    "prev_date": "115.11.19",
-    "prev_avg": 188.1,
-    "change_pct": -65.8,
-    "qty": 3194.0,
-    "upper": 143.4,
-    "lower": 35.6,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 67.2
-     },
-     {
-      "d": "115.11.14",
-      "v": 72.2
-     },
-     {
       "d": "115.11.15",
-      "v": 68.8
+      "v": 33.1
      },
      {
       "d": "115.11.17",
-      "v": 304.4
+      "v": 28.8
      },
      {
       "d": "115.11.18",
-      "v": 106.7
+      "v": 35.2
      },
      {
       "d": "115.11.19",
-      "v": 188.1
+      "v": 20.3
      },
      {
       "d": "115.11.20",
-      "v": 64.3
+      "v": 22.8
+     },
+     {
+      "d": "115.11.21",
+      "v": 37.4
      }
     ]
    },
    {
-    "crop": "蠔菇-鮑魚菇",
+    "crop": "甘藍-甘藍芽",
     "market": "台北一",
-    "date": "115.11.20",
-    "avg": 34.4,
-    "prev_date": "115.11.19",
-    "prev_avg": 95.0,
+    "date": "115.11.22",
+    "avg": 22.1,
+    "prev_date": "115.11.21",
+    "prev_avg": 61.0,
     "change_pct": -63.8,
-    "qty": 175.0,
-    "upper": 76.0,
-    "lower": 40.0,
+    "qty": 122.0,
+    "upper": 19.2,
+    "lower": 12.0,
     "history": [
      {
       "d": "115.11.13",
-      "v": 58.9
+      "v": 16.3
      },
      {
       "d": "115.11.14",
-      "v": 47.4
+      "v": 56.1
      },
      {
       "d": "115.11.15",
-      "v": 40.1
+      "v": 31.4
      },
      {
       "d": "115.11.17",
-      "v": 37.2
+      "v": 42.0
      },
      {
       "d": "115.11.18",
-      "v": 27.1
+      "v": 44.8
      },
      {
       "d": "115.11.19",
-      "v": 95.0
+      "v": 16.8
      },
      {
       "d": "115.11.20",
-      "v": 34.4
-     }
-    ]
-   },
-   {
-    "crop": "其他-進口",
-    "market": "台北二",
-    "date": "115.11.19",
-    "avg": 53.3,
-    "prev_date": "115.11.18",
-    "prev_avg": 146.7,
-    "change_pct": -63.7,
-    "qty": 35.0,
-    "upper": 200.0,
-    "lower": 200.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 200.0
+      "v": 21.7
      },
      {
-      "d": "115.11.14",
-      "v": 197.9
+      "d": "115.11.21",
+      "v": 61.0
      },
      {
-      "d": "115.11.15",
-      "v": 180.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 196.7
-     },
-     {
-      "d": "115.11.18",
-      "v": 146.7
-     },
-     {
-      "d": "115.11.19",
-      "v": 53.3
+      "d": "115.11.22",
+      "v": 22.1
      }
     ]
    },
@@ -2447,272 +3072,278 @@
     ]
    },
    {
-    "crop": "油菜-油菜花",
+    "crop": "萵苣菜-其他",
     "market": "台北一",
-    "date": "115.11.20",
-    "avg": 32.7,
-    "prev_date": "115.11.19",
-    "prev_avg": 20.0,
-    "change_pct": 63.5,
-    "qty": 26.0,
-    "upper": 46.0,
-    "lower": 40.0,
-    "history": [
-     {
-      "d": "115.11.14",
-      "v": 44.6
-     },
-     {
-      "d": "115.11.15",
-      "v": 47.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 40.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 10.0
-     },
-     {
-      "d": "115.11.19",
-      "v": 20.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 32.7
-     }
-    ]
-   },
-   {
-    "crop": "雜柑-黃金檸檬",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 13.3,
-    "prev_date": "115.11.18",
-    "prev_avg": 35.7,
-    "change_pct": -62.7,
-    "qty": 96.0,
-    "upper": 18.0,
-    "lower": 8.0,
-    "history": [
-     {
-      "d": "115.11.14",
-      "v": 14.2
-     },
-     {
-      "d": "115.11.17",
-      "v": 60.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 35.7
-     },
-     {
-      "d": "115.11.20",
-      "v": 13.3
-     }
-    ]
-   },
-   {
-    "crop": "西瓜-其他",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 33.0,
-    "prev_date": "115.11.19",
-    "prev_avg": 87.4,
-    "change_pct": -62.2,
-    "qty": 2720.0,
-    "upper": 58.5,
-    "lower": 12.0,
+    "date": "115.11.22",
+    "avg": 97.1,
+    "prev_date": "115.11.21",
+    "prev_avg": 59.5,
+    "change_pct": 63.2,
+    "qty": 346.0,
+    "upper": 139.0,
+    "lower": 34.9,
     "history": [
      {
       "d": "115.11.13",
-      "v": 23.8
+      "v": 94.9
      },
      {
       "d": "115.11.14",
-      "v": 29.7
+      "v": 74.0
      },
      {
       "d": "115.11.15",
-      "v": 79.2
+      "v": 65.8
      },
      {
       "d": "115.11.17",
-      "v": 62.7
+      "v": 76.9
      },
      {
       "d": "115.11.18",
-      "v": 51.8
+      "v": 75.7
      },
      {
       "d": "115.11.19",
-      "v": 87.4
+      "v": 67.7
      },
      {
       "d": "115.11.20",
-      "v": 33.0
-     }
-    ]
-   },
-   {
-    "crop": "甜瓜-其他",
-    "market": "台北一",
-    "date": "115.11.19",
-    "avg": 80.0,
-    "prev_date": "115.11.17",
-    "prev_avg": 49.6,
-    "change_pct": 61.3,
-    "qty": 42.0,
-    "upper": 80.0,
-    "lower": 80.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 80.0
+      "v": 55.0
      },
      {
-      "d": "115.11.14",
-      "v": 80.0
+      "d": "115.11.21",
+      "v": 59.5
      },
      {
-      "d": "115.11.15",
-      "v": 24.3
-     },
-     {
-      "d": "115.11.17",
-      "v": 49.6
-     },
-     {
-      "d": "115.11.19",
-      "v": 80.0
+      "d": "115.11.22",
+      "v": 97.1
      }
     ]
    },
    {
     "crop": "甜椒-彩色種 黃色",
-    "market": "台北二",
-    "date": "115.11.20",
-    "avg": 99.9,
-    "prev_date": "115.11.19",
-    "prev_avg": 62.2,
-    "change_pct": 60.6,
-    "qty": 485.0,
-    "upper": 92.8,
-    "lower": 38.9,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 73.9
-     },
-     {
-      "d": "115.11.14",
-      "v": 81.2
-     },
-     {
-      "d": "115.11.15",
-      "v": 47.9
-     },
-     {
-      "d": "115.11.17",
-      "v": 74.2
-     },
-     {
-      "d": "115.11.18",
-      "v": 81.8
-     },
-     {
-      "d": "115.11.19",
-      "v": 62.2
-     },
-     {
-      "d": "115.11.20",
-      "v": 99.9
-     }
-    ]
-   },
-   {
-    "crop": "海菜-海帶",
     "market": "台北一",
-    "date": "115.11.20",
-    "avg": 80.0,
-    "prev_date": "115.11.19",
-    "prev_avg": 50.0,
-    "change_pct": 60.0,
-    "qty": 117.0,
-    "upper": 80.0,
-    "lower": 50.0,
+    "date": "115.11.22",
+    "avg": 100.0,
+    "prev_date": "115.11.21",
+    "prev_avg": 61.4,
+    "change_pct": 62.9,
+    "qty": 1293.0,
+    "upper": 155.6,
+    "lower": 33.2,
     "history": [
      {
       "d": "115.11.13",
-      "v": 61.5
+      "v": 90.3
      },
      {
       "d": "115.11.14",
-      "v": 55.4
+      "v": 73.8
      },
      {
       "d": "115.11.15",
-      "v": 50.0
+      "v": 69.4
      },
      {
       "d": "115.11.17",
-      "v": 50.0
+      "v": 82.6
      },
      {
       "d": "115.11.18",
-      "v": 61.5
+      "v": 66.2
      },
      {
       "d": "115.11.19",
-      "v": 50.0
+      "v": 60.5
      },
      {
       "d": "115.11.20",
-      "v": 80.0
+      "v": 74.4
+     },
+     {
+      "d": "115.11.21",
+      "v": 61.4
+     },
+     {
+      "d": "115.11.22",
+      "v": 100.0
      }
     ]
    },
    {
-    "crop": "珍珠柑",
+    "crop": "芫荽-進口",
     "market": "台北二",
-    "date": "115.11.20",
-    "avg": 60.9,
-    "prev_date": "115.11.19",
-    "prev_avg": 38.5,
-    "change_pct": 58.2,
-    "qty": 126.0,
-    "upper": 57.1,
-    "lower": 37.6,
+    "date": "115.11.22",
+    "avg": 137.3,
+    "prev_date": "115.11.21",
+    "prev_avg": 85.0,
+    "change_pct": 61.5,
+    "qty": 60.0,
+    "upper": 90.0,
+    "lower": 85.0,
     "history": [
      {
       "d": "115.11.13",
-      "v": 46.9
+      "v": 86.0
      },
      {
       "d": "115.11.14",
-      "v": 47.4
+      "v": 79.8
      },
      {
       "d": "115.11.15",
-      "v": 37.2
+      "v": 54.6
      },
      {
       "d": "115.11.17",
-      "v": 36.4
+      "v": 77.0
      },
      {
       "d": "115.11.18",
-      "v": 30.2
+      "v": 60.0
      },
      {
       "d": "115.11.19",
-      "v": 38.5
+      "v": 53.0
      },
      {
       "d": "115.11.20",
-      "v": 60.9
+      "v": 70.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 85.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 137.3
+     }
+    ]
+   },
+   {
+    "crop": "玉米-進口 甜軟殼",
+    "market": "台北一",
+    "date": "115.11.21",
+    "avg": 3.0,
+    "prev_date": "115.11.17",
+    "prev_avg": 7.8,
+    "change_pct": -61.5,
+    "qty": 1470.0,
+    "upper": 15.0,
+    "lower": 9.0,
+    "history": [
+     {
+      "d": "115.11.14",
+      "v": 13.1
+     },
+     {
+      "d": "115.11.15",
+      "v": 9.8
+     },
+     {
+      "d": "115.11.17",
+      "v": 7.8
+     },
+     {
+      "d": "115.11.21",
+      "v": 3.0
+     }
+    ]
+   },
+   {
+    "crop": "南瓜-黃如意",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 24.5,
+    "prev_date": "115.11.21",
+    "prev_avg": 15.2,
+    "change_pct": 61.2,
+    "qty": 86.0,
+    "upper": 35.0,
+    "lower": 11.8,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 26.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 7.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 30.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 24.4
+     },
+     {
+      "d": "115.11.18",
+      "v": 32.0
+     },
+     {
+      "d": "115.11.19",
+      "v": 18.3
+     },
+     {
+      "d": "115.11.20",
+      "v": 19.5
+     },
+     {
+      "d": "115.11.21",
+      "v": 15.2
+     },
+     {
+      "d": "115.11.22",
+      "v": 24.5
+     }
+    ]
+   },
+   {
+    "crop": "其他-進口",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 77.5,
+    "prev_date": "115.11.21",
+    "prev_avg": 197.6,
+    "change_pct": -60.8,
+    "qty": 35.0,
+    "upper": 200.0,
+    "lower": 200.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 200.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 197.9
+     },
+     {
+      "d": "115.11.15",
+      "v": 180.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 196.7
+     },
+     {
+      "d": "115.11.18",
+      "v": 146.7
+     },
+     {
+      "d": "115.11.19",
+      "v": 53.3
+     },
+     {
+      "d": "115.11.21",
+      "v": 197.6
+     },
+     {
+      "d": "115.11.22",
+      "v": 77.5
      }
     ]
    },
@@ -2781,112 +3412,78 @@
     ]
    },
    {
-    "crop": "甘藍-紫色",
+    "crop": "甜椒-彩色種 其他",
     "market": "台北二",
-    "date": "115.11.20",
-    "avg": 25.0,
-    "prev_date": "115.11.19",
-    "prev_avg": 16.0,
-    "change_pct": 56.2,
-    "qty": 241.0,
-    "upper": 32.0,
-    "lower": 20.6,
+    "date": "115.11.22",
+    "avg": 74.7,
+    "prev_date": "115.11.20",
+    "prev_avg": 47.7,
+    "change_pct": 56.6,
+    "qty": 119.0,
+    "upper": 97.6,
+    "lower": 50.0,
     "history": [
      {
       "d": "115.11.13",
-      "v": 25.4
+      "v": 66.2
      },
      {
       "d": "115.11.14",
-      "v": 20.0
-     },
-     {
-      "d": "115.11.15",
-      "v": 12.0
+      "v": 48.0
      },
      {
       "d": "115.11.17",
-      "v": 26.6
+      "v": 73.0
      },
      {
       "d": "115.11.18",
-      "v": 27.4
+      "v": 90.0
      },
      {
       "d": "115.11.19",
-      "v": 16.0
+      "v": 46.4
      },
      {
       "d": "115.11.20",
-      "v": 25.0
+      "v": 47.7
+     },
+     {
+      "d": "115.11.22",
+      "v": 74.7
      }
     ]
    },
    {
-    "crop": "晚香玉筍",
+    "crop": "雜柑-其他",
     "market": "台北二",
-    "date": "115.11.20",
-    "avg": 250.0,
+    "date": "115.11.21",
+    "avg": 23.4,
     "prev_date": "115.11.19",
-    "prev_avg": 160.0,
-    "change_pct": 56.2,
-    "qty": 4.0,
-    "upper": 260.0,
-    "lower": 260.0,
+    "prev_avg": 15.0,
+    "change_pct": 56.0,
+    "qty": 24.0,
+    "upper": 18.0,
+    "lower": 18.0,
     "history": [
      {
       "d": "115.11.13",
-      "v": 260.0
-     },
-     {
-      "d": "115.11.14",
-      "v": 455.0
-     },
-     {
-      "d": "115.11.15",
-      "v": 380.0
-     },
-     {
-      "d": "115.11.17",
-      "v": 152.8
-     },
-     {
-      "d": "115.11.18",
-      "v": 140.0
-     },
-     {
-      "d": "115.11.19",
-      "v": 160.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 250.0
-     }
-    ]
-   },
-   {
-    "crop": "玉米-超甜白",
-    "market": "台北一",
-    "date": "115.11.18",
-    "avg": 8.0,
-    "prev_date": "115.11.14",
-    "prev_avg": 18.0,
-    "change_pct": -55.6,
-    "qty": 88.0,
-    "upper": 16.0,
-    "lower": 16.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 16.0
-     },
-     {
-      "d": "115.11.14",
       "v": 18.0
      },
      {
-      "d": "115.11.18",
-      "v": 8.0
+      "d": "115.11.15",
+      "v": 15.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 18.3
+     },
+     {
+      "d": "115.11.19",
+      "v": 15.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 23.4
      }
     ]
    },
@@ -2917,116 +3514,32 @@
     ]
    },
    {
-    "crop": "茴香",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 85.1,
-    "prev_date": "115.11.19",
-    "prev_avg": 54.9,
-    "change_pct": 55.0,
-    "qty": 379.0,
-    "upper": 104.4,
-    "lower": 36.7,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 74.6
-     },
-     {
-      "d": "115.11.14",
-      "v": 80.1
-     },
-     {
-      "d": "115.11.15",
-      "v": 87.5
-     },
-     {
-      "d": "115.11.17",
-      "v": 72.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 69.4
-     },
-     {
-      "d": "115.11.19",
-      "v": 54.9
-     },
-     {
-      "d": "115.11.20",
-      "v": 85.1
-     }
-    ]
-   },
-   {
-    "crop": "柚子-西施柚",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 10.8,
-    "prev_date": "115.11.19",
-    "prev_avg": 7.0,
-    "change_pct": 54.3,
-    "qty": 98.0,
-    "upper": 22.0,
-    "lower": 8.0,
-    "history": [
-     {
-      "d": "115.11.13",
-      "v": 14.9
-     },
-     {
-      "d": "115.11.14",
-      "v": 26.2
-     },
-     {
-      "d": "115.11.15",
-      "v": 9.1
-     },
-     {
-      "d": "115.11.17",
-      "v": 11.0
-     },
-     {
-      "d": "115.11.18",
-      "v": 12.0
-     },
-     {
-      "d": "115.11.19",
-      "v": 7.0
-     },
-     {
-      "d": "115.11.20",
-      "v": 10.8
-     }
-    ]
-   },
-   {
-    "crop": "橄欖",
+    "crop": "薯蕷-紅薯蕷",
     "market": "台北二",
-    "date": "115.11.20",
-    "avg": 23.1,
+    "date": "115.11.21",
+    "avg": 31.2,
     "prev_date": "115.11.19",
-    "prev_avg": 15.0,
-    "change_pct": 54.0,
-    "qty": 44.0,
-    "upper": 24.0,
-    "lower": 15.0,
+    "prev_avg": 69.0,
+    "change_pct": -54.8,
+    "qty": 237.0,
+    "upper": 71.4,
+    "lower": 44.3,
     "history": [
      {
       "d": "115.11.13",
-      "v": 19.9
+      "v": 61.6
      },
      {
       "d": "115.11.14",
-      "v": 15.9
+      "v": 58.4
      },
      {
       "d": "115.11.15",
-      "v": 16.3
+      "v": 33.0
      },
      {
       "d": "115.11.17",
-      "v": 50.0
+      "v": 56.0
      },
      {
       "d": "115.11.18",
@@ -3034,11 +3547,149 @@
      },
      {
       "d": "115.11.19",
-      "v": 15.0
+      "v": 69.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 31.2
+     }
+    ]
+   },
+   {
+    "crop": "薯蕷-樹薯",
+    "market": "台北二",
+    "date": "115.11.21",
+    "avg": 33.2,
+    "prev_date": "115.11.20",
+    "prev_avg": 21.6,
+    "change_pct": 53.7,
+    "qty": 226.0,
+    "upper": 38.1,
+    "lower": 17.1,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 23.7
+     },
+     {
+      "d": "115.11.14",
+      "v": 33.5
+     },
+     {
+      "d": "115.11.15",
+      "v": 21.4
+     },
+     {
+      "d": "115.11.17",
+      "v": 29.8
+     },
+     {
+      "d": "115.11.18",
+      "v": 18.7
+     },
+     {
+      "d": "115.11.19",
+      "v": 20.0
      },
      {
       "d": "115.11.20",
-      "v": 23.1
+      "v": 21.6
+     },
+     {
+      "d": "115.11.21",
+      "v": 33.2
+     }
+    ]
+   },
+   {
+    "crop": "南瓜-進口 東昇",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 18.3,
+    "prev_date": "115.11.21",
+    "prev_avg": 12.0,
+    "change_pct": 52.5,
+    "qty": 172.0,
+    "upper": 15.0,
+    "lower": 12.2,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 14.4
+     },
+     {
+      "d": "115.11.14",
+      "v": 13.1
+     },
+     {
+      "d": "115.11.15",
+      "v": 11.3
+     },
+     {
+      "d": "115.11.19",
+      "v": 12.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 10.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 12.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 18.3
+     }
+    ]
+   },
+   {
+    "crop": "韭菜-白頭",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 68.8,
+    "prev_date": "115.11.21",
+    "prev_avg": 45.1,
+    "change_pct": 52.5,
+    "qty": 752.0,
+    "upper": 78.0,
+    "lower": 62.8,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 72.4
+     },
+     {
+      "d": "115.11.14",
+      "v": 60.4
+     },
+     {
+      "d": "115.11.15",
+      "v": 44.1
+     },
+     {
+      "d": "115.11.17",
+      "v": 79.5
+     },
+     {
+      "d": "115.11.18",
+      "v": 72.6
+     },
+     {
+      "d": "115.11.19",
+      "v": 49.4
+     },
+     {
+      "d": "115.11.20",
+      "v": 53.7
+     },
+     {
+      "d": "115.11.21",
+      "v": 45.1
+     },
+     {
+      "d": "115.11.22",
+      "v": 68.8
      }
     ]
    },
@@ -3077,86 +3728,190 @@
     ]
    },
    {
-    "crop": "青花苔-青花筍",
+    "crop": "橄欖",
     "market": "台北一",
-    "date": "115.11.20",
-    "avg": 67.4,
-    "prev_date": "115.11.19",
-    "prev_avg": 44.5,
-    "change_pct": 51.5,
-    "qty": 1411.0,
-    "upper": 128.7,
-    "lower": 35.4,
+    "date": "115.11.22",
+    "avg": 33.9,
+    "prev_date": "115.11.21",
+    "prev_avg": 22.4,
+    "change_pct": 51.3,
+    "qty": 108.0,
+    "upper": 44.6,
+    "lower": 25.0,
     "history": [
      {
       "d": "115.11.13",
-      "v": 73.6
+      "v": 33.6
      },
      {
       "d": "115.11.14",
-      "v": 70.0
+      "v": 17.4
      },
      {
       "d": "115.11.15",
-      "v": 62.8
+      "v": 60.0
      },
      {
       "d": "115.11.17",
-      "v": 60.7
+      "v": 42.0
      },
      {
       "d": "115.11.18",
-      "v": 52.2
+      "v": 37.2
      },
      {
       "d": "115.11.19",
-      "v": 44.5
+      "v": 32.0
      },
      {
       "d": "115.11.20",
-      "v": 67.4
+      "v": 30.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 22.4
+     },
+     {
+      "d": "115.11.22",
+      "v": 33.9
      }
     ]
    },
    {
-    "crop": "櫻桃-進口",
-    "market": "台北一",
-    "date": "115.11.20",
-    "avg": 300.9,
-    "prev_date": "115.11.19",
-    "prev_avg": 200.5,
-    "change_pct": 50.1,
-    "qty": 848.0,
-    "upper": 522.7,
-    "lower": 293.3,
+    "crop": "柚子-白柚",
+    "market": "台北二",
+    "date": "115.11.21",
+    "avg": 11.8,
+    "prev_date": "115.11.20",
+    "prev_avg": 7.8,
+    "change_pct": 51.3,
+    "qty": 324.0,
+    "upper": 36.8,
+    "lower": 8.0,
     "history": [
      {
       "d": "115.11.13",
-      "v": 368.8
+      "v": 14.6
      },
      {
       "d": "115.11.14",
-      "v": 279.1
+      "v": 46.3
      },
      {
       "d": "115.11.15",
-      "v": 309.2
-     },
-     {
-      "d": "115.11.17",
-      "v": 342.4
+      "v": 7.5
      },
      {
       "d": "115.11.18",
-      "v": 353.1
+      "v": 7.0
      },
      {
       "d": "115.11.19",
-      "v": 200.5
+      "v": 11.5
      },
      {
       "d": "115.11.20",
-      "v": 300.9
+      "v": 7.8
+     },
+     {
+      "d": "115.11.21",
+      "v": 11.8
+     }
+    ]
+   },
+   {
+    "crop": "薯蕷-白薯蕷 人參",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 60.0,
+    "prev_date": "115.11.20",
+    "prev_avg": 39.7,
+    "change_pct": 51.1,
+    "qty": 216.0,
+    "upper": 67.9,
+    "lower": 50.2,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 58.5
+     },
+     {
+      "d": "115.11.14",
+      "v": 58.9
+     },
+     {
+      "d": "115.11.15",
+      "v": 48.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 50.7
+     },
+     {
+      "d": "115.11.18",
+      "v": 67.5
+     },
+     {
+      "d": "115.11.19",
+      "v": 49.3
+     },
+     {
+      "d": "115.11.20",
+      "v": 39.7
+     },
+     {
+      "d": "115.11.22",
+      "v": 60.0
+     }
+    ]
+   },
+   {
+    "crop": "晚香玉筍",
+    "market": "台北二",
+    "date": "115.11.22",
+    "avg": 138.3,
+    "prev_date": "115.11.21",
+    "prev_avg": 280.0,
+    "change_pct": -50.6,
+    "qty": 4.0,
+    "upper": 260.0,
+    "lower": 260.0,
+    "history": [
+     {
+      "d": "115.11.13",
+      "v": 260.0
+     },
+     {
+      "d": "115.11.14",
+      "v": 455.0
+     },
+     {
+      "d": "115.11.15",
+      "v": 380.0
+     },
+     {
+      "d": "115.11.17",
+      "v": 152.8
+     },
+     {
+      "d": "115.11.18",
+      "v": 140.0
+     },
+     {
+      "d": "115.11.19",
+      "v": 160.0
+     },
+     {
+      "d": "115.11.20",
+      "v": 250.0
+     },
+     {
+      "d": "115.11.21",
+      "v": 280.0
+     },
+     {
+      "d": "115.11.22",
+      "v": 138.3
      }
     ]
    }
